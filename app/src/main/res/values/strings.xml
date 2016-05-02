@@ -1,0 +1,280 @@
+<resources>
+    <string name="app_name">ЕДА</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="ingridients">Ингредиенты</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="meat">Meat</string>
+    <string name="myrecipes">Мои Рецепты</string>
+    <string name="Chicken">Курица</string>
+    <string name="Pig">Свинина</string>
+    <string name="turkey">Индейка</string>
+    <string name="Cow">Говядина</string>
+    <string name="Rabbit">Крольчатина</string>
+    <string name="Bear">Медвежатина</string>
+    <string name="apply">Apply</string>
+    <string name="potatoes">Potatoes</string>
+    <string name="carrot">Carrot</string>
+    <string name="beet">Beet</string>
+    <string name="boot">Boot</string>
+    <string name="garlic">Garlic</string>
+    <string name="cucumber">Cucumber</string>
+    <string name="apply3">Apply</string>
+    <string name="kefir">kefir</string>
+    <string name="cheese">Сыр</string>
+    <string name="milk">Молоко</string>
+    <string name="sour">Сметана</string>
+    <string name="cream">Сливки</string>
+    <string name="milkb">Milk</string>
+    <string name="Рис">Рис</string>
+    <string name="Овсянка">Овсянка</string>
+    <string name="Пшено">Пшено</string>
+    <string name="Гречка">Гречка</string>
+
+    //Название продукта
+    <string-array name="Ingredient_name">
+        <item>Яблоки</item>
+        //-------------ФРУКТЫ-----------------------
+        <item>Бананы</item>
+        <item>Апельсины</item>
+        <item>Груши</item>
+        <item>Виноград</item>
+        <item>Ананас</item>
+        <item>Картошка</item>
+        //-------------ОВОЩИ----------------------
+        <item>Морковь</item>
+        <item>Лук</item>
+        <item>Свекла</item>
+        <item>Перец болгарский</item>
+        <item>Кабачки</item>
+        <item>Капуста</item>
+        <item>Греча</item>
+        //---------------ЗЕРНОВЫЕ---------------------
+        <item>Овсянка</item>
+        <item>Рис</item>
+        <item>Пшено</item>
+        <item>Клубника</item>
+        //-----------ЯГОДЫ-------------------------
+        <item>Малина</item>
+        <item>Черная смородина</item>
+        <item>Красная смородина</item>
+        <item>Арахис</item>//------------------------ОРЕХИ---------------
+        <item>Миндаль</item>
+        <item>Фундук</item>
+        <item>Кешью</item>
+        <item>Лавр</item>//-------------------ТРАВЫ----------------------
+        <item>Оригана</item>
+        <item>Мята</item>
+        <item>Мелиса</item>
+        <item>Лимонный</item>//------------------СОКИ--------------------
+        <item>Апельсиновый</item>
+        <item>Яблочеый</item>
+        <item>Говядина</item>//------------------МЯСО--------------------
+        <item>Свинина</item>
+        <item>Курица</item>
+        <item>Индейка</item>
+        <item>Мясо кролика</item>
+        <item>Окунь</item>//-----------------РЫБА------------------------
+        <item>Горбуша</item>
+        <item>Сельдь</item>
+        <item>Скумбрия</item>
+        <item>Куриные</item>//------------------ЯЙЦА---------------------
+        <item>Перепелиные</item>
+        <item>Красная</item>//-----------------ИКРА----------------------
+        <item>Черная</item>
+        <item>Кабачковая</item>
+        <item>Молоко</item>//----------------МОЛОЧНЫЕ--------------------
+        <item>Кефир</item>
+        <item>Сметана</item>
+        <item>Сыр</item>
+        <item>Сливки</item>
+        <item>Кальмары</item>//--------------МОЛЛЮСКИ--------------------
+        <item>Криветки</item>
+        <item>Белые</item>//--------------ГРИБЫ--------------------------
+        <item>Шампьньоны</item>
+        <item>Соль</item>//-------------------ПРИПРАВЫ-------------------
+        <item>Перец</item>
+        <item>Корица</item>
+        <item>Ваниль</item>
+        <item>Сахар</item>
+        <item>Спагетти</item>//------------------БАКАЛЕЯ-----------------
+        <item>Рожки</item>
+        <item>Тесто слоеное</item>
+        <item>Тесто дрожжевое</item>
+        <item>Морская кпуста</item>//------------ВОДОРОСЛИ---------------
+        <item>Рольные водоросли</item>
+    </string-array>
+
+    //id продукта
+    <integer-array name="Ingredient_id">
+        <item>101</item>
+        <item>102</item>
+        <item>103</item>
+        <item>104</item>
+        <item>105</item>
+        <item>106</item>
+        <item>107</item>
+        <item>108</item>
+        <item>109</item>
+        <item>110</item>
+        <item>111</item>
+        <item>112</item>
+        <item>113</item>
+        <item>114</item>
+        <item>115</item>
+        <item>116</item>
+        <item>117</item>
+        <item>118</item>
+        <item>119</item>
+        <item>120</item>
+        <item>121</item>
+        <item>122</item>
+        <item>123</item>
+        <item>124</item>
+        <item>125</item>
+        <item>126</item>
+        <item>127</item>
+        <item>128</item>
+        <item>129</item>
+        <item>130</item>
+        <item>131</item>
+        <item>132</item>
+        <item>133</item>
+        <item>134</item>
+        <item>135</item>
+        <item>136</item>
+        <item>137</item>
+        <item>138</item>
+        <item>139</item>
+        <item>140</item>
+        <item>141</item>
+        <item>142</item>
+        <item>143</item>
+        <item>144</item>
+        <item>145</item>
+        <item>146</item>
+        <item>147</item>
+        <item>148</item>
+        <item>149</item>
+        <item>150</item>
+        <item>151</item>
+        <item>152</item>
+        <item>153</item>
+        <item>154</item>
+        <item>155</item>
+        <item>156</item>
+        <item>157</item>
+        <item>158</item>
+        <item>159</item>
+        <item>160</item>
+        <item>161</item>
+        <item>162</item>
+        <item>163</item>
+        <item>164</item>
+        <item>165</item>
+        <item>166</item>
+    </integer-array>
+
+    //------------------------------------------------------------------------------------------
+
+    //Название кухни
+    <string-array name="Cuisine_name">
+        <item>Русская</item>
+        <item>Европейская</item>
+        <item>Азиатская</item>
+        <item>Кавказская</item>
+    </string-array>
+
+    //id кухни
+    <integer-array name="Cuisine_id">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </integer-array>
+
+    //-------------------------------------------------------------------------------------------
+
+    //Название вида
+    <string-array name="Category_name">
+        <item>Закуска</item>
+        <item>Салат</item>
+        <item>Первое блюдо</item>
+        <item>Второе блюда</item>
+        <item>Десерт</item>
+    </string-array>
+
+    //id категории
+    <integer-array name="Category_id">
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+    </integer-array>
+
+    //-------------------------------------------------------------------------------------------
+
+    //Название способа приготовления
+    <string-array name="Method_name">
+        <item>Вареное</item>
+        <item>Тушеное</item>
+        <item>Жареное</item>
+    </string-array>
+
+    //id способа приготовления
+    <integer-array name="Cooking_method_ID">
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+    </integer-array>
+
+    //Время
+    <string-array name="Time_name">
+        <item>10 минут</item>
+        <item>15 минут</item>
+        <item>20 минут</item>
+        <item>30 минут</item>
+        <item>50 минут</item>
+        <item>1 час</item>
+        <item>более 1 час</item>
+    </string-array>
+
+    //id способа приготовления
+    <integer-array name="Time_ID">
+        <item>1001</item>
+        <item>1002</item>
+        <item>1003</item>
+        <item>1004</item>
+        <item>1005</item>
+        <item>1006</item>
+        <item>1007</item>
+    </integer-array>
+
+    //единицы измерения
+    <string-array name="Unit_measure_name">
+        <item>гр</item>
+        <item>мл</item>
+        <item>л</item>
+        <item>ложка/ложек</item>
+        <item>штука/штук</item>
+        <item>банка/банок</item>
+        <item>кубик/кубиков</item>
+    </string-array>
+
+    //id способа приготовления
+    <integer-array name="Unit_measure_ID">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+    </integer-array>
+</resources>

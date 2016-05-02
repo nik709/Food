@@ -1,0 +1,92 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context="com.example.makpro.recipedesign1.Fragments.MeatFragment"
+    android:weightSum="1">
+
+    <!-- TODO: Update blank fragment layout -->
+
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="748dp"
+        android:id="@+id/scrollView"
+        android:layout_weight="0.6">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Chicken"
+                android:id="@+id/CBchicken"
+                android:checked="false"
+                android:textSize="20sp" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Pig"
+                android:id="@+id/CBpig"
+                android:checked="false"
+                android:textSize="20sp" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/turkey"
+                android:id="@+id/CBturkey"
+                android:checked="false"
+                android:textSize="20sp" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Cow"
+                android:id="@+id/CBcow"
+                android:checked="false"
+                android:textSize="20sp" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Rabbit"
+                android:id="@+id/CBrabbit"
+                android:checked="false"
+                android:textSize="20sp" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Bear"
+                android:id="@+id/CBbear"
+                android:checked="false"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.4">
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/apply"
+            android:id="@+id/apply" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Choose all"
+            android:id="@+id/choose_all" />
+    </LinearLayout>
+
+</LinearLayout>
