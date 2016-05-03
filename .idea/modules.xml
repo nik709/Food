@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+<<<<<<< HEAD
       <module fileurl="file://$PROJECT_DIR$/Food-master.iml" filepath="$PROJECT_DIR$/Food-master.iml" />
+=======
+      <module fileurl="file://$PROJECT_DIR$/Food-1.iml" filepath="$PROJECT_DIR$/Food-1.iml" />
+>>>>>>> dad2e7cb6ab10b131d59f7d39bb2c85f709aea93
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

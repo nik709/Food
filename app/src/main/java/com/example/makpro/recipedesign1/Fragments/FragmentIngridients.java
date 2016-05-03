@@ -41,7 +41,8 @@ public class FragmentIngridients extends Fragment implements View.OnClickListene
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
-    Button meatB, veganB, result, milkB, fruitB, cornB, nutB;
+    Button meatB, veganB, result, milkB, fruitB, cornB, nutB, herbB, seasoningB, juiceB, seafoodB,
+    eggB, mushB, groceryB;
     View view;
     MeatFragment mF;
     vegetableFragment vF;
@@ -49,6 +50,13 @@ public class FragmentIngridients extends Fragment implements View.OnClickListene
     milk milkF;
     corn cornF;
     nut nutF;
+    herb herbF;
+    juice juiceF;
+    seasoning seasoningF;
+    seafood seafoodF;
+    egg eggF;
+    grocery groceryF;
+    mushroom mushF;
     ResultFragment rF;
     TextView txt;
     FragmentTransaction fTrans;
@@ -99,6 +107,13 @@ public class FragmentIngridients extends Fragment implements View.OnClickListene
         cornF = new corn();
         rF = new ResultFragment();
         nutF = new nut();
+        herbF = new herb();
+        seasoningF = new seasoning();
+        juiceF = new juice();
+        seafoodF = new seafood();
+        eggF = new egg();
+        mushF = new mushroom();
+        groceryF = new grocery();
 
         staticString.str = new ArrayList<String>();
         if (getArguments() != null) {
@@ -151,6 +166,13 @@ public class FragmentIngridients extends Fragment implements View.OnClickListene
         fruitB = (Button) view.findViewById(R.id.fruitButton);
         result = (Button) view.findViewById(R.id.search);
         nutB = (Button) view.findViewById(R.id.nutButton);
+        herbB = (Button) view.findViewById(R.id.herbButton);
+        seasoningB = (Button) view.findViewById(R.id.seasoningButton);
+        juiceB = (Button) view.findViewById(R.id.juiceButton);
+        seafoodB = (Button) view.findViewById(R.id.seafoodButton);
+        eggB = (Button) view.findViewById(R.id.eggButton);
+        mushB = (Button) view.findViewById(R.id.mushroomButton);
+        groceryB = (Button) view.findViewById(R.id.groceryButton);
         result.setOnClickListener(this);
         meatB.setOnClickListener(this);
         veganB.setOnClickListener(this);
@@ -158,6 +180,13 @@ public class FragmentIngridients extends Fragment implements View.OnClickListene
         fruitB.setOnClickListener(this);
         cornB.setOnClickListener(this);
         nutB.setOnClickListener(this);
+        herbB.setOnClickListener(this);
+        seasoningB.setOnClickListener(this);
+        juiceB.setOnClickListener(this);
+        seafoodB.setOnClickListener(this);
+        eggB.setOnClickListener(this);
+        mushB.setOnClickListener(this);
+        groceryB.setOnClickListener(this);
         txt = (TextView) view.findViewById(R.id.textView2);
         txt.setText(tmp);
         for (int i=0; i<staticString.str.size(); i++) {
@@ -250,8 +279,31 @@ public class FragmentIngridients extends Fragment implements View.OnClickListene
                 break;
             case R.id.cornBN:
                 fTrans.replace(R.id.conteiner, cornF);
+                break;
             case R.id.nutButton:
                 fTrans.replace(R.id.conteiner, nutF);
+                break;
+            case R.id.herbButton:
+                fTrans.replace(R.id.conteiner, herbF);
+                break;
+            case R.id.seasoningButton:
+                fTrans.replace(R.id.conteiner, seasoningF);
+                break;
+            case R.id.juiceButton:
+                fTrans.replace(R.id.conteiner, juiceF);
+                break;
+            case R.id.seafoodButton:
+                fTrans.replace(R.id.conteiner, seafoodF);
+                break;
+            case R.id.eggButton:
+                fTrans.replace(R.id.conteiner, eggF);
+                break;
+            case R.id.mushroomButton:
+                fTrans.replace(R.id.conteiner, mushF);
+                break;
+            case R.id.groceryButton:
+                fTrans.replace(R.id.conteiner, groceryF);
+                break;
         }
         fTrans.addToBackStack(null);
         fTrans.commit();

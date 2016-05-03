@@ -1,13 +1,11 @@
 package com.example.makpro.recipedesign1.Fragments;
 
-import android.content.Context;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
-
+import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 import android.app.Fragment;
-//import android.support.v4.app.Fragment;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -18,35 +16,30 @@ import android.widget.CheckBox;
 import com.example.makpro.recipedesign1.R;
 import com.example.makpro.recipedesign1.staticString;
 
-import com.example.makpro.recipedesign1.R;
-
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link milk.OnFragmentInteractionListener} interface
+ * {@link seafood.OnFragmentInteractionListener} interface
  * to handle interaction events.
- * Use the {@link milk#newInstance} factory method to
+ * Use the {@link seafood#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class milk extends Fragment {
+public class seafood extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
     // TODO: Rename and change types of parameters
+    CheckBox ocun, gorbusha, seld, scum, redcaviar, blackcaviar;
+    Button apply;
+    View view;
     private String mParam1;
     private String mParam2;
-    View view;
-    CheckBox milk;
-    CheckBox cheese;
-    CheckBox curd;
-    CheckBox sour;
-    CheckBox cream;
-    Button apply;
+
     private OnFragmentInteractionListener mListener;
 
-    public milk() {
+    public seafood() {
         // Required empty public constructor
     }
 
@@ -56,11 +49,11 @@ public class milk extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment milk.
+     * @return A new instance of fragment seafood.
      */
     // TODO: Rename and change types and number of parameters
-    public static milk newInstance(String param1, String param2) {
-        milk fragment = new milk();
+    public static seafood newInstance(String param1, String param2) {
+        seafood fragment = new seafood();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -81,7 +74,7 @@ public class milk extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        view = inflater.inflate(R.layout.fragment_milk, container, false);
+        view = inflater.inflate(R.layout.fragment_seafood, container, false);
         view.setFocusableInTouchMode(true);
         view.requestFocus();
 
@@ -100,51 +93,58 @@ public class milk extends Fragment {
                 return false;
             }
         });
-        apply = (Button) view.findViewById(R.id.milkApply);
-        milk = (CheckBox) view.findViewById(R.id.milkBox);
-        cheese = (CheckBox) view.findViewById(R.id.cheeseBox);
-        curd = (CheckBox) view.findViewById(R.id.curdBox);
-        sour = (CheckBox) view.findViewById(R.id.sourBox);
-        cream = (CheckBox) view.findViewById(R.id.creamBox);
+        scum = (CheckBox) view.findViewById(R.id.scumBox);
+        ocun = (CheckBox) view.findViewById(R.id.ocunBox);
+        gorbusha = (CheckBox) view.findViewById(R.id.gorbushaBox);
+        seld = (CheckBox) view.findViewById(R.id.seldBox);
+        redcaviar = (CheckBox) view.findViewById(R.id.redcaviarBox);
+        blackcaviar = (CheckBox) view.findViewById(R.id.blackcaviarBox);
+        apply = (Button) view.findViewById(R.id.applySeafood);
         apply.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (milk.isChecked())
+                if (scum.isChecked())
                 {
-                    staticString.str.remove("milk");
-                    staticString.str.add("milk");
+                    staticString.str.remove("Скумбрия");
+                    staticString.str.add("Скумбрия");
                 }
                 else
-                    staticString.str.remove("milk");
-                if (cheese.isChecked())
+                    staticString.str.remove("Скумбрия");
+                if (ocun.isChecked())
                 {
-                    staticString.str.remove("cheese");
-                    staticString.str.add("cheese");
+                    staticString.str.remove("Окунь");
+                    staticString.str.add("Окунь");
                 }
                 else
-                    staticString.str.remove("cheese");
-                if (curd.isChecked())
+                    staticString.str.remove("Окунь");
+                if (gorbusha.isChecked())
                 {
-                    staticString.str.remove("kefir");
-                    staticString.str.add("kefir");
+                    staticString.str.remove("Горбуша");
+                    staticString.str.add("Горбуша");
                 }
                 else
-                    staticString.str.remove("kefir");
-                if (sour.isChecked())
+                    staticString.str.remove("Горбуша");
+                if (seld.isChecked())
                 {
-                    staticString.str.remove("sour");
-                    staticString.str.add("sour");
+                    staticString.str.remove("Сельдь");
+                    staticString.str.add("Сельдь");
                 }
                 else
-                    staticString.str.remove("sour");
-                if (cream.isChecked())
+                    staticString.str.remove("Сельдь");
+                if (redcaviar.isChecked())
                 {
-                    staticString.str.remove("cream");
-                    staticString.str.add("cream");
+                    staticString.str.remove("Красная икра");
+                    staticString.str.add("Красная икра");
                 }
                 else
-                    staticString.str.remove("cream");
-
+                    staticString.str.remove("Красная икра");
+                if (blackcaviar.isChecked())
+                {
+                    staticString.str.remove("Черная икра");
+                    staticString.str.add("Черная икра");
+                }
+                else
+                    staticString.str.remove("Черная икра");
                 FragmentManager fm = getFragmentManager();
                 fm.popBackStack();
                 FragmentTransaction ft = fm.beginTransaction();

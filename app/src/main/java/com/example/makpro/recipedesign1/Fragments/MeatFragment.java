@@ -11,6 +11,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.app.Fragment;
 //import android.support.v4.app.Fragment;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.VelocityTracker;
 import android.view.View;
@@ -86,6 +87,24 @@ public class MeatFragment extends Fragment implements View.OnClickListener {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_meat2,container, false);
+        view.setFocusableInTouchMode(true);
+        view.requestFocus();
+
+        view.setOnKeyListener(new View.OnKeyListener() {
+            @Override
+            public boolean onKey(View v, int keyCode, KeyEvent event) {
+                if (event.getAction() == KeyEvent.ACTION_UP) {
+                    if (keyCode == KeyEvent.KEYCODE_BACK) {
+                        FragmentManager fm = getFragmentManager();
+                        fm.popBackStack();
+                        FragmentTransaction ft = fm.beginTransaction();
+                        ft.commit();
+                        return true;
+                    }
+                }
+                return false;
+            }
+        });
         apply = (Button) view.findViewById(R.id.apply);
         chicken = (CheckBox) view.findViewById(R.id.CBchicken);
         Pig =(CheckBox) view.findViewById(R.id.CBpig);
