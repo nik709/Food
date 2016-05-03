@@ -3,14 +3,15 @@
     android:orientation="horizontal"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.makpro.recipedesign1.Fragments.corn">
+    tools:context="com.example.makpro.recipedesign1.Fragments.seafood">
 
     <!-- TODO: Update blank fragment layout -->
 
     <ScrollView
         android:layout_width="wrap_content"
-        android:layout_height="748dp"
-        android:id="@+id/scrollView5" >
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView11"
+        android:layout_weight="0.6">
 
         <LinearLayout
             android:orientation="vertical"
@@ -20,29 +21,43 @@
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/Рис"
-                android:id="@+id/riceB"
+                android:text="Окунь"
+                android:id="@+id/ocunBox"
                 android:checked="false" />
 
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/Овсянка"
-                android:id="@+id/oatmealB"
+                android:text="Горбуша"
+                android:id="@+id/gorbushaBox"
                 android:checked="false" />
 
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/Пшено"
-                android:id="@+id/milletB"
+                android:text="Сельдь"
+                android:id="@+id/seldBox"
                 android:checked="false" />
 
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/Гречка"
-                android:id="@+id/buckwheatB"
+                android:text="Скумбрия"
+                android:id="@+id/scumBox"
+                android:checked="false" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Красная икра"
+                android:id="@+id/redcaviarBox"
+                android:checked="false" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Черная икра"
+                android:id="@+id/blackcaviarBox"
                 android:checked="false" />
         </LinearLayout>
     </ScrollView>
@@ -55,8 +70,8 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="New Button"
-            android:id="@+id/applyCorn" />
+            android:text="Apply"
+            android:id="@+id/applySeafood" />
     </LinearLayout>
 
 </LinearLayout>

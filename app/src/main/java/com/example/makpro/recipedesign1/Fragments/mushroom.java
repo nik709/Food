@@ -1,13 +1,11 @@
 package com.example.makpro.recipedesign1.Fragments;
 
-import android.content.Context;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
-
+import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 import android.app.Fragment;
-//import android.support.v4.app.Fragment;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -18,35 +16,30 @@ import android.widget.CheckBox;
 import com.example.makpro.recipedesign1.R;
 import com.example.makpro.recipedesign1.staticString;
 
-import com.example.makpro.recipedesign1.R;
-
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link milk.OnFragmentInteractionListener} interface
+ * {@link mushroom.OnFragmentInteractionListener} interface
  * to handle interaction events.
- * Use the {@link milk#newInstance} factory method to
+ * Use the {@link mushroom#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class milk extends Fragment {
+public class mushroom extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
     // TODO: Rename and change types of parameters
+    CheckBox whitemush, champignon;
+    View view;
+    Button apply;
     private String mParam1;
     private String mParam2;
-    View view;
-    CheckBox milk;
-    CheckBox cheese;
-    CheckBox curd;
-    CheckBox sour;
-    CheckBox cream;
-    Button apply;
+
     private OnFragmentInteractionListener mListener;
 
-    public milk() {
+    public mushroom() {
         // Required empty public constructor
     }
 
@@ -56,11 +49,11 @@ public class milk extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment milk.
+     * @return A new instance of fragment mushroom.
      */
     // TODO: Rename and change types and number of parameters
-    public static milk newInstance(String param1, String param2) {
-        milk fragment = new milk();
+    public static mushroom newInstance(String param1, String param2) {
+        mushroom fragment = new mushroom();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -81,7 +74,7 @@ public class milk extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        view = inflater.inflate(R.layout.fragment_milk, container, false);
+        view = inflater.inflate(R.layout.fragment_mushroom, container, false);
         view.setFocusableInTouchMode(true);
         view.requestFocus();
 
@@ -100,50 +93,26 @@ public class milk extends Fragment {
                 return false;
             }
         });
-        apply = (Button) view.findViewById(R.id.milkApply);
-        milk = (CheckBox) view.findViewById(R.id.milkBox);
-        cheese = (CheckBox) view.findViewById(R.id.cheeseBox);
-        curd = (CheckBox) view.findViewById(R.id.curdBox);
-        sour = (CheckBox) view.findViewById(R.id.sourBox);
-        cream = (CheckBox) view.findViewById(R.id.creamBox);
+        whitemush = (CheckBox) view.findViewById(R.id.whitemBox);
+        champignon = (CheckBox) view.findViewById(R.id.champignonBox);
+        apply = (Button) view.findViewById(R.id.applyMushroom);
         apply.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (milk.isChecked())
+                if (whitemush.isChecked())
                 {
-                    staticString.str.remove("milk");
-                    staticString.str.add("milk");
+                    staticString.str.remove("Белые грибы");
+                    staticString.str.add("Белые грибы");
                 }
                 else
-                    staticString.str.remove("milk");
-                if (cheese.isChecked())
+                    staticString.str.remove("Белые грибы");
+                if (champignon.isChecked())
                 {
-                    staticString.str.remove("cheese");
-                    staticString.str.add("cheese");
+                    staticString.str.remove("Шампиньоны");
+                    staticString.str.add("Шампиньоны");
                 }
                 else
-                    staticString.str.remove("cheese");
-                if (curd.isChecked())
-                {
-                    staticString.str.remove("kefir");
-                    staticString.str.add("kefir");
-                }
-                else
-                    staticString.str.remove("kefir");
-                if (sour.isChecked())
-                {
-                    staticString.str.remove("sour");
-                    staticString.str.add("sour");
-                }
-                else
-                    staticString.str.remove("sour");
-                if (cream.isChecked())
-                {
-                    staticString.str.remove("cream");
-                    staticString.str.add("cream");
-                }
-                else
-                    staticString.str.remove("cream");
+                    staticString.str.remove("Шампиньоны");
 
                 FragmentManager fm = getFragmentManager();
                 fm.popBackStack();
