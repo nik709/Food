@@ -6,6 +6,7 @@ import android.app.FragmentTransaction;
 import android.net.Uri;
 import android.os.Bundle;
 import android.app.Fragment;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -78,6 +79,24 @@ public class fruit extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         view = inflater.inflate(R.layout.fragment_fruit, container, false);
+        view.setFocusableInTouchMode(true);
+        view.requestFocus();
+
+        view.setOnKeyListener(new View.OnKeyListener() {
+            @Override
+            public boolean onKey(View v, int keyCode, KeyEvent event) {
+                if (event.getAction() == KeyEvent.ACTION_UP) {
+                    if (keyCode == KeyEvent.KEYCODE_BACK) {
+                        FragmentManager fm = getFragmentManager();
+                        fm.popBackStack();
+                        FragmentTransaction ft = fm.beginTransaction();
+                        ft.commit();
+                        return true;
+                    }
+                }
+                return false;
+            }
+        });
         apple = (CheckBox) view.findViewById(R.id.appleB);
         pear = (CheckBox) view.findViewById(R.id.pearB);
         orange = (CheckBox) view.findViewById(R.id.orangeB);

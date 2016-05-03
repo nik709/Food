@@ -6,6 +6,7 @@ import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 import android.app.Fragment;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -75,6 +76,24 @@ public class herb extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         view = inflater.inflate(R.layout.fragment_herb, container, false);
+        view.setFocusableInTouchMode(true);
+        view.requestFocus();
+
+        view.setOnKeyListener(new View.OnKeyListener() {
+            @Override
+            public boolean onKey(View v, int keyCode, KeyEvent event) {
+                if (event.getAction() == KeyEvent.ACTION_UP) {
+                    if (keyCode == KeyEvent.KEYCODE_BACK) {
+                        FragmentManager fm = getFragmentManager();
+                        fm.popBackStack();
+                        FragmentTransaction ft = fm.beginTransaction();
+                        ft.commit();
+                        return true;
+                    }
+                }
+                return false;
+            }
+        });
         lavr = (CheckBox) view.findViewById(R.id.lavrBox);
         mint = (CheckBox) view.findViewById(R.id.mintBox);
         melisa = (CheckBox) view.findViewById(R.id.melisaBox);
