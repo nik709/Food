@@ -263,7 +263,6 @@ public class FragmentIngridients extends Fragment implements View.OnClickListene
 
                 String chislo = Integer.toString(staticString.str.size());
                 String inquiry = "select Recipe_name, Cuisine_name, Category_name, Method_name, Time_name, Description_cooking_method, Caloric_content "
-<<<<<<< HEAD
                         + "from Recipe "
                         + "inner join Cuisine on Rec_Cuisine_ID = Cuisine_ID "
                         + "inner join Category on Rec_Category_ID = Category_ID "
@@ -278,21 +277,6 @@ public class FragmentIngridients extends Fragment implements View.OnClickListene
                         + "having count(Comp_ingredient_ID)=" + chislo + " order by Recipe_ID) "
                         + "group by Recipe_ID";
                 cursor = sqLiteDatabase.rawQuery(inquiry, null);
-=======
-                        +"from Recipe "
-                        +"inner join Cuisine on Rec_Cuisine_ID = Cuisine_ID "
-                        +"inner join Category on Rec_Category_ID = Category_ID "
-                        +"inner join Cooking_method on Rec_Cooking_method_ID = Cooking_method_ID "
-                        +"inner join Time on Rec_Time_ID = Time_ID "
-                        +"inner join Composition on Recipe_ID = Comp_recipe_ID "
-                        +"where Recipe_ID in "
-                        +"(select Recipe_ID "
-                        +"from Composition "
-                        +"inner join Recipe on Recipe_ID = Comp_Recipe_ID "
-                        +"where "+ tmp + " group by Recipe_ID "
-                        +"having count(Comp_ingredient_ID)="+chislo +" order by Recipe_ID) "
-                        +"group by Recipe_ID";
-                cursor = sqLiteDatabase.rawQuery(inquiry,null);
 
                 if (cursor.moveToFirst()) {
                     int recipeColIndex = cursor.getColumnIndex("Recipe_name");
@@ -321,8 +305,7 @@ public class FragmentIngridients extends Fragment implements View.OnClickListene
                 }
                     else
                 //сказать что ТАКИХ РЕЦЕПТОВ НЕТ , ВЫ ГУРМАН. МОЖЕТ ДОБАВИТЕ СВОЙ?
-                ;            ;
->>>>>>> 914cad585f2437189395993ad45674b2ec9f5a4f
+                ;
                 logCursor(cursor);
                 cursor.close();
 

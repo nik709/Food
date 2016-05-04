@@ -73,7 +73,7 @@ public class DescriptionOfRecipeFragment extends Fragment {
         RecipeName = (TextView) view.findViewById(R.id.IDRecipeName);
         Description = (TextView) view.findViewById(R.id.IDDescription);
         RecipeName.setText(staticString.RecipeName);
-        Description.setText("Hello");
+        Description.setText(staticString.Description.get(staticString.IDofRecipe));
         return  view;
     }
 

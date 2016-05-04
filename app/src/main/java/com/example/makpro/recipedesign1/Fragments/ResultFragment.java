@@ -33,7 +33,6 @@ public class ResultFragment extends Fragment implements View.OnClickListener {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
-    public int QuatityOfRecipe = 5; //КОЛИЧЕСТВО РЕЦЕПТОВ, 100 ДЛЯ ТЕСТИРОВАНИЯ
     TextView[] textViews;
     View view;
     ScrollView scroll;
@@ -130,6 +129,7 @@ public class ResultFragment extends Fragment implements View.OnClickListener {
         for (int i=0; i<staticString.quantityRecipe; i++) {
             if (v.getId()==i) {
                 staticString.RecipeName = textViews[i].getText().toString();
+                staticString.IDofRecipe=i;
                 fTrans = getFragmentManager().beginTransaction();
                 fTrans.replace(R.id.conteiner, fD);
             }

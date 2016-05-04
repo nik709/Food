@@ -16,6 +16,6 @@ public class staticString {
     public static ArrayList<String> NameTime;
     public static ArrayList<String> Description;
     public static ArrayList<String> Caloric;
-
+    public static int IDofRecipe=0;
 
 }
