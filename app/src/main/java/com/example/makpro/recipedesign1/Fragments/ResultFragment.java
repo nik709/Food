@@ -89,14 +89,14 @@ public class ResultFragment extends Fragment implements View.OnClickListener {
         lParams.height = 50;
         //---------------------------------------------------------------------
         //-------------СОЗДАНИЕ ЭЛЕМЕНТОВ ОКНА---------------------------------
-        for (int i=0; i<QuatityOfRecipe; i++) {
+        for (int i=0; i<staticString.quantityRecipe; i++) {
             TextView textView = new TextView(view.getContext());
-            textView.setText("IT WORK" + i);
+            textView.setText(staticString.NameRecipe.get(i));
             textView.setId(i);
             linearLayout.addView(textView, lParams);
         }
-        textViews = new TextView[QuatityOfRecipe];
-        for (int i=0; i<QuatityOfRecipe; i++) {
+        textViews = new TextView[staticString.quantityRecipe];
+        for (int i=0; i<staticString.quantityRecipe; i++) {
             textViews[i] = (TextView) view.findViewById(i);
             textViews[i].setOnClickListener(this);
         }
@@ -127,7 +127,7 @@ public class ResultFragment extends Fragment implements View.OnClickListener {
 
     @Override
     public void onClick(View v) {
-        for (int i=0; i<QuatityOfRecipe; i++) {
+        for (int i=0; i<staticString.quantityRecipe; i++) {
             if (v.getId()==i) {
                 staticString.RecipeName = textViews[i].getText().toString();
                 fTrans = getFragmentManager().beginTransaction();
