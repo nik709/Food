@@ -1,9 +1,10 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="horizontal"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.example.makpro.recipedesign1.Fragments.grocery">
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    tools:context="com.example.makpro.recipedesign1.Fragments.grocery"
+    android:background="#07ff18">
 
     <!-- TODO: Update blank fragment layout -->
 
@@ -23,28 +24,36 @@
                 android:layout_height="wrap_content"
                 android:text="Спагетти"
                 android:id="@+id/spagettiBox"
-                android:checked="false" />
+                android:checked="false"
+                android:textSize="20dp"
+                android:textColor="#ff0000" />
 
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Рожки"
                 android:id="@+id/rozhokBox"
-                android:checked="false" />
+                android:checked="false"
+                android:textSize="20dp"
+                android:textColor="#ff0000" />
 
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Тесто слоеное"
                 android:id="@+id/puffpastryBox"
-                android:checked="false" />
+                android:checked="false"
+                android:textSize="20dp"
+                android:textColor="#ff0000" />
 
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Тесто дрожжевое"
                 android:id="@+id/yeastdoughBox"
-                android:checked="false" />
+                android:checked="false"
+                android:textSize="20dp"
+                android:textColor="#ff0000" />
         </LinearLayout>
     </ScrollView>
 

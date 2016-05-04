@@ -1,2 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
-<items version="2" />
+<items version="2" >
+
+    <item
+        jar="/Users/makpro/Food-1/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.3.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="a0b5d60246cd9d4f3f2443611b3b4c25265840b5">
+        <dex dex="/Users/makpro/Food-1/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-vector-drawable-23.3.0_a2b8d9cc787ad8936081c8875699cf62a2ca06cf/classes.dex" />
+    </item>
+    <item
+        jar="/Users/makpro/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.3.0/support-annotations-23.3.0.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="db7791d75a07fef9844d06236c1c59ba7bf6997c">
+        <dex dex="/Users/makpro/Food-1/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-23.3.0_60ef30f7c2c553ee580e62a368bd2142629133ef/classes.dex" />
+    </item>
+    <item
+        jar="/Users/makpro/Food-1/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="b65622a40a21c35ab4305e4c4bed4c22eeaf6216">
+        <dex dex="/Users/makpro/Food-1/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_f6582389d9f83c5cbb9f77c9338d9cd437ac4411/classes.dex" />
+    </item>
+    <item
+        jar="/Users/makpro/Food-1/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.3.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="8a034dd16c0dfd75fe86c52c2cd581592acc684a">
+        <dex dex="/Users/makpro/Food-1/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-23.3.0_5569148a55652ed83d10e1cfc9f45a70410c3acf/classes.dex" />
+    </item>
+    <item
+        jar="/Users/makpro/Food-1/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="1b8e03daaa43fb0a4cd57e378167c2fd70454c1e">
+        <dex dex="/Users/makpro/Food-1/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-23.3.0_5eedf0ccc5e143b1297dfa3ad0f5f5209edd5d31/classes.dex" />
+    </item>
+    <item
+        jar="/Users/makpro/Food-1/app/build/intermediates/exploded-aar/com.android.support/design/23.3.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="f0001e71cea6ae432a00021c6f727f5ef0f3d27e">
+        <dex dex="/Users/makpro/Food-1/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-design-23.3.0_112ce98dd05330842fcbffd19b6ecfa91b170b47/classes.dex" />
+    </item>
+    <item
+        jar="/Users/makpro/Food-1/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.3.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="23be6993826b8fd88bbc8d14928bb3b8960d3d4e">
+        <dex dex="/Users/makpro/Food-1/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-animated-vector-drawable-23.3.0_49853d5406201f9e1bf529ba94f0b382f9733e62/classes.dex" />
+    </item>
+    <item
+        jar="/Users/makpro/Food-1/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="2c316a79b3e071688e392a3a106a474c52279ccb">
+        <dex dex="/Users/makpro/Food-1/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_cccdb958a8554a76fc708d3e997dc4b87dddaf75/classes.dex" />
+    </item>
+    <item
+        jar="/Users/makpro/Food-1/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.3.0/jars/libs/internal_impl-23.3.0.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="4da5a4d697d32497c6f85567a5112e62fdfd0676">
+        <dex dex="/Users/makpro/Food-1/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-23.3.0_cd980a24fbca8b7f039a89b712f89dcee7539c3f/classes.dex" />
+    </item>
+    <item
+        jar="/Users/makpro/Food-1/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.3.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="debf30ce0a7560396b6235edef77e447006454c2">
+        <dex dex="/Users/makpro/Food-1/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-recyclerview-v7-23.3.0_8fbde255615420e47c888bf53ceabdcd6f639ea7/classes.dex" />
+    </item>
+
+</items>
