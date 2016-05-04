@@ -17,30 +17,23 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Поиск"
-        android:id="@+id/search"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
-
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="800dp"
         android:id="@+id/scrollView6"
         android:fillViewport="false"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true">
 
-        <RelativeLayout
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
             <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:text="@string/milkb"
                 android:id="@+id/milkB"
                 android:layout_below="@+id/vegetableButton"
@@ -67,7 +60,7 @@
                 android:layout_centerHorizontal="true" />
 
             <Button
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="FRUIT"
                 android:id="@+id/fruitButton"
@@ -78,7 +71,7 @@
                 android:layout_alignParentEnd="true" />
 
             <Button
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="CORN"
                 android:id="@+id/cornBN"
@@ -89,7 +82,7 @@
                 android:layout_alignParentStart="true" />
 
             <Button
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="NUTS"
                 android:id="@+id/nutButton"
@@ -100,7 +93,7 @@
                 android:layout_alignParentStart="true" />
 
             <Button
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="SEASONING"
                 android:id="@+id/seasoningButton"
@@ -109,7 +102,7 @@
                 android:layout_alignParentEnd="true" />
 
             <Button
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="JUICE"
                 android:id="@+id/juiceButton"
@@ -118,7 +111,7 @@
                 android:layout_alignParentStart="true" />
 
             <Button
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="HERB"
                 android:id="@+id/herbButton"
@@ -127,7 +120,34 @@
                 android:layout_alignParentStart="true" />
 
             <Button
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="EGG"
+                android:id="@+id/eggButton"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="GROCERY"
+                android:id="@+id/groceryButton"
+                android:layout_below="@+id/meatButton"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="MUSHROOM"
+                android:id="@+id/mushroomButton"
+                android:layout_above="@+id/milkB"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <Button
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="SEAFOOD"
                 android:id="@+id/seafoodButton"
@@ -137,33 +157,15 @@
                 android:layout_marginBottom="31dp" />
 
             <Button
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="EGG"
-                android:id="@+id/eggButton"
+                android:text="Поиск"
+                android:id="@+id/search"
                 android:layout_alignParentTop="true"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true" />
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="MUSHROOM"
-                android:id="@+id/mushroomButton"
-                android:layout_above="@+id/milkB"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true" />
 
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="GROCERY"
-                android:id="@+id/groceryButton"
-                android:layout_below="@+id/meatButton"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true" />
-
-        </RelativeLayout>
+        </LinearLayout>
     </ScrollView>
 
 </RelativeLayout>

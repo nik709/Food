@@ -60,6 +60,7 @@ public class FragmentIngridients extends Fragment implements View.OnClickListene
     ResultFragment rF;
     TextView txt;
     FragmentTransaction fTrans;
+    String tmp;
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
@@ -69,7 +70,7 @@ public class FragmentIngridients extends Fragment implements View.OnClickListene
     public SQLiteDatabase sqLiteDatabase;
     public DBHelper dbHelper;
 
-    String tmp;
+
 
     //Описание курсора
     Cursor cursor;
@@ -249,31 +250,31 @@ public class FragmentIngridients extends Fragment implements View.OnClickListene
             case R.id.milkB:
                 fTrans.replace(R.id.conteiner, milkF);
                 break;
-            case R.id.search:
-
+            case R.id.search: {
                 //---------------------------------------------------------------------------------
                 String chislo = Integer.toString(staticString.str.size());
                 String inquiry = "select Recipe_name, Cuisine_name, Category_name, Method_name, Time_name, Description_cooking_method, Caloric_content "
-                        +"from Recipe "
-                        +"inner join Cuisine on Rec_Cuisine_ID = Cuisine_ID "
-                        +"inner join Category on Rec_Category_ID = Category_ID "
-                        +"inner join Cooking_method on Rec_Cooking_method_ID = Cooking_method_ID "
-                        +"inner join Time on Rec_Time_ID = Time_ID "
-                        +"inner join Composition on Recipe_ID = Comp_recipe_ID "
-                        +"where Recipe_ID in "
-                        +"(select Recipe_ID "
-                        +"from Composition "
-                        +"inner join Recipe on Recipe_ID = Comp_Recipe_ID "
-                        +"where "+ tmp + " group by Recipe_ID "
-                        +"having count(Comp_ingredient_ID)="+chislo +" order by Recipe_ID) "
-                        +"group by Recipe_ID";
-                cursor = sqLiteDatabase.rawQuery(inquiry,null);
+                        + "from Recipe "
+                        + "inner join Cuisine on Rec_Cuisine_ID = Cuisine_ID "
+                        + "inner join Category on Rec_Category_ID = Category_ID "
+                        + "inner join Cooking_method on Rec_Cooking_method_ID = Cooking_method_ID "
+                        + "inner join Time on Rec_Time_ID = Time_ID "
+                        + "inner join Composition on Recipe_ID = Comp_recipe_ID "
+                        + "where Recipe_ID in "
+                        + "(select Recipe_ID "
+                        + "from Composition "
+                        + "inner join Recipe on Recipe_ID = Comp_Recipe_ID "
+                        + "where " + tmp + " group by Recipe_ID "
+                        + "having count(Comp_ingredient_ID)=" + chislo + " order by Recipe_ID) "
+                        + "group by Recipe_ID";
+                cursor = sqLiteDatabase.rawQuery(inquiry, null);
                 logCursor(cursor);
                 cursor.close();
                 //--------------------------------------------------------------------------------
 
                 fTrans.replace(R.id.conteiner, rF);
                 break;
+            }
             case R.id.fruitButton:
                 fTrans.replace(R.id.conteiner, fruitF);
                 break;
