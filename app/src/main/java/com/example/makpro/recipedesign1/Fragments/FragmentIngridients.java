@@ -289,6 +289,8 @@ public class FragmentIngridients extends Fragment implements View.OnClickListene
 
                     Log.d(LOG_TAG,cursor.getString(recipeColIndex));
 
+                    staticString.quantityRecipe = 0 ;
+
                     do {
                         //присваивание в каждый рецепт
                         staticString.NameRecipe.add(cursor.getString(recipeColIndex));
@@ -306,6 +308,10 @@ public class FragmentIngridients extends Fragment implements View.OnClickListene
                     else
                 //сказать что ТАКИХ РЕЦЕПТОВ НЕТ , ВЫ ГУРМАН. МОЖЕТ ДОБАВИТЕ СВОЙ?
                 ;
+<<<<<<< HEAD
+=======
+                Log.d(LOG_TAG,Integer.toString(staticString.quantityRecipe));
+>>>>>>> 8b16b944f908593e59efe7da9fc6033800c58c61
                 logCursor(cursor);
                 cursor.close();
 

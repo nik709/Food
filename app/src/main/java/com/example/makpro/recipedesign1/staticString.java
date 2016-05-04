@@ -8,7 +8,7 @@ import java.util.ArrayList;
 public class staticString {
     public static ArrayList<String> str;
     public static String RecipeName;
-    public static int quantityRecipe = 0;
+    public static int quantityRecipe ;
     public static ArrayList<String> NameRecipe;
     public static ArrayList<String> NameCuisine;
     public static ArrayList<String> NameCategory;
