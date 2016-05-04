@@ -2,16 +2,20 @@ package com.example.makpro.recipedesign1.Fragments;
 
 import android.app.FragmentTransaction;
 import android.content.Context;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
 import android.os.Bundle;
 //import android.support.v4.app.Fragment;
 import  android.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.example.makpro.recipedesign1.DBHelper;
 import com.example.makpro.recipedesign1.R;
 import com.example.makpro.recipedesign1.staticString;
 
@@ -56,11 +60,21 @@ public class FragmentIngridients extends Fragment implements View.OnClickListene
     ResultFragment rF;
     TextView txt;
     FragmentTransaction fTrans;
+    String tmp;
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
 
     private OnFragmentInteractionListener mListener;
+
+    public SQLiteDatabase sqLiteDatabase;
+    public DBHelper dbHelper;
+
+
+
+    //Описание курсора
+    Cursor cursor;
+    final String LOG_TAG = "myLogs";
 
     public FragmentIngridients() {
         // Required empty public constructor
@@ -112,8 +126,40 @@ public class FragmentIngridients extends Fragment implements View.OnClickListene
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        String tmp = "";
+        tmp = "";
         view = inflater.inflate(R.layout.fragment_fragment_ingridients, container, false);
+
+        //------------------------------------------------------------------------------------------------
+        //подлючаемся к базе данных
+        dbHelper = new DBHelper(view.getContext());
+        sqLiteDatabase = dbHelper.getWritableDatabase();
+
+        // выводим в лог блюда по типу
+        Log.d(LOG_TAG, "--- Table Ingredient ---");
+        cursor = sqLiteDatabase.query("Ingredient", null, null, null, null, null, null);
+        logCursor(cursor);
+        cursor.close();
+        Log.d(LOG_TAG, "--- ---");
+
+        Log.d(LOG_TAG, "--- Table Recipe ---");
+        cursor = sqLiteDatabase.query("Recipe", null, null, null, null, null, null);
+        logCursor(cursor);
+        cursor.close();
+        Log.d(LOG_TAG, "--- ---");
+
+        Log.d(LOG_TAG, "--- INNER JOIN with rawQuery---");
+        String sqlQuery = "select Recipe_name, Method_name, Cuisine_name "
+                +"from Recipe "
+                +"inner join Cooking_method on Rec_Cooking_method_ID = Cooking_method_ID "
+                +"inner join Cuisine on Rec_Cuisine_ID = Cuisine_ID "
+                +"where Rec_Cooking_method_ID = ?";
+        cursor = sqLiteDatabase.rawQuery(sqlQuery,new String[]{"16"});
+        logCursor(cursor);
+        cursor.close();
+        Log.d(LOG_TAG, "--- ---");
+
+//--------------------------------------------------------------------------------------------------
+
         meatB = (Button) view.findViewById(R.id.meatButton);
         cornB = (Button) view.findViewById(R.id.cornBN);
         veganB = (Button) view.findViewById(R.id.vegetableButton);
@@ -151,23 +197,6 @@ public class FragmentIngridients extends Fragment implements View.OnClickListene
                 tmp+=staticString.str.get(i);
         }
         txt.setText(tmp);
-//-------------------------------------------------------------------------------------------------
-        String chislo = Integer.toString(staticString.str.size());
-        String inquiry = "select Recipe_name, Cuisine_name, Category_name, Method_name, Time_name, Description_cooking_method, Caloric_content"
-                +"from Recipe "
-                +"inner join Cuisine on Rec_Cuisine_ID = Cuisine_ID "
-                +"inner join Category on Rec_Category_ID = Category_ID "
-                +"inner join Cooking_method on Rec_Cooking_method_ID = Cooking_method_ID "
-                +"inner join Time on Rec_Time_ID = Time_ID "
-                +"inner join Composition on Recipe_ID = Comp_recipe_ID "
-                +"where Recipe_ID in "
-                +"(select Recipe_ID "
-                +"from Composition "
-                +"inner join Recipe on Recipe_ID = Comp_Recipe_ID "
-                +"where"+ tmp + " group by Recipe_ID "
-                +"having count(Comp_ingredient_ID)="+chislo +" order by Recipe_ID) "
-                +"group by Recipe_ID";
-//-----------11--------------------------------------------------------------------------------------
         return view;
     }
 
@@ -192,6 +221,22 @@ public class FragmentIngridients extends Fragment implements View.OnClickListene
         mListener = null;
     }
 
+    void logCursor(Cursor c) {
+        if (c != null) {
+            if (c.moveToFirst()) {
+                String str;
+                do {
+                    str = "";
+                    for (String cn : c.getColumnNames()) {
+                        str = str.concat(cn + " = " + c.getString(c.getColumnIndex(cn)) + "; ");
+                    }
+                    Log.d(LOG_TAG, str);
+                } while (c.moveToNext());
+            }
+        } else
+            Log.d(LOG_TAG, "Cursor is null");
+    }
+
     @Override
     public void onClick(View v) {
         fTrans = getFragmentManager().beginTransaction();
@@ -205,9 +250,31 @@ public class FragmentIngridients extends Fragment implements View.OnClickListene
             case R.id.milkB:
                 fTrans.replace(R.id.conteiner, milkF);
                 break;
-            case R.id.search:
+            case R.id.search: {
+                //---------------------------------------------------------------------------------
+                String chislo = Integer.toString(staticString.str.size());
+                String inquiry = "select Recipe_name, Cuisine_name, Category_name, Method_name, Time_name, Description_cooking_method, Caloric_content "
+                        + "from Recipe "
+                        + "inner join Cuisine on Rec_Cuisine_ID = Cuisine_ID "
+                        + "inner join Category on Rec_Category_ID = Category_ID "
+                        + "inner join Cooking_method on Rec_Cooking_method_ID = Cooking_method_ID "
+                        + "inner join Time on Rec_Time_ID = Time_ID "
+                        + "inner join Composition on Recipe_ID = Comp_recipe_ID "
+                        + "where Recipe_ID in "
+                        + "(select Recipe_ID "
+                        + "from Composition "
+                        + "inner join Recipe on Recipe_ID = Comp_Recipe_ID "
+                        + "where " + tmp + " group by Recipe_ID "
+                        + "having count(Comp_ingredient_ID)=" + chislo + " order by Recipe_ID) "
+                        + "group by Recipe_ID";
+                cursor = sqLiteDatabase.rawQuery(inquiry, null);
+                logCursor(cursor);
+                cursor.close();
+                //--------------------------------------------------------------------------------
+
                 fTrans.replace(R.id.conteiner, rF);
                 break;
+            }
             case R.id.fruitButton:
                 fTrans.replace(R.id.conteiner, fruitF);
                 break;

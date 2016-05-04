@@ -145,11 +145,11 @@ public class MeatFragment extends Fragment implements View.OnClickListener {
                    staticString.str.remove("Comp_Ingredient_ID = 133");
 
                if (rabbit.isChecked()) {
-                   staticString.str.remove("Comp_Ingredient_ID = 133");
-                   staticString.str.add("Comp_Ingredient_ID = 133");
+                   staticString.str.remove("Comp_Ingredient_ID = 137");
+                   staticString.str.add("Comp_Ingredient_ID = 137");
                }
                else
-                   staticString.str.remove("Comp_Ingredient_ID = 133");
+                   staticString.str.remove("Comp_Ingredient_ID = 137");
 
                if (bear.isChecked()) {
                    staticString.str.remove("bear");

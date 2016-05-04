@@ -26,51 +26,12 @@ public class NavigatActivity extends AppCompatActivity
     FragmentIngridients FragIngridient;
     MyRecipeFragment myrecipe;
 
-    //Описание курсора
-    Cursor cursor;
-    SQLiteDatabase sqLiteDatabase;
-    DBHelper dbHelper;
-
-    final String LOG_TAG = "myLogs";
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_navigat);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-//--------------------------------------------------------------------------------------------------
-        //подлючаемся к базе данных
-        dbHelper = new DBHelper(this);
-        sqLiteDatabase = dbHelper.getWritableDatabase();
-
-        // выводим в лог блюда по типу
-        Log.d(LOG_TAG, "--- Table Ingredient ---");
-        cursor = sqLiteDatabase.query("Ingredient", null, null, null, null, null, null);
-        logCursor(cursor);
-        cursor.close();
-        Log.d(LOG_TAG, "--- ---");
-
-        Log.d(LOG_TAG, "--- Table Recipe ---");
-        cursor = sqLiteDatabase.query("Recipe", null, null, null, null, null, null);
-        logCursor(cursor);
-        cursor.close();
-        Log.d(LOG_TAG, "--- ---");
-
-        Log.d(LOG_TAG, "--- INNER JOIN with rawQuery---");
-        String sqlQuery = "select Recipe_name, Method_name, Cuisine_name "
-                +"from Recipe "
-                +"inner join Cooking_method on Rec_Cooking_method_ID = Cooking_method_ID "
-                +"inner join Cuisine on Rec_Cuisine_ID = Cuisine_ID "
-                +"where Rec_Cooking_method_ID = ?";
-        cursor = sqLiteDatabase.rawQuery(sqlQuery,new String[]{"16"});
-        logCursor(cursor);
-        cursor.close();
-        Log.d(LOG_TAG, "--- ---");
-
-//--------------------------------------------------------------------------------------------------
-
-
 
         /*FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -94,21 +55,6 @@ public class NavigatActivity extends AppCompatActivity
 
     }
 
-    void logCursor(Cursor c) {
-        if (c != null) {
-            if (c.moveToFirst()) {
-                String str;
-                do {
-                    str = "";
-                    for (String cn : c.getColumnNames()) {
-                        str = str.concat(cn + " = " + c.getString(c.getColumnIndex(cn)) + "; ");
-                    }
-                    Log.d(LOG_TAG, str);
-                } while (c.moveToNext());
-            }
-        } else
-            Log.d(LOG_TAG, "Cursor is null");
-    }
 
     @Override
     public void onBackPressed() {
