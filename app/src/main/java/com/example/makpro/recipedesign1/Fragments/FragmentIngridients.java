@@ -120,6 +120,14 @@ public class FragmentIngridients extends Fragment implements View.OnClickListene
         groceryF = new grocery();
 
         staticString.str = new ArrayList<String>();
+        staticString.NameRecipe = new ArrayList<String>();
+        staticString.NameCuisine = new ArrayList<String>();
+        staticString.NameCategory = new ArrayList<String>();
+        staticString.NameMethod = new ArrayList<String>();
+        staticString.NameTime = new ArrayList<String>();
+        staticString.Description = new ArrayList<String>();
+        staticString.Caloric = new ArrayList<String>();
+
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
@@ -255,6 +263,7 @@ public class FragmentIngridients extends Fragment implements View.OnClickListene
                 break;
             case R.id.search: {
                 //---------------------------------------------------------------------------------
+
                 String chislo = Integer.toString(staticString.str.size());
                 String inquiry = "select Recipe_name, Cuisine_name, Category_name, Method_name, Time_name, Description_cooking_method, Caloric_content "
                         + "from Recipe "
@@ -271,8 +280,44 @@ public class FragmentIngridients extends Fragment implements View.OnClickListene
                         + "having count(Comp_ingredient_ID)=" + chislo + " order by Recipe_ID) "
                         + "group by Recipe_ID";
                 cursor = sqLiteDatabase.rawQuery(inquiry, null);
+
+                if (cursor.moveToFirst()) {
+                    int recipeColIndex = cursor.getColumnIndex("Recipe_name");
+                    int cuisineColIndex = cursor.getColumnIndex("Cuisine_name");
+                    int categoryColIndex = cursor.getColumnIndex("Category_name");
+                    int methodColIndex = cursor.getColumnIndex("Method_name");
+                    int timeColIndex = cursor.getColumnIndex("Time_name");
+                    int descriptionColIndex = cursor.getColumnIndex("Description_cooking_method");
+                    int caloricColIndex = cursor.getColumnIndex("Caloric_content");
+
+                    Log.d(LOG_TAG,cursor.getString(recipeColIndex));
+
+                    staticString.quantityRecipe = 0 ;
+
+                    do {
+                        //присваивание в каждый рецепт
+                        staticString.NameRecipe.add(cursor.getString(recipeColIndex));
+                        staticString.NameCuisine.add(cursor.getString(cuisineColIndex));
+                        staticString.NameCategory.add(cursor.getString(categoryColIndex));
+                        staticString.NameMethod.add(cursor.getString(methodColIndex));
+                        staticString.NameTime.add(cursor.getString(timeColIndex));
+                        staticString.Description.add(cursor.getString(descriptionColIndex));
+                        staticString.Caloric.add(cursor.getString(caloricColIndex));
+
+                        staticString.quantityRecipe = staticString.quantityRecipe + 1;
+
+                    } while (cursor.moveToNext());
+                }
+                    else
+                //сказать что ТАКИХ РЕЦЕПТОВ НЕТ , ВЫ ГУРМАН. МОЖЕТ ДОБАВИТЕ СВОЙ?
+                ;
+<<<<<<< HEAD
+=======
+                Log.d(LOG_TAG,Integer.toString(staticString.quantityRecipe));
+>>>>>>> 8b16b944f908593e59efe7da9fc6033800c58c61
                 logCursor(cursor);
                 cursor.close();
+
                 //--------------------------------------------------------------------------------
 
                 fTrans.replace(R.id.conteiner, rF);

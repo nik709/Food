@@ -33,7 +33,6 @@ public class ResultFragment extends Fragment implements View.OnClickListener {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
-    public int QuatityOfRecipe = 5; //КОЛИЧЕСТВО РЕЦЕПТОВ, 100 ДЛЯ ТЕСТИРОВАНИЯ
     TextView[] textViews;
     View view;
     ScrollView scroll;
@@ -89,14 +88,14 @@ public class ResultFragment extends Fragment implements View.OnClickListener {
         lParams.height = 50;
         //---------------------------------------------------------------------
         //-------------СОЗДАНИЕ ЭЛЕМЕНТОВ ОКНА---------------------------------
-        for (int i=0; i<QuatityOfRecipe; i++) {
+        for (int i=0; i<staticString.quantityRecipe; i++) {
             TextView textView = new TextView(view.getContext());
-            textView.setText("IT WORK" + i);
+            textView.setText(staticString.NameRecipe.get(i));
             textView.setId(i);
             linearLayout.addView(textView, lParams);
         }
-        textViews = new TextView[QuatityOfRecipe];
-        for (int i=0; i<QuatityOfRecipe; i++) {
+        textViews = new TextView[staticString.quantityRecipe];
+        for (int i=0; i<staticString.quantityRecipe; i++) {
             textViews[i] = (TextView) view.findViewById(i);
             textViews[i].setOnClickListener(this);
         }
@@ -127,9 +126,10 @@ public class ResultFragment extends Fragment implements View.OnClickListener {
 
     @Override
     public void onClick(View v) {
-        for (int i=0; i<QuatityOfRecipe; i++) {
+        for (int i=0; i<staticString.quantityRecipe; i++) {
             if (v.getId()==i) {
                 staticString.RecipeName = textViews[i].getText().toString();
+                staticString.IDofRecipe=i;
                 fTrans = getFragmentManager().beginTransaction();
                 fTrans.replace(R.id.conteiner, fD);
             }
