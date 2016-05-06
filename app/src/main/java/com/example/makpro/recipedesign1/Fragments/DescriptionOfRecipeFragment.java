@@ -4,9 +4,13 @@ import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 import android.app.Fragment;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.makpro.recipedesign1.R;
@@ -20,7 +24,7 @@ import com.example.makpro.recipedesign1.staticString;
  * Use the {@link DescriptionOfRecipeFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class DescriptionOfRecipeFragment extends Fragment {
+public class DescriptionOfRecipeFragment extends Fragment implements View.OnClickListener {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -31,6 +35,7 @@ public class DescriptionOfRecipeFragment extends Fragment {
     private String mParam2;
     TextView RecipeName;
     TextView Description;
+    Button addComment;
     View view;
 
     private OnFragmentInteractionListener mListener;
@@ -70,6 +75,8 @@ public class DescriptionOfRecipeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_description_of_recipe, container, false);
+        addComment = (Button) view.findViewById(R.id.addComment);
+        addComment.setOnClickListener(this);
         RecipeName = (TextView) view.findViewById(R.id.IDRecipeName);
         Description = (TextView) view.findViewById(R.id.IDDescription);
         RecipeName.setText(staticString.RecipeName);
@@ -96,6 +103,20 @@ public class DescriptionOfRecipeFragment extends Fragment {
     public void onDetach() {
         super.onDetach();
         mListener = null;
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch(v.getId()){
+            case R.id.addComment:
+                LinearLayout layout = (LinearLayout) view.findViewById(R.id.description);
+                LinearLayout.LayoutParams lParams = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+                int gravity = Gravity.LEFT; //по левому краю
+                lParams.gravity = gravity;
+                EditText editText = new EditText(view.getContext());
+                layout.addView(editText, lParams);
+                break;
+        }
     }
 
     /**

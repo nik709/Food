@@ -11,6 +11,8 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.example.makpro.recipedesign1.NavigatActivity"
     tools:showIn="@layout/app_bar_navigat"
-    android:id="@+id/conteiner">
+    android:id="@+id/conteiner"
+
+    >
 
 </FrameLayout>
