@@ -4,6 +4,7 @@ import android.app.FragmentTransaction;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Bundle;
 //import android.support.v4.app.Fragment;
@@ -13,6 +14,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.example.makpro.recipedesign1.DBHelper;
@@ -41,8 +43,9 @@ public class FragmentIngridients extends Fragment implements View.OnClickListene
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
-    Button meatB, veganB, result, milkB, fruitB, cornB, nutB, herbB, seasoningB, juiceB, seafoodB,
-    eggB, mushB, groceryB;
+    Button result;
+    ImageButton milkB, meatB, fruitB, groceryB, mushB, veganB, cornB, nutB, seasoningB, juiceB,
+    herbB, eggB, seafoodB;
     View view;
     MeatFragment mF;
     vegetableFragment vF;
@@ -159,21 +162,21 @@ public class FragmentIngridients extends Fragment implements View.OnClickListene
         Log.d(LOG_TAG, "--- ---");
 
 //--------------------------------------------------------------------------------------------------
-
-        meatB = (Button) view.findViewById(R.id.meatButton);
-        cornB = (Button) view.findViewById(R.id.cornBN);
-        veganB = (Button) view.findViewById(R.id.vegetableButton);
-        milkB = (Button) view.findViewById(R.id.milkB);
-        fruitB = (Button) view.findViewById(R.id.fruitButton);
+        Typeface ingredientFont = Typeface.createFromAsset(getActivity().getAssets(), "Peace Sans Webfont.ttf");
+        meatB = (ImageButton) view.findViewById(R.id.meatButton);
+        cornB = (ImageButton) view.findViewById(R.id.cornBN);
+        veganB = (ImageButton) view.findViewById(R.id.vegetableButton);
+        milkB = (ImageButton) view.findViewById(R.id.milkButton);
+        fruitB = (ImageButton) view.findViewById(R.id.fruitButton);
         result = (Button) view.findViewById(R.id.search);
-        nutB = (Button) view.findViewById(R.id.nutButton);
-        herbB = (Button) view.findViewById(R.id.herbButton);
-        seasoningB = (Button) view.findViewById(R.id.seasoningButton);
-        juiceB = (Button) view.findViewById(R.id.juiceButton);
-        seafoodB = (Button) view.findViewById(R.id.seafoodButton);
-        eggB = (Button) view.findViewById(R.id.eggButton);
-        mushB = (Button) view.findViewById(R.id.mushroomButton);
-        groceryB = (Button) view.findViewById(R.id.groceryButton);
+        nutB = (ImageButton) view.findViewById(R.id.nutButton);
+        herbB = (ImageButton) view.findViewById(R.id.herbButton);
+        seasoningB = (ImageButton) view.findViewById(R.id.seasoningButton);
+        juiceB = (ImageButton) view.findViewById(R.id.juiceButton);
+        seafoodB = (ImageButton) view.findViewById(R.id.seafoodButton);
+        eggB = (ImageButton) view.findViewById(R.id.eggButton);
+        mushB = (ImageButton) view.findViewById(R.id.mushroomButton);
+        groceryB = (ImageButton) view.findViewById(R.id.groceryButton);
         result.setOnClickListener(this);
         meatB.setOnClickListener(this);
         veganB.setOnClickListener(this);
@@ -247,7 +250,7 @@ public class FragmentIngridients extends Fragment implements View.OnClickListene
             case R.id.vegetableButton:
                 fTrans.replace(R.id.conteiner, vF);
                 break;
-            case R.id.milkB:
+            case R.id.milkButton:
                 fTrans.replace(R.id.conteiner, milkF);
                 break;
             case R.id.search: {

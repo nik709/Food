@@ -7,6 +7,7 @@ import android.content.Context;
 import android.content.res.Resources;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Bundle;
 import android.app.Fragment;
@@ -87,6 +88,7 @@ public class MeatFragment extends Fragment implements View.OnClickListener {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_meat2,container, false);
+        Typeface general = Typeface.createFromAsset(getActivity().getAssets(), "Peace Sans Webfont.ttf");
         view.setFocusableInTouchMode(true);
         view.requestFocus();
 
@@ -107,11 +109,17 @@ public class MeatFragment extends Fragment implements View.OnClickListener {
         });
         apply = (Button) view.findViewById(R.id.apply);
         chicken = (CheckBox) view.findViewById(R.id.CBchicken);
+        chicken.setTypeface(general);
         Pig =(CheckBox) view.findViewById(R.id.CBpig);
+        Pig.setTypeface(general);
         turkey =(CheckBox) view.findViewById(R.id.CBturkey);
+        turkey.setTypeface(general);
         cow =(CheckBox) view.findViewById(R.id.CBcow);
+        cow.setTypeface(general);
         rabbit =(CheckBox) view.findViewById(R.id.CBrabbit);
+        rabbit.setTypeface(general);
         bear =(CheckBox) view.findViewById(R.id.CBbear);
+        bear.setTypeface(general);
         apply.setOnClickListener(new View.OnClickListener(){
            @Override
             public void onClick(View v)

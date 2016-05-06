@@ -4,7 +4,8 @@
     android:layout_height="match_parent"
     android:orientation="horizontal"
     tools:context="com.example.makpro.recipedesign1.Fragments.MeatFragment"
-    android:weightSum="1">
+    android:weightSum="1"
+    android:background="@drawable/meatt">
 
     <!-- TODO: Update blank fragment layout -->
 
@@ -26,7 +27,8 @@
                 android:text="@string/Chicken"
                 android:id="@+id/CBchicken"
                 android:checked="false"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:textColor="#ffe100" />
 
             <CheckBox
                 android:layout_width="wrap_content"
@@ -34,7 +36,8 @@
                 android:text="@string/Pig"
                 android:id="@+id/CBpig"
                 android:checked="false"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:textColor="#ffe100" />
 
             <CheckBox
                 android:layout_width="wrap_content"
@@ -42,7 +45,8 @@
                 android:text="@string/turkey"
                 android:id="@+id/CBturkey"
                 android:checked="false"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:textColor="#ffe100" />
 
             <CheckBox
                 android:layout_width="wrap_content"
@@ -50,7 +54,8 @@
                 android:text="@string/Cow"
                 android:id="@+id/CBcow"
                 android:checked="false"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:textColor="#ffe100" />
 
             <CheckBox
                 android:layout_width="wrap_content"
@@ -58,7 +63,8 @@
                 android:text="@string/Rabbit"
                 android:id="@+id/CBrabbit"
                 android:checked="false"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:textColor="#ffe100" />
 
             <CheckBox
                 android:layout_width="wrap_content"
@@ -66,7 +72,8 @@
                 android:text="@string/Bear"
                 android:id="@+id/CBbear"
                 android:checked="false"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:textColor="#ffe100" />
 
         </LinearLayout>
     </ScrollView>
