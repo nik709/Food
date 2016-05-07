@@ -124,13 +124,7 @@ public class FragmentIngridients extends Fragment implements View.OnClickListene
 
         //staticString.str = new ArrayList<String>();
 
-        staticString.NameRecipe = new ArrayList<String>();
-        staticString.NameCuisine = new ArrayList<String>();
-        staticString.NameCategory = new ArrayList<String>();
-        staticString.NameMethod = new ArrayList<String>();
-        staticString.NameTime = new ArrayList<String>();
-        staticString.Description = new ArrayList<String>();
-        staticString.Caloric = new ArrayList<String>();
+
 
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);

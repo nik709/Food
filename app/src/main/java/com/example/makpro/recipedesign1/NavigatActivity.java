@@ -59,6 +59,13 @@ public class NavigatActivity extends AppCompatActivity
         addRecipeFragment = new AddRecipeFragment();
         staticString.str = new ArrayList<String>();
         staticString.addIngridients = new ArrayList<String>();
+        staticString.NameRecipe = new ArrayList<String>();
+        staticString.NameCuisine = new ArrayList<String>();
+        staticString.NameCategory = new ArrayList<String>();
+        staticString.NameMethod = new ArrayList<String>();
+        staticString.NameTime = new ArrayList<String>();
+        staticString.Description = new ArrayList<String>();
+        staticString.Caloric = new ArrayList<String>();
 
     }
 
