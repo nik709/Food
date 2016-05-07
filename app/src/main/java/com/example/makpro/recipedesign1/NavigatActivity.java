@@ -66,6 +66,10 @@ public class NavigatActivity extends AppCompatActivity
         staticString.NameTime = new ArrayList<String>();
         staticString.Description = new ArrayList<String>();
         staticString.Caloric = new ArrayList<String>();
+        staticString.SearchCuisine = new ArrayList<String>();
+        staticString.SearchCategory = new ArrayList<String>();
+        staticString.SearchTime = new ArrayList<String>();
+        staticString.SearchCookingMethod = new ArrayList<String>();
 
     }
 

@@ -137,6 +137,15 @@ public class CategoryFragment extends Fragment implements View.OnClickListener {
                 else
                     staticString.SearchCategory.remove("15");
 
+                if (staticString.IsAdd){
+                    for (int i=0; i<staticString.addCategory.size(); i++)
+                        staticString.addCategory.remove(i);
+                    for (int i=0; i<staticString.SearchTime.size(); i++)
+                        staticString.addCategory.add(staticString.SearchCategory.get(i));
+                    for (int i=0; i<staticString.SearchCategory.size(); i++)
+                        staticString.SearchCategory.remove(i);
+                }
+
                 FragmentManager fm = getFragmentManager();
                 fm.popBackStack();
                 FragmentTransaction ft = fm.beginTransaction();

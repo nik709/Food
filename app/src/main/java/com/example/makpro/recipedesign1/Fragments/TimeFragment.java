@@ -153,6 +153,15 @@ public class TimeFragment extends Fragment {
                 else
                     staticString.SearchTime.remove("1007");
 
+                if (staticString.IsAdd){
+                    for (int i=0; i<staticString.addTime.size(); i++)
+                        staticString.addTime.remove(i);
+                    for (int i=0; i<staticString.SearchTime.size(); i++)
+                        staticString.addTime.add(staticString.SearchTime.get(i));
+                    for (int i=0; i<staticString.SearchTime.size(); i++)
+                        staticString.SearchTime.remove(i);
+                }
+
                 FragmentManager fm = getFragmentManager();
                 fm.popBackStack();
                 FragmentTransaction ft = fm.beginTransaction();

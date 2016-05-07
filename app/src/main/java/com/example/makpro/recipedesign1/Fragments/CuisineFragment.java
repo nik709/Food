@@ -128,7 +128,14 @@ public class CuisineFragment extends Fragment implements View.OnClickListener {
                 }
                 else
                     staticString.SearchCuisine.remove("4");
-
+                if (staticString.IsAdd){
+                    for (int i=0; i<staticString.addCuisine.size(); i++)
+                        staticString.addCuisine.remove(i);
+                    for (int i=0; i<staticString.SearchCuisine.size(); i++)
+                        staticString.addCuisine.add(staticString.SearchCuisine.get(i));
+                    for (int i=0; i<staticString.SearchCuisine.size(); i++)
+                        staticString.SearchCuisine.remove(i);
+                }
 
                 FragmentManager fm = getFragmentManager();
                 fm.popBackStack();

@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.example.makpro.recipedesign1.R;
 import com.example.makpro.recipedesign1.staticString;
@@ -33,7 +34,8 @@ public class AddRecipeFragment extends Fragment implements View.OnClickListener 
     private String mParam1;
     private String mParam2;
     View view;
-    Button addIngr, addTime, addCuisine, addCategory, addMethod, addDescription;
+    Button addIngr, addTime, addCuisine, addCategory, addMethod, addDescription, ADD;
+    TextView test;
 
     FragmentTransaction fTrans;
     FragmentIngridients fragmentIngridients;
@@ -41,6 +43,7 @@ public class AddRecipeFragment extends Fragment implements View.OnClickListener 
     CuisineFragment cuisineFragment;
     CategoryFragment categoryFragment;
     Cooking_methodFragment cooking_methodFragment;
+    AddDescriptionFragment addDescriptionFragment;
 
     private OnFragmentInteractionListener mListener;
 
@@ -74,7 +77,11 @@ public class AddRecipeFragment extends Fragment implements View.OnClickListener 
         cuisineFragment = new CuisineFragment();
         categoryFragment = new CategoryFragment();
         cooking_methodFragment = new Cooking_methodFragment();
+        addDescriptionFragment = new AddDescriptionFragment();
         staticString.addTime = new ArrayList<String>();
+        staticString.addCuisine = new ArrayList<String>();
+        staticString.addCategory = new ArrayList<String>();
+        staticString.addCookingMethod = new ArrayList<String>();
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
@@ -91,12 +98,20 @@ public class AddRecipeFragment extends Fragment implements View.OnClickListener 
         addCategory = (Button) view.findViewById(R.id.addCategory);
         addMethod = (Button) view.findViewById(R.id.addMethod);
         addDescription = (Button) view.findViewById(R.id.addDescription);
+        ADD = (Button) view.findViewById(R.id.ADD);
+        ADD.setOnClickListener(this);
         addIngr.setOnClickListener(this);
         addTime.setOnClickListener(this);
         addCuisine.setOnClickListener(this);
         addCategory.setOnClickListener(this);
         addMethod.setOnClickListener(this);
         addDescription.setOnClickListener(this);
+        test = (TextView) view.findViewById(R.id.textView3);
+        String testStr;
+        testStr ="";
+        for (int i=0; i<staticString.addTime.size(); i++)
+            testStr+=staticString.addTime.get(i);
+        test.setText(testStr);
         return view;
     }
 
@@ -142,6 +157,10 @@ public class AddRecipeFragment extends Fragment implements View.OnClickListener 
                 fTrans.replace(R.id.conteiner, cooking_methodFragment);
                 break;
             case R.id.addDescription:
+                fTrans.replace(R.id.conteiner, addDescriptionFragment);
+                break;
+            case R.id.ADD:
+                //ДОБАВЛЕНИЕ РЕЦЕПТА В БД
                 break;
         }
         fTrans.addToBackStack(null);

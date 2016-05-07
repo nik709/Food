@@ -124,8 +124,6 @@ public class FragmentIngridients extends Fragment implements View.OnClickListene
 
         //staticString.str = new ArrayList<String>();
 
-
-
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
@@ -233,9 +231,11 @@ public class FragmentIngridients extends Fragment implements View.OnClickListene
                 public void onClick(View v){
                     for (int i=0; i<staticString.addIngridients.size(); i++)
                         staticString.addIngridients.remove(i);
-                    staticString.addIngridients = staticString.str;
+                    for (int i=0; i<staticString.str.size(); i++)
+                        staticString.addIngridients.add(staticString.str.get(i));
                     for (int i=0; i<staticString.str.size(); i++)
                         staticString.str.remove(i);
+
                     FragmentManager fm = getFragmentManager();
                     fm.popBackStack();
                     FragmentTransaction ft = fm.beginTransaction();

@@ -25,7 +25,13 @@ public class staticString {
     public static ArrayList<String> SearchTime;
 
     public static int IDofRecipe=0;
+
     public static boolean IsAdd = false;
-    public static ArrayList<String> addIngridients;
-    public static ArrayList<String> addTime;
+    public static ArrayList<String> addIngridients; //НОВЫЕ ИНГРИДИЕНТЫ
+    public static ArrayList<String> addTime; //НОВОЕ ВРЕМЯ
+    public static ArrayList<String> addCuisine; //НОВАЯ КУХНЯ
+    public static ArrayList<String> addCategory; //НОВАЯ КАТЕГОРИЯ
+    public static ArrayList<String> addCookingMethod; //НОВЫЙ СПОСОБ ПРИГОТОВЛЕНИЯ
+    public static String addName; //НОВОЕ ИМЯ
+    public static String addDescription; //НОВОЕ ОПИСАНИЕ
 }

@@ -122,6 +122,15 @@ public class Cooking_methodFragment extends Fragment implements View.OnClickList
                 else
                     staticString.SearchCookingMethod.remove("18");
 
+                if (staticString.IsAdd){
+                    for (int i=0; i<staticString.addCookingMethod.size(); i++)
+                        staticString.addCookingMethod.remove(i);
+                    for (int i=0; i<staticString.SearchTime.size(); i++)
+                        staticString.addCookingMethod.add(staticString.SearchCookingMethod.get(i));
+                    for (int i=0; i<staticString.SearchCookingMethod.size(); i++)
+                        staticString.SearchCookingMethod.remove(i);
+                }
+
                 FragmentManager fm = getFragmentManager();
                 fm.popBackStack();
                 FragmentTransaction ft = fm.beginTransaction();

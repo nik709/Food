@@ -93,10 +93,7 @@ public class MyRecipeFragment extends Fragment implements View.OnClickListener {
         }
 
 
-        staticString.SearchCuisine = new ArrayList<String>();
-        staticString.SearchCategory = new ArrayList<String>();
-        staticString.SearchTime = new ArrayList<String>();
-        staticString.SearchCookingMethod = new ArrayList<String>();
+
     }
 
     @Override
