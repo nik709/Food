@@ -43,7 +43,7 @@
                 android:layout_height="match_parent">
 
                 <ImageButton
-                    android:layout_width="78dp"
+                    android:layout_width="100dp"
                     android:layout_height="100dp"
                     android:id="@+id/milkButton"
                     android:background="@drawable/moloko"
@@ -54,10 +54,20 @@
                     android:layout_height="100dp"
                     android:id="@+id/fruitButton"
                     android:background="@drawable/vish"
-                    android:layout_column="25"
+                    android:layout_column="49"
                     android:layout_alignParentTop="true"
                     android:layout_alignLeft="@+id/textView2"
                     android:layout_alignStart="@+id/textView2" />
+
+                <ImageButton
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:id="@+id/mushroomButton"
+                    android:background="@drawable/grib"
+                    android:layout_alignBottom="@+id/fruitButton"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_column="51" />
 
             </TableRow>
 
@@ -66,8 +76,8 @@
                 android:layout_height="match_parent">
 
                 <ImageButton
-                    android:layout_width="94dp"
-                    android:layout_height="83dp"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
                     android:id="@+id/meatButton"
                     android:background="@drawable/steyk"
                     android:layout_alignParentBottom="true"
@@ -89,15 +99,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-                <ImageButton
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:id="@+id/mushroomButton"
-                    android:background="@drawable/grib"
-                    android:layout_alignBottom="@+id/fruitButton"
-                    android:layout_alignParentRight="true"
-                    android:layout_alignParentEnd="true"
-                    android:layout_column="14" />
             </TableRow>
 
             <ImageButton

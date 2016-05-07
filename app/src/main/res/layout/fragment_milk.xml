@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     tools:context="com.example.makpro.recipedesign1.Fragments.milk"
-    android:weightSum="1">
+    android:weightSum="1"
+    android:background="@drawable/milk">
 
     <!-- TODO: Update blank fragment layout -->
 
@@ -24,35 +25,52 @@
                 android:layout_height="wrap_content"
                 android:text="@string/milk"
                 android:id="@+id/milkBox"
-                android:checked="false" />
+                android:checked="false"
+                android:textColor="#0b765c"
+                android:textSize="20dp"
+                android:textColorHighlight="#000000" />
 
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/cheese"
                 android:id="@+id/cheeseBox"
-                android:checked="false" />
+                android:checked="false"
+                android:textColor="#0b765c"
+                android:textSize="20dp"
+                android:textColorHighlight="#000000" />
 
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/kefir"
                 android:id="@+id/curdBox"
-                android:checked="false" />
+                android:checked="false"
+                android:textColor="#0b765c"
+                android:textSize="20dp"
+                android:textColorHighlight="#000000"
+                android:textColorHint="#000000"
+                android:textColorLink="#000000" />
 
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/sour"
                 android:id="@+id/sourBox"
-                android:checked="false" />
+                android:checked="false"
+                android:textColor="#0b765c"
+                android:textSize="20dp"
+                android:textColorHighlight="#000000" />
 
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/cream"
                 android:id="@+id/creamBox"
-                android:checked="false" />
+                android:checked="false"
+                android:textColor="#0b765c"
+                android:textSize="20dp"
+                android:textColorHighlight="#000000" />
         </LinearLayout>
     </ScrollView>
 
@@ -66,7 +84,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/apply3"
-            android:id="@+id/milkApply" />
+            android:id="@+id/milkApply"
+            android:background="#0a9472" />
     </LinearLayout>
 
 </LinearLayout>

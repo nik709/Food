@@ -88,7 +88,7 @@ public class MeatFragment extends Fragment implements View.OnClickListener {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_meat2,container, false);
-        Typeface general = Typeface.createFromAsset(getActivity().getAssets(), "Peace Sans Webfont.ttf");
+        Typeface general = Typeface.createFromAsset(getActivity().getAssets(), "Mateur.ttf");
         view.setFocusableInTouchMode(true);
         view.requestFocus();
 
@@ -108,6 +108,7 @@ public class MeatFragment extends Fragment implements View.OnClickListener {
             }
         });
         apply = (Button) view.findViewById(R.id.apply);
+        apply.setTypeface(general);
         chicken = (CheckBox) view.findViewById(R.id.CBchicken);
         chicken.setTypeface(general);
         Pig =(CheckBox) view.findViewById(R.id.CBpig);

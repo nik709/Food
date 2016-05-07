@@ -73,7 +73,8 @@
                 android:id="@+id/CBbear"
                 android:checked="false"
                 android:textSize="20sp"
-                android:textColor="#ffe100" />
+                android:textColor="#ffe100"
+                android:textColorHighlight="#000000" />
 
         </LinearLayout>
     </ScrollView>
@@ -87,7 +88,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/apply"
-            android:id="@+id/apply" />
+            android:id="@+id/apply"
+            android:background="#ffe100" />
 
         <Button
             android:layout_width="match_parent"
