@@ -102,25 +102,25 @@ public class Cooking_methodFragment extends Fragment implements View.OnClickList
             public void onClick(View v)
             {
                 if (boiled.isChecked()) {
-                    staticString.str.remove("boiled");
-                    staticString.str.add("boiled");
+                    staticString.SearchCookingMethod.remove("16");
+                    staticString.SearchCookingMethod.add("16");
                 }
                 else
-                    staticString.str.remove("boiled");
+                    staticString.SearchCookingMethod.remove("16");
 
                 if (stew.isChecked()) {
-                    staticString.str.remove("stew");
-                    staticString.str.add("stew");
+                    staticString.SearchCookingMethod.remove("17");
+                    staticString.SearchCookingMethod.add("17");
                 }
                 else
-                    staticString.str.remove("stew");
+                    staticString.SearchCookingMethod.remove("17");
 
                 if (fry.isChecked()) {
-                    staticString.str.remove("fry");
-                    staticString.str.add("fry");
+                    staticString.SearchCookingMethod.remove("18");
+                    staticString.SearchCookingMethod.add("18");
                 }
                 else
-                    staticString.str.remove("fry");
+                    staticString.SearchCookingMethod.remove("18");
 
                 FragmentManager fm = getFragmentManager();
                 fm.popBackStack();

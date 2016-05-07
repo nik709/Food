@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">ЕДА</string>
+    <string name="app_name">IT LUNCH</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -246,7 +246,7 @@
         <item>более 1 час</item>
     </string-array>
 
-    //id способа приготовления
+    //id времени
     <integer-array name="Time_ID">
         <item>1001</item>
         <item>1002</item>
