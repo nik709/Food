@@ -1,5 +1,6 @@
 package com.example.makpro.recipedesign1.Fragments;
 
+import android.app.FragmentTransaction;
 import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
@@ -8,6 +9,7 @@ import  android.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import com.example.makpro.recipedesign1.R;
 
@@ -19,7 +21,7 @@ import com.example.makpro.recipedesign1.R;
  * Use the {@link MyRecipeFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class MyRecipeFragment extends Fragment {
+public class MyRecipeFragment extends Fragment implements View.OnClickListener {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -28,6 +30,12 @@ public class MyRecipeFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+
+    View view;
+    Button time, cuisine, category, cookingMethod;
+    FragmentTransaction fTrans;
+    TimeFragment tF;
+    CuisineFragment cuisineFragmentF;
 
     private OnFragmentInteractionListener mListener;
 
@@ -56,6 +64,8 @@ public class MyRecipeFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        tF = new TimeFragment();
+        cuisineFragmentF = new CuisineFragment();
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
@@ -65,8 +75,16 @@ public class MyRecipeFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_my_recipe, container, false);
+        view = inflater.inflate(R.layout.fragment_my_recipe, container, false);
+        time = (Button) view.findViewById(R.id.timeB);
+        cuisine = (Button) view.findViewById(R.id.cuisineB);
+        category = (Button) view.findViewById(R.id.categoryB);
+        cookingMethod = (Button) view.findViewById(R.id.CookingmethodB);
+        time.setOnClickListener(this);
+        cuisine.setOnClickListener(this);
+        category.setOnClickListener(this);
+        cookingMethod.setOnClickListener(this);
+        return view;
     }
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -88,6 +106,26 @@ public class MyRecipeFragment extends Fragment {
     public void onDetach() {
         super.onDetach();
         mListener = null;
+    }
+
+    @Override
+    public void onClick(View v) {
+        fTrans = getFragmentManager().beginTransaction();
+        switch (v.getId()){
+            case R.id.timeB:
+                fTrans.replace(R.id.conteiner, tF);
+                break;
+            case R.id.cuisineB:
+                fTrans.replace(R.id.conteiner, cuisineFragmentF);
+                break;
+            case R.id.categoryB:
+                break;
+            case R.id.CookingmethodB:
+                break;
+        }
+
+        fTrans.addToBackStack(null);
+        fTrans.commit();
     }
 
     /**

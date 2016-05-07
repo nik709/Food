@@ -116,7 +116,7 @@ public class FragmentIngridients extends Fragment implements View.OnClickListene
         mushF = new mushroom();
         groceryF = new grocery();
 
-        staticString.str = new ArrayList<String>();
+
         staticString.NameRecipe = new ArrayList<String>();
         staticString.NameCuisine = new ArrayList<String>();
         staticString.NameCategory = new ArrayList<String>();
@@ -277,7 +277,7 @@ public class FragmentIngridients extends Fragment implements View.OnClickListene
                         + "having count(Comp_ingredient_ID)=" + chislo + " order by Recipe_ID) "
                         + "group by Recipe_ID";
                 cursor = sqLiteDatabase.rawQuery(inquiry, null);
-
+                staticString.quantityRecipe = 0 ;
                 if (cursor.moveToFirst()) {
                     int recipeColIndex = cursor.getColumnIndex("Recipe_name");
                     int cuisineColIndex = cursor.getColumnIndex("Cuisine_name");
@@ -289,7 +289,7 @@ public class FragmentIngridients extends Fragment implements View.OnClickListene
 
                     Log.d(LOG_TAG,cursor.getString(recipeColIndex));
 
-                    staticString.quantityRecipe = 0 ;
+
 
                     do {
                         //присваивание в каждый рецепт
@@ -308,10 +308,7 @@ public class FragmentIngridients extends Fragment implements View.OnClickListene
                     else
                 //сказать что ТАКИХ РЕЦЕПТОВ НЕТ , ВЫ ГУРМАН. МОЖЕТ ДОБАВИТЕ СВОЙ?
                 ;
-<<<<<<< HEAD
-=======
                 Log.d(LOG_TAG,Integer.toString(staticString.quantityRecipe));
->>>>>>> 8b16b944f908593e59efe7da9fc6033800c58c61
                 logCursor(cursor);
                 cursor.close();
 

@@ -35,6 +35,7 @@
     <string name="Овсянка">Овсянка</string>
     <string name="Пшено">Пшено</string>
     <string name="Гречка">Гречка</string>
+    <string name="otherSearch">Дополнительный поиск</string>
 
     //Название продукта
     <string-array name="Ingredient_name">
