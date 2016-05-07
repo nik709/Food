@@ -20,11 +20,13 @@ import android.widget.Button;
 import com.example.makpro.recipedesign1.Fragments.FragmentIngridients;
 import com.example.makpro.recipedesign1.Fragments.MyRecipeFragment;
 
+import java.util.ArrayList;
+
 public class NavigatActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     FragmentIngridients FragIngridient;
-    MyRecipeFragment myrecipe;
+    MyRecipeFragment dopSearch;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,7 +53,8 @@ public class NavigatActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
         FragIngridient = new FragmentIngridients();
-        myrecipe = new MyRecipeFragment();
+        dopSearch = new MyRecipeFragment();
+        staticString.str = new ArrayList<String>();
 
     }
 
@@ -100,7 +103,7 @@ public class NavigatActivity extends AppCompatActivity
             ftrans.replace(R.id.conteiner, FragIngridient);
 
         } else if (id == R.id.nav_gallery) {
-            ftrans.replace(R.id.conteiner, myrecipe);
+            ftrans.replace(R.id.conteiner, dopSearch);
 
         } else if (id == R.id.nav_slideshow) {
 
