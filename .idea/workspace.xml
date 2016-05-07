@@ -6,8 +6,11 @@
     </shared>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> 48d16f6e7a0201b6906857a150e8dcc6950d1b26
 =======
 >>>>>>> 48d16f6e7a0201b6906857a150e8dcc6950d1b26
     <layouts>
@@ -40,6 +43,9 @@
 =======
 >>>>>>> nik709/master
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 48d16f6e7a0201b6906857a150e8dcc6950d1b26
+=======
 >>>>>>> 48d16f6e7a0201b6906857a150e8dcc6950d1b26
 =======
 >>>>>>> 48d16f6e7a0201b6906857a150e8dcc6950d1b26
@@ -51,6 +57,7 @@
 <<<<<<< HEAD
     <list default="true" id="22e5705b-9234-45ac-b2ff-9073a310be6a" name="Default" comment="" />
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
     <list default="true" id="22e5705b-9234-45ac-b2ff-9073a310be6a" name="Default" comment="">
@@ -58,12 +65,19 @@
 >>>>>>> 48d16f6e7a0201b6906857a150e8dcc6950d1b26
 =======
 <<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 48d16f6e7a0201b6906857a150e8dcc6950d1b26
     <list default="true" id="d338a516-44ad-4b74-a533-f3a4a05276d9" name="Default" comment="">
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/assets/Mateur.ttf" />
 =======
     <list default="true" id="22e5705b-9234-45ac-b2ff-9073a310be6a" name="Default" comment="">
 >>>>>>> nik709/master
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 48d16f6e7a0201b6906857a150e8dcc6950d1b26
+=======
 >>>>>>> 48d16f6e7a0201b6906857a150e8dcc6950d1b26
 =======
 >>>>>>> 48d16f6e7a0201b6906857a150e8dcc6950d1b26
@@ -73,8 +87,11 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/taskArtifacts.bin" />
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> 48d16f6e7a0201b6906857a150e8dcc6950d1b26
 =======
 >>>>>>> 48d16f6e7a0201b6906857a150e8dcc6950d1b26
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/generated/mockable-android-23.jar" afterPath="$PROJECT_DIR$/build/generated/mockable-android-23.jar" />
@@ -86,6 +103,9 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" afterPath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" />
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 48d16f6e7a0201b6906857a150e8dcc6950d1b26
+=======
 >>>>>>> 48d16f6e7a0201b6906857a150e8dcc6950d1b26
 =======
 >>>>>>> 48d16f6e7a0201b6906857a150e8dcc6950d1b26
@@ -95,6 +115,10 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/makpro/recipedesign1/staticString.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/makpro/recipedesign1/staticString.java" />
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> nik709/master
+>>>>>>> 48d16f6e7a0201b6906857a150e8dcc6950d1b26
 =======
 >>>>>>> nik709/master
 >>>>>>> 48d16f6e7a0201b6906857a150e8dcc6950d1b26
@@ -137,6 +161,7 @@
 <<<<<<< HEAD
             <state vertical-scroll-proportion="0.0">
               <caret line="307" column="17" selection-start-line="307" selection-start-column="17" selection-end-line="307" selection-end-column="17" />
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -147,6 +172,10 @@
 <<<<<<< HEAD
 =======
 >>>>>>> 48d16f6e7a0201b6906857a150e8dcc6950d1b26
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 48d16f6e7a0201b6906857a150e8dcc6950d1b26
     <favorites_list name="Food-1" />
   </component>
   <component name="FileEditorManager">
@@ -154,6 +183,7 @@
       <file leaf-file-name="fragment_fragment_ingridients.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_fragment_ingridients.xml">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state vertical-scroll-proportion="0.0">
               <caret line="11" column="44" selection-start-line="11" selection-start-column="44" selection-end-line="11" selection-end-column="44" />
               <folding />
@@ -184,12 +214,41 @@
           </provider>
         </entry>
       </file>
+=======
+            <state vertical-scroll-proportion="0.0">
+              <caret line="11" column="44" selection-start-line="11" selection-start-column="44" selection-end-line="11" selection-end-column="44" />
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="android-designer">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="fragment_corn.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_corn.xml">
+          <provider editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+>>>>>>> dad2e7cb6ab10b131d59f7d39bb2c85f709aea93
+=======
+            <state vertical-scroll-proportion="0.3681416">
+              <caret line="291" column="51" selection-start-line="291" selection-start-column="51" selection-end-line="291" selection-end-column="51" />
+>>>>>>> 8b16b944f908593e59efe7da9fc6033800c58c61
+>>>>>>> nik709/master
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+>>>>>>> 48d16f6e7a0201b6906857a150e8dcc6950d1b26
       <file leaf-file-name="staticString.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/makpro/recipedesign1/staticString.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
 <<<<<<< HEAD
               <caret line="18" column="35" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -199,6 +258,10 @@
 >>>>>>> 48d16f6e7a0201b6906857a150e8dcc6950d1b26
 =======
 <<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 48d16f6e7a0201b6906857a150e8dcc6950d1b26
       <file leaf-file-name="mushroom.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/makpro/recipedesign1/Fragments/mushroom.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -225,6 +288,9 @@
 >>>>>>> 8b16b944f908593e59efe7da9fc6033800c58c61
 >>>>>>> nik709/master
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 48d16f6e7a0201b6906857a150e8dcc6950d1b26
+=======
 >>>>>>> 48d16f6e7a0201b6906857a150e8dcc6950d1b26
 =======
 >>>>>>> 48d16f6e7a0201b6906857a150e8dcc6950d1b26
@@ -235,6 +301,7 @@
       </file>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       <file leaf-file-name="ResultFragment.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/makpro/recipedesign1/Fragments/ResultFragment.java">
 =======
@@ -242,6 +309,8 @@
 =======
 >>>>>>> 48d16f6e7a0201b6906857a150e8dcc6950d1b26
 <<<<<<< HEAD
+=======
+>>>>>>> 48d16f6e7a0201b6906857a150e8dcc6950d1b26
       <file leaf-file-name="grocery.java" pinned="false" current-in-tab="true">
 =======
 <<<<<<< HEAD
@@ -252,6 +321,9 @@
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/makpro/recipedesign1/Fragments/ResultFragment.java">
 >>>>>>> nik709/master
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 48d16f6e7a0201b6906857a150e8dcc6950d1b26
+=======
 >>>>>>> 48d16f6e7a0201b6906857a150e8dcc6950d1b26
 =======
 >>>>>>> 48d16f6e7a0201b6906857a150e8dcc6950d1b26
@@ -280,10 +352,13 @@
             <state vertical-scroll-proportion="0.0">
               <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
       <file leaf-file-name="DescriptionOfRecipeFragment.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/makpro/recipedesign1/Fragments/DescriptionOfRecipeFragment.java">
+=======
+>>>>>>> 48d16f6e7a0201b6906857a150e8dcc6950d1b26
 =======
 >>>>>>> 48d16f6e7a0201b6906857a150e8dcc6950d1b26
 =======
@@ -316,6 +391,9 @@
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/makpro/recipedesign1/Fragments/DescriptionOfRecipeFragment.java">
 >>>>>>> nik709/master
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 48d16f6e7a0201b6906857a150e8dcc6950d1b26
+=======
 >>>>>>> 48d16f6e7a0201b6906857a150e8dcc6950d1b26
 =======
 >>>>>>> 48d16f6e7a0201b6906857a150e8dcc6950d1b26
@@ -330,8 +408,11 @@
       </file>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> 48d16f6e7a0201b6906857a150e8dcc6950d1b26
 =======
 >>>>>>> 48d16f6e7a0201b6906857a150e8dcc6950d1b26
       <file leaf-file-name="seafood.java" pinned="false" current-in-tab="false">
@@ -347,6 +428,9 @@
 =======
 >>>>>>> nik709/master
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 48d16f6e7a0201b6906857a150e8dcc6950d1b26
+=======
 >>>>>>> 48d16f6e7a0201b6906857a150e8dcc6950d1b26
 =======
 >>>>>>> 48d16f6e7a0201b6906857a150e8dcc6950d1b26
@@ -1884,6 +1968,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/makpro/recipedesign1/staticString.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/makpro/recipedesign1/Fragments/DescriptionOfRecipeFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/makpro/recipedesign1/Fragments/ResultFragment.java" />
@@ -1895,6 +1980,8 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/makpro/recipedesign1/Fragments/FragmentIngridients.java" />
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> 48d16f6e7a0201b6906857a150e8dcc6950d1b26
 =======
 >>>>>>> 48d16f6e7a0201b6906857a150e8dcc6950d1b26
 =======
@@ -1946,6 +2033,9 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/makpro/recipedesign1/Fragments/FragmentIngridients.java" />
 >>>>>>> nik709/master
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 48d16f6e7a0201b6906857a150e8dcc6950d1b26
+=======
 >>>>>>> 48d16f6e7a0201b6906857a150e8dcc6950d1b26
 =======
 >>>>>>> 48d16f6e7a0201b6906857a150e8dcc6950d1b26
@@ -1998,7 +2088,10 @@
               <option name="myItemId" value="Food" />
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 48d16f6e7a0201b6906857a150e8dcc6950d1b26
 =======
 >>>>>>> 48d16f6e7a0201b6906857a150e8dcc6950d1b26
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
@@ -2008,6 +2101,9 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="Food" />
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 48d16f6e7a0201b6906857a150e8dcc6950d1b26
+=======
 >>>>>>> 48d16f6e7a0201b6906857a150e8dcc6950d1b26
 =======
 >>>>>>> 48d16f6e7a0201b6906857a150e8dcc6950d1b26
@@ -2043,6 +2139,9 @@
 =======
               <option name="myItemId" value="Food-1" />
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 48d16f6e7a0201b6906857a150e8dcc6950d1b26
+=======
 >>>>>>> 48d16f6e7a0201b6906857a150e8dcc6950d1b26
 =======
 >>>>>>> 48d16f6e7a0201b6906857a150e8dcc6950d1b26
@@ -2055,7 +2154,10 @@
             <PATH_ELEMENT>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 48d16f6e7a0201b6906857a150e8dcc6950d1b26
 =======
 >>>>>>> 48d16f6e7a0201b6906857a150e8dcc6950d1b26
               <option name="myItemId" value="res" />
@@ -2065,6 +2167,8 @@
               <option name="myItemId" value="layout" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderTypeNode" />
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
 =======
             </PATH_ELEMENT>
           </PATH>
@@ -2086,6 +2190,29 @@
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="Food" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
+<<<<<<< HEAD
+>>>>>>> 48d16f6e7a0201b6906857a150e8dcc6950d1b26
+=======
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="recipedesign1" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
+>>>>>>> 48d16f6e7a0201b6906857a150e8dcc6950d1b26
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Food" />
+<<<<<<< HEAD
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -2110,6 +2237,8 @@
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="Food" />
+=======
+>>>>>>> 48d16f6e7a0201b6906857a150e8dcc6950d1b26
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -2125,11 +2254,14 @@
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
 <<<<<<< HEAD
+<<<<<<< HEAD
           </PATH>
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="Food" />
 =======
+=======
+>>>>>>> 48d16f6e7a0201b6906857a150e8dcc6950d1b26
             <PATH_ELEMENT>
               <option name="myItemId" value="Fragments" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
@@ -2138,6 +2270,9 @@
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="Food-1" />
+<<<<<<< HEAD
+>>>>>>> 48d16f6e7a0201b6906857a150e8dcc6950d1b26
+=======
 >>>>>>> 48d16f6e7a0201b6906857a150e8dcc6950d1b26
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
             </PATH_ELEMENT>
@@ -2179,11 +2314,14 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       <pane id="PackagesPane" />
       <pane id="ProjectPane" />
 =======
 >>>>>>> 8b16b944f908593e59efe7da9fc6033800c58c61
 =======
+=======
+>>>>>>> 48d16f6e7a0201b6906857a150e8dcc6950d1b26
 =======
 >>>>>>> 48d16f6e7a0201b6906857a150e8dcc6950d1b26
       <pane id="Scratches" />
@@ -2212,6 +2350,9 @@
 >>>>>>> 8b16b944f908593e59efe7da9fc6033800c58c61
 >>>>>>> nik709/master
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 48d16f6e7a0201b6906857a150e8dcc6950d1b26
+=======
 >>>>>>> 48d16f6e7a0201b6906857a150e8dcc6950d1b26
 =======
 >>>>>>> 48d16f6e7a0201b6906857a150e8dcc6950d1b26
@@ -2229,7 +2370,10 @@
 >>>>>>> 8b16b944f908593e59efe7da9fc6033800c58c61
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 48d16f6e7a0201b6906857a150e8dcc6950d1b26
 =======
 >>>>>>> 48d16f6e7a0201b6906857a150e8dcc6950d1b26
   </component>
@@ -2238,6 +2382,9 @@
       <recent name="$PROJECT_DIR$/app/src/main/assets" />
     </key>
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 48d16f6e7a0201b6906857a150e8dcc6950d1b26
+=======
 >>>>>>> 48d16f6e7a0201b6906857a150e8dcc6950d1b26
 =======
 >>>>>>> 48d16f6e7a0201b6906857a150e8dcc6950d1b26
@@ -2351,6 +2498,7 @@
     </configuration>
     <configuration default="true" type="JUnitTestDiscovery" factoryName="JUnit Test Discovery" changeList="All">
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -2402,6 +2550,8 @@
       <method />
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
+>>>>>>> 48d16f6e7a0201b6906857a150e8dcc6950d1b26
+=======
 >>>>>>> 48d16f6e7a0201b6906857a150e8dcc6950d1b26
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -2581,9 +2731,12 @@
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> 48d16f6e7a0201b6906857a150e8dcc6950d1b26
 =======
 >>>>>>> 48d16f6e7a0201b6906857a150e8dcc6950d1b26
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -2597,6 +2750,9 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
 >>>>>>> nik709/master
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 48d16f6e7a0201b6906857a150e8dcc6950d1b26
+=======
 >>>>>>> 48d16f6e7a0201b6906857a150e8dcc6950d1b26
 =======
 >>>>>>> 48d16f6e7a0201b6906857a150e8dcc6950d1b26
@@ -2619,8 +2775,11 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> 48d16f6e7a0201b6906857a150e8dcc6950d1b26
 =======
 >>>>>>> 48d16f6e7a0201b6906857a150e8dcc6950d1b26
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -2628,6 +2787,9 @@
 =======
 >>>>>>> nik709/master
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 48d16f6e7a0201b6906857a150e8dcc6950d1b26
+=======
 >>>>>>> 48d16f6e7a0201b6906857a150e8dcc6950d1b26
 =======
 >>>>>>> 48d16f6e7a0201b6906857a150e8dcc6950d1b26
@@ -2654,6 +2816,7 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/makpro/recipedesign1/Fragments/FragmentIngridients.java">
@@ -4141,12 +4304,17 @@
 =======
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
 >>>>>>> nik709/master
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/makpro/recipedesign1/Fragments/grocery.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+>>>>>>> 48d16f6e7a0201b6906857a150e8dcc6950d1b26
         </state>
       </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/nav_header_navigat.xml">
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -4155,26 +4323,12 @@
           <folding />
 =======
 >>>>>>> nik709/master
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_vegetable.xml">
-      <provider editor-type-id="text-editor">
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/makpro/recipedesign1/DBHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_seasoning.xml">
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="182" column="0" selection-start-line="182" selection-start-column="0" selection-end-line="182" selection-end-column="0" />
+          <folding />
 >>>>>>> 48d16f6e7a0201b6906857a150e8dcc6950d1b26
         </state>
       </provider>
@@ -4182,6 +4336,38 @@
         <state />
       </provider>
     </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_vegetable.xml">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/makpro/recipedesign1/Fragments/FragmentIngridients.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="235" column="54" selection-start-line="235" selection-start-column="54" selection-end-line="235" selection-end-column="54" />
+          <folding />
+>>>>>>> 48d16f6e7a0201b6906857a150e8dcc6950d1b26
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/makpro/recipedesign1/Fragments/seafood.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+<<<<<<< HEAD
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+>>>>>>> 48d16f6e7a0201b6906857a150e8dcc6950d1b26
+=======
+          <caret line="16" column="53" selection-start-line="16" selection-start-column="53" selection-end-line="16" selection-end-column="53" />
+          <folding />
+>>>>>>> 48d16f6e7a0201b6906857a150e8dcc6950d1b26
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
 <<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/makpro/recipedesign1/Fragments/DescriptionOfRecipeFragment.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -4201,6 +4387,26 @@
 =======
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_result.xml">
       <provider editor-type-id="text-editor">
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_fragment_ingridients.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/makpro/recipedesign1/Fragments/mushroom.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="116" column="16" selection-start-line="116" selection-start-column="16" selection-end-line="119" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_grocery.xml">
+      <provider selected="true" editor-type-id="text-editor">
+>>>>>>> 48d16f6e7a0201b6906857a150e8dcc6950d1b26
         <state vertical-scroll-proportion="0.0">
 <<<<<<< HEAD
           <caret line="16" column="53" selection-start-line="16" selection-start-column="53" selection-end-line="16" selection-end-column="53" />
@@ -4210,44 +4416,81 @@
 >>>>>>> nik709/master
         </state>
       </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_nut.xml">
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/makpro/recipedesign1/Fragments/grocery.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="153" column="9" selection-start-line="153" selection-start-column="9" selection-end-line="153" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/makpro/recipedesign1/Fragments/FragmentIngridients.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="235" column="54" selection-start-line="235" selection-start-column="54" selection-end-line="235" selection-end-column="54" />
+          <folding />
+>>>>>>> 48d16f6e7a0201b6906857a150e8dcc6950d1b26
         </state>
       </provider>
       <provider selected="true" editor-type-id="android-designer">
         <state />
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_my_recipe.xml">
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
 <<<<<<< HEAD
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/makpro/recipedesign1/Fragments/seafood.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="16" column="53" selection-start-line="16" selection-start-column="53" selection-end-line="16" selection-end-column="53" />
+>>>>>>> 48d16f6e7a0201b6906857a150e8dcc6950d1b26
           <folding />
 =======
 >>>>>>> nik709/master
         </state>
       </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_mushroom.xml">
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+=======
+=======
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/makpro/recipedesign1/Fragments/MeatFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="129" column="68" selection-start-line="129" selection-start-column="68" selection-end-line="129" selection-end-column="68" />
+=======
+>>>>>>> nik709/master
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_fragment_ingridients.xml">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/makpro/recipedesign1/Fragments/FragmentIngridients.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="279" column="0" selection-start-line="279" selection-start-column="0" selection-end-line="279" selection-end-column="0" />
+>>>>>>> nik709/master
+          <folding />
+>>>>>>> 48d16f6e7a0201b6906857a150e8dcc6950d1b26
         </state>
       </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_milk.xml">
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -4256,38 +4499,59 @@
 =======
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
 >>>>>>> nik709/master
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_meat2.xml">
-      <provider editor-type-id="text-editor">
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/makpro/recipedesign1/staticString.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+<<<<<<< HEAD
+          <caret line="91" column="34" selection-start-line="91" selection-start-column="34" selection-end-line="91" selection-end-column="34" />
+=======
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+>>>>>>> nik709/master
+          <folding />
+>>>>>>> 48d16f6e7a0201b6906857a150e8dcc6950d1b26
         </state>
       </provider>
       <provider selected="true" editor-type-id="android-designer">
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/makpro/recipedesign1/Fragments/ResultFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+<<<<<<< HEAD
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+=======
+          <caret line="129" column="47" selection-start-line="129" selection-start-column="47" selection-end-line="129" selection-end-column="47" />
+          <folding />
+>>>>>>> 48d16f6e7a0201b6906857a150e8dcc6950d1b26
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_juice.xml">
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
 <<<<<<< HEAD
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/makpro/recipedesign1/Fragments/MyRecipeFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+>>>>>>> 48d16f6e7a0201b6906857a150e8dcc6950d1b26
           <folding />
 =======
 >>>>>>> nik709/master
         </state>
       </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
     </entry>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/makpro/recipedesign1/Fragments/vegetableFragment.java">
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/makpro/recipedesign1/Fragments/DescriptionOfRecipeFragment.java">
+>>>>>>> 48d16f6e7a0201b6906857a150e8dcc6950d1b26
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.6731235">
           <caret line="155" column="16" selection-start-line="155" selection-start-column="16" selection-end-line="158" selection-end-column="28" />
@@ -4295,11 +4559,20 @@
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_grocery.xml">
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
+<<<<<<< HEAD
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+=======
+<<<<<<< HEAD
+          <caret line="142" column="9" selection-start-line="142" selection-start-column="9" selection-end-line="142" selection-end-column="9" />
+=======
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+>>>>>>> 48d16f6e7a0201b6906857a150e8dcc6950d1b26
 >>>>>>> nik709/master
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
 <<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/makpro/recipedesign1/Fragments/FragmentIngridients.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -4329,10 +4602,62 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="129" column="51" selection-start-line="129" selection-start-column="51" selection-end-line="129" selection-end-column="51" />
 >>>>>>> 8b16b944f908593e59efe7da9fc6033800c58c61
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/makpro/recipedesign1/Fragments/FragmentIngridients.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+<<<<<<< HEAD
+          <caret line="128" column="16" selection-start-line="128" selection-start-column="16" selection-end-line="131" selection-end-column="28" />
+=======
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+>>>>>>> nik709/master
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/makpro/recipedesign1/staticString.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="48" selection-start-line="12" selection-start-column="48" selection-end-line="12" selection-end-column="48" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/makpro/recipedesign1/Fragments/ResultFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="129" column="51" selection-start-line="129" selection-start-column="51" selection-end-line="129" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/makpro/recipedesign1/Fragments/MyRecipeFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+<<<<<<< HEAD
+          <caret line="135" column="9" selection-start-line="135" selection-start-column="9" selection-end-line="135" selection-end-column="9" />
+=======
+          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+          <folding />
+>>>>>>> nik709/master
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/makpro/recipedesign1/Fragments/DescriptionOfRecipeFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+<<<<<<< HEAD
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+=======
+          <caret line="75" column="34" selection-start-line="75" selection-start-column="34" selection-end-line="75" selection-end-column="34" />
+>>>>>>> 48d16f6e7a0201b6906857a150e8dcc6950d1b26
+          <folding />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
 <<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/makpro/recipedesign1/Fragments/FragmentIngridients.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -4344,6 +4669,551 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="75" column="34" selection-start-line="75" selection-start-column="34" selection-end-line="75" selection-end-column="34" />
 >>>>>>> 8b16b944f908593e59efe7da9fc6033800c58c61
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_egg.xml">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/makpro/recipedesign1/Fragments/FragmentIngridients.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="279" column="0" selection-start-line="279" selection-start-column="0" selection-end-line="279" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/makpro/recipedesign1/staticString.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="48" selection-start-line="12" selection-start-column="48" selection-end-line="12" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+>>>>>>> nik709/master
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/makpro/recipedesign1/Fragments/ResultFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="129" column="51" selection-start-line="129" selection-start-column="51" selection-end-line="129" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/makpro/recipedesign1/Fragments/MyRecipeFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+          <folding />
+>>>>>>> 48d16f6e7a0201b6906857a150e8dcc6950d1b26
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/makpro/recipedesign1/Fragments/MyRecipeFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+<<<<<<< HEAD
+          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+>>>>>>> nik709/master
+          <folding />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/makpro/recipedesign1/DBHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="182" column="0" selection-start-line="182" selection-start-column="0" selection-end-line="182" selection-end-column="0" />
+>>>>>>> 48d16f6e7a0201b6906857a150e8dcc6950d1b26
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/makpro/recipedesign1/Fragments/DescriptionOfRecipeFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+<<<<<<< HEAD
+=======
+          <folding />
+>>>>>>> nik709/master
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/makpro/recipedesign1/Fragments/FragmentIngridients.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/makpro/recipedesign1/staticString.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="48" selection-start-line="12" selection-start-column="48" selection-end-line="12" selection-end-column="48" />
+>>>>>>> 48d16f6e7a0201b6906857a150e8dcc6950d1b26
+          <folding />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/makpro/recipedesign1/DBHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/makpro/recipedesign1/staticString.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="38" />
+>>>>>>> 8b16b944f908593e59efe7da9fc6033800c58c61
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_fragment_ingridients.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="44" selection-start-line="11" selection-start-column="44" selection-end-line="11" selection-end-column="44" />
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/makpro/recipedesign1/Fragments/DescriptionOfRecipeFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="75" column="80" selection-start-line="75" selection-start-column="80" selection-end-line="75" selection-end-column="80" />
+=======
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/makpro/recipedesign1/Fragments/ResultFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="35" column="34" selection-start-line="35" selection-start-column="33" selection-end-line="35" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/makpro/recipedesign1/Fragments/MyRecipeFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+<<<<<<< HEAD
+          <caret line="94" column="11" selection-start-line="94" selection-start-column="11" selection-end-line="94" selection-end-column="11" />
+=======
+          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+          <folding />
+>>>>>>> nik709/master
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/makpro/recipedesign1/Fragments/DescriptionOfRecipeFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+<<<<<<< HEAD
+          <caret line="95" column="11" selection-start-line="95" selection-start-column="11" selection-end-line="95" selection-end-column="11" />
+=======
+          <caret line="20" column="39" selection-start-line="20" selection-start-column="39" selection-end-line="20" selection-end-column="39" />
+          <folding />
+>>>>>>> nik709/master
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/makpro/recipedesign1/Fragments/FragmentIngridients.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+<<<<<<< HEAD
+          <caret line="79" column="28" selection-start-line="79" selection-start-column="28" selection-end-line="79" selection-end-column="28" />
+=======
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+>>>>>>> nik709/master
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/makpro/recipedesign1/staticString.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+<<<<<<< HEAD
+          <caret line="98" column="11" selection-start-line="98" selection-start-column="11" selection-end-line="98" selection-end-column="11" />
+=======
+          <caret line="12" column="48" selection-start-line="12" selection-start-column="48" selection-end-line="12" selection-end-column="48" />
+          <folding />
+>>>>>>> nik709/master
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/makpro/recipedesign1/Fragments/ResultFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+<<<<<<< HEAD
+          <caret line="106" column="11" selection-start-line="106" selection-start-column="11" selection-end-line="106" selection-end-column="11" />
+=======
+          <caret line="35" column="34" selection-start-line="35" selection-start-column="33" selection-end-line="35" selection-end-column="34" />
+          <folding />
+>>>>>>> nik709/master
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/makpro/recipedesign1/Fragments/MyRecipeFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+<<<<<<< HEAD
+          <caret line="95" column="11" selection-start-line="95" selection-start-column="11" selection-end-line="95" selection-end-column="11" />
+=======
+          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+          <folding />
+>>>>>>> nik709/master
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/makpro/recipedesign1/Fragments/DescriptionOfRecipeFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="20" column="39" selection-start-line="20" selection-start-column="39" selection-end-line="20" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_milk.xml">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_meat2.xml">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_juice.xml">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_grocery.xml">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+>>>>>>> 48d16f6e7a0201b6906857a150e8dcc6950d1b26
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/makpro/recipedesign1/Fragments/MyRecipeFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+>>>>>>> 8b16b944f908593e59efe7da9fc6033800c58c61
+>>>>>>> nik709/master
+          <folding />
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_fragment_ingridients.xml">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/makpro/recipedesign1/Fragments/FragmentIngridients.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="270" column="0" selection-start-line="270" selection-start-column="0" selection-end-line="270" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/makpro/recipedesign1/staticString.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/makpro/recipedesign1/Fragments/ResultFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/makpro/recipedesign1/Fragments/DescriptionOfRecipeFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="20" column="39" selection-start-line="20" selection-start-column="39" selection-end-line="20" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_egg.xml">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+>>>>>>> 48d16f6e7a0201b6906857a150e8dcc6950d1b26
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+<<<<<<< HEAD
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_corn.xml">
+      <provider editor-type-id="text-editor">
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+>>>>>>> 48d16f6e7a0201b6906857a150e8dcc6950d1b26
+        <state vertical-scroll-proportion="0.0">
+<<<<<<< HEAD
+          <caret line="101" column="11" selection-start-line="84" selection-start-column="8" selection-end-line="101" selection-end-column="11" />
+=======
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+<<<<<<< HEAD
+>>>>>>> 48d16f6e7a0201b6906857a150e8dcc6950d1b26
+          <folding />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/makpro/recipedesign1/Fragments/ResultFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="3.2416852">
+          <caret line="136" column="36" selection-start-line="136" selection-start-column="36" selection-end-line="136" selection-end-column="36" />
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/makpro/recipedesign1/Fragments/FragmentIngridients.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3681416">
+          <caret line="291" column="51" selection-start-line="291" selection-start-column="51" selection-end-line="291" selection-end-column="51" />
+>>>>>>> 8b16b944f908593e59efe7da9fc6033800c58c61
+=======
+          <folding />
+>>>>>>> nik709/master
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_fruit.xml">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+>>>>>>> 48d16f6e7a0201b6906857a150e8dcc6950d1b26
+          <folding />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
+=======
+>>>>>>> 48d16f6e7a0201b6906857a150e8dcc6950d1b26
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/makpro/recipedesign1/Fragments/mushroom.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="15" column="41" selection-start-line="15" selection-start-column="41" selection-end-line="15" selection-end-column="41" />
+=======
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/makpro/recipedesign1/staticString.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="18" column="35" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/makpro/recipedesign1/Fragments/ResultFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="129" column="51" selection-start-line="129" selection-start-column="51" selection-end-line="129" selection-end-column="51" />
+>>>>>>> 8b16b944f908593e59efe7da9fc6033800c58c61
+          <folding />
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/content_navigat.xml">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+<<<<<<< HEAD
+          <caret line="153" column="9" selection-start-line="153" selection-start-column="9" selection-end-line="153" selection-end-column="9" />
+=======
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+>>>>>>> nik709/master
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/nav_header_navigat.xml">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+<<<<<<< HEAD
+          <folding />
+=======
+>>>>>>> nik709/master
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_vegetable.xml">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_seasoning.xml">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_result.xml">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+<<<<<<< HEAD
+          <caret line="16" column="53" selection-start-line="16" selection-start-column="53" selection-end-line="16" selection-end-column="53" />
+          <folding />
+=======
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+>>>>>>> nik709/master
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_nut.xml">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_my_recipe.xml">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+<<<<<<< HEAD
+          <folding />
+=======
+>>>>>>> nik709/master
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_mushroom.xml">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_milk.xml">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+<<<<<<< HEAD
+          <caret line="117" column="16" selection-start-line="117" selection-start-column="16" selection-end-line="120" selection-end-column="28" />
+=======
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+>>>>>>> nik709/master
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_meat2.xml">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_juice.xml">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+<<<<<<< HEAD
+          <folding />
+=======
+>>>>>>> nik709/master
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/makpro/recipedesign1/Fragments/vegetableFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6731235">
+          <caret line="155" column="16" selection-start-line="155" selection-start-column="16" selection-end-line="158" selection-end-column="28" />
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_grocery.xml">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+>>>>>>> nik709/master
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/makpro/recipedesign1/Fragments/FragmentIngridients.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="235" column="54" selection-start-line="235" selection-start-column="54" selection-end-line="235" selection-end-column="54" />
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_fragment_ingridients.xml">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+>>>>>>> 48d16f6e7a0201b6906857a150e8dcc6950d1b26
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+<<<<<<< HEAD
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/makpro/recipedesign1/Fragments/FragmentIngridients.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="307" column="17" selection-start-line="307" selection-start-column="17" selection-end-line="307" selection-end-column="17" />
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/makpro/recipedesign1/Fragments/DescriptionOfRecipeFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="75" column="34" selection-start-line="75" selection-start-column="34" selection-end-line="75" selection-end-column="34" />
+>>>>>>> 8b16b944f908593e59efe7da9fc6033800c58c61
+>>>>>>> nik709/master
 =======
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_egg.xml">
       <provider editor-type-id="text-editor">
@@ -4377,16 +5247,7 @@
     </entry>
 <<<<<<< HEAD
 <<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/makpro/recipedesign1/DBHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-=======
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/makpro/recipedesign1/staticString.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="38" />
->>>>>>> 8b16b944f908593e59efe7da9fc6033800c58c61
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_grocery.xml">
 =======
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_fragment_ingridients.xml">
       <provider selected="true" editor-type-id="text-editor">
@@ -4417,9 +5278,30 @@
     </entry>
 <<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_corn.xml">
+>>>>>>> 48d16f6e7a0201b6906857a150e8dcc6950d1b26
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
+<<<<<<< HEAD
+          <caret line="26" column="39" selection-start-line="26" selection-start-column="39" selection-end-line="26" selection-end-column="39" />
+=======
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+<<<<<<< HEAD
+>>>>>>> dad2e7cb6ab10b131d59f7d39bb2c85f709aea93
+>>>>>>> nik709/master
+=======
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/makpro/recipedesign1/DBHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/makpro/recipedesign1/staticString.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="38" />
+>>>>>>> 8b16b944f908593e59efe7da9fc6033800c58c61
+>>>>>>> nik709/master
+=======
 >>>>>>> 48d16f6e7a0201b6906857a150e8dcc6950d1b26
           <folding />
         </state>
@@ -4440,8 +5322,14 @@
         </state>
       </provider>
     </entry>
-=======
->>>>>>> 48d16f6e7a0201b6906857a150e8dcc6950d1b26
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/makpro/recipedesign1/Fragments/grocery.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6174334">
+          <caret line="17" column="33" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/makpro/recipedesign1/Fragments/mushroom.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
