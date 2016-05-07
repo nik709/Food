@@ -36,6 +36,7 @@
     <string name="Пшено">Пшено</string>
     <string name="Гречка">Гречка</string>
     <string name="otherSearch">Дополнительный поиск</string>
+    <string name="addYourRecipe">Добавление своих рецептов</string>
 
     //Название продукта
     <string-array name="Ingredient_name">

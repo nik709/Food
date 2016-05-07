@@ -17,5 +17,7 @@ public class staticString {
     public static ArrayList<String> Description;
     public static ArrayList<String> Caloric;
     public static int IDofRecipe=0;
-
+    public static boolean IsAdd = false;
+    public static ArrayList<String> addIngridients;
+    public static ArrayList<String> addTime;
 }

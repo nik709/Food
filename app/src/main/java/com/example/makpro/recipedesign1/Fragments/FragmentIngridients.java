@@ -1,5 +1,6 @@
 package com.example.makpro.recipedesign1.Fragments;
 
+import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.content.Context;
 import android.database.Cursor;
@@ -10,6 +11,7 @@ import android.os.Bundle;
 //import android.support.v4.app.Fragment;
 import  android.app.Fragment;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -120,7 +122,7 @@ public class FragmentIngridients extends Fragment implements View.OnClickListene
         groceryF = new grocery();
 
 
-        staticString.str = new ArrayList<String>();
+        //staticString.str = new ArrayList<String>();
 
         staticString.NameRecipe = new ArrayList<String>();
         staticString.NameCuisine = new ArrayList<String>();
@@ -210,6 +212,43 @@ public class FragmentIngridients extends Fragment implements View.OnClickListene
                 tmp+=staticString.str.get(i);
         }
         txt.setText(tmp);
+        if (staticString.IsAdd)
+        {
+            view.setFocusableInTouchMode(true);
+            view.requestFocus();
+
+            view.setOnKeyListener(new View.OnKeyListener() {
+                @Override
+                public boolean onKey(View v, int keyCode, KeyEvent event) {
+                    if (event.getAction() == KeyEvent.ACTION_UP) {
+                        if (keyCode == KeyEvent.KEYCODE_BACK) {
+                            FragmentManager fm = getFragmentManager();
+                            fm.popBackStack();
+                            FragmentTransaction ft = fm.beginTransaction();
+                            ft.commit();
+                            return true;
+                        }
+                    }
+                    return false;
+                }
+            });
+
+            result.setText("Принять");
+            result.setOnClickListener(new View.OnClickListener(){
+                @Override
+                public void onClick(View v){
+                    for (int i=0; i<staticString.addIngridients.size(); i++)
+                        staticString.addIngridients.remove(i);
+                    staticString.addIngridients = staticString.str;
+                    for (int i=0; i<staticString.str.size(); i++)
+                        staticString.str.remove(i);
+                    FragmentManager fm = getFragmentManager();
+                    fm.popBackStack();
+                    FragmentTransaction ft = fm.beginTransaction();
+                    ft.commit();
+                }
+            });
+        }
         return view;
     }
 
