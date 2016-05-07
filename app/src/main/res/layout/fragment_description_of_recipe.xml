@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:id = "@+id/description"
     tools:context="com.example.makpro.recipedesign1.Fragments.DescriptionOfRecipeFragment"
     android:weightSum="1">
 
@@ -20,6 +21,12 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Medium Text"
         android:id="@+id/IDDescription"
-        android:layout_weight="1" />
+        android:layout_weight="0.25" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Добавить комментарий?"
+        android:id="@+id/addComment" />
 
 </LinearLayout>

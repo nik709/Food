@@ -1,8 +1,13 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.example.makpro.recipedesign1.Fragments.FragmentIngridients">
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    tools:context="com.example.makpro.recipedesign1.Fragments.FragmentIngridients"
+    android:background="#000000"
+    android:backgroundTint="#000000"
+    android:focusableInTouchMode="false"
+    android:clickable="false"
+    android:backgroundTintMode="screen">
 
     <!-- TODO: Update blank fragment layout -->
 
@@ -22,150 +27,132 @@
         android:layout_height="800dp"
         android:id="@+id/scrollView6"
         android:fillViewport="false"
+        android:background="#000000"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true">
 
-        <LinearLayout
+        <TableLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:background="#000000">
 
-            <Button
+            <TableRow
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="@string/milkb"
-                android:id="@+id/milkB"
-                android:layout_below="@+id/vegetableButton"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true" />
+                android:layout_height="match_parent">
 
-            <Button
+                <ImageButton
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:id="@+id/milkButton"
+                    android:background="@drawable/moloko"
+                    android:layout_column="14" />
+
+                <ImageButton
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:id="@+id/fruitButton"
+                    android:background="@drawable/vish"
+                    android:layout_column="49"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignLeft="@+id/textView2"
+                    android:layout_alignStart="@+id/textView2" />
+
+                <ImageButton
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:id="@+id/mushroomButton"
+                    android:background="@drawable/grib"
+                    android:layout_alignBottom="@+id/fruitButton"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_column="51" />
+
+            </TableRow>
+
+            <TableRow
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Vegetables"
-                android:id="@+id/vegetableButton"
-                android:layout_below="@+id/meatButton"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true" />
+                android:layout_height="match_parent">
 
-            <Button
+                <ImageButton
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:id="@+id/meatButton"
+                    android:background="@drawable/steyk"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_gravity="right"
+                    android:layout_column="14" />
+
+                <ImageButton
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:id="@+id/groceryButton"
+                    android:background="@drawable/khleb"
+                    android:layout_column="49" />
+
+            </TableRow>
+
+            <TableRow
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Meat"
-                android:id="@+id/meatButton"
-                android:layout_alignParentTop="true"
-                android:layout_centerHorizontal="true" />
+                android:layout_height="match_parent">
 
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="FRUIT"
-                android:id="@+id/fruitButton"
-                android:layout_below="@+id/milkB"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true" />
+            </TableRow>
 
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="CORN"
-                android:id="@+id/cornBN"
-                android:layout_below="@+id/fruitButton"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true" />
-
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="NUTS"
-                android:id="@+id/nutButton"
-                android:layout_below="@+id/cornBN"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true" />
-
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="SEASONING"
-                android:id="@+id/seasoningButton"
-                android:layout_above="@+id/fruitButton"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true" />
-
-            <Button
+            <ImageButton
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="JUICE"
-                android:id="@+id/juiceButton"
-                android:layout_alignTop="@+id/fruitButton"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true" />
+                android:id="@+id/vegetableButton" />
 
-            <Button
+            <ImageButton
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="HERB"
-                android:id="@+id/herbButton"
-                android:layout_above="@+id/fruitButton"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true" />
+                android:id="@+id/cornBN" />
 
-            <Button
+            <ImageButton
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="EGG"
-                android:id="@+id/eggButton"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true" />
+                android:id="@+id/nutButton" />
 
-            <Button
+            <ImageButton
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="GROCERY"
-                android:id="@+id/groceryButton"
-                android:layout_below="@+id/meatButton"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true" />
+                android:id="@+id/seasoningButton" />
 
-            <Button
+            <ImageButton
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="MUSHROOM"
-                android:id="@+id/mushroomButton"
-                android:layout_above="@+id/milkB"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true" />
+                android:id="@+id/juiceButton" />
 
-            <Button
+            <ImageButton
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="SEAFOOD"
-                android:id="@+id/seafoodButton"
-                android:layout_above="@+id/textView2"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_marginBottom="31dp" />
+                android:id="@+id/herbButton" />
 
-            <Button
+            <ImageButton
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Поиск"
-                android:id="@+id/search"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true" />
+                android:id="@+id/eggButton" />
 
-        </LinearLayout>
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/seafoodButton" />
+
+        </TableLayout>
     </ScrollView>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Поиск"
+        android:id="@+id/search"
+        android:background="#ff0000"
+        android:textSize="20dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
 </RelativeLayout>

@@ -3,6 +3,8 @@ package com.example.makpro.recipedesign1.Fragments;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.content.Context;
+import android.content.res.AssetManager;
+import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Bundle;
 import android.app.Fragment;
@@ -75,6 +77,7 @@ public class grocery extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         view = inflater.inflate(R.layout.fragment_grocery, container, false);
+
         view.setFocusableInTouchMode(true);
         view.requestFocus();
 
@@ -98,6 +101,12 @@ public class grocery extends Fragment {
         yeastDough = (CheckBox) view.findViewById(R.id.yeastdoughBox);
         rozhok = (CheckBox) view.findViewById(R.id.rozhokBox);
         apply = (Button) view.findViewById(R.id.applyGrocery);
+        Typeface buttonFace = Typeface.createFromAsset(getActivity().getAssets(), "Mateur.ttf");
+        rozhok.setTypeface(buttonFace);
+        spagetti.setTypeface(buttonFace);
+        puffPastry.setTypeface(buttonFace);
+        yeastDough.setTypeface(buttonFace);
+        spagetti.setTypeface(buttonFace);
         apply.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -159,6 +168,8 @@ public class grocery extends Fragment {
         super.onDetach();
         mListener = null;
     }
+
+
 
     /**
      * This interface must be implemented by activities that contain this

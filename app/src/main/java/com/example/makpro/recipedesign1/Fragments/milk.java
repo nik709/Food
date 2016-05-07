@@ -4,6 +4,7 @@ import android.content.Context;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 
+import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Bundle;
 import android.app.Fragment;
@@ -100,12 +101,19 @@ public class milk extends Fragment {
                 return false;
             }
         });
+        Typeface general = Typeface.createFromAsset(getActivity().getAssets(), "Mateur.ttf");
         apply = (Button) view.findViewById(R.id.milkApply);
+        apply.setTypeface(general);
         milk = (CheckBox) view.findViewById(R.id.milkBox);
+        milk.setTypeface(general);
         cheese = (CheckBox) view.findViewById(R.id.cheeseBox);
+        cheese.setTypeface(general);
         curd = (CheckBox) view.findViewById(R.id.curdBox);
+        curd.setTypeface(general);
         sour = (CheckBox) view.findViewById(R.id.sourBox);
+        sour.setTypeface(general);
         cream = (CheckBox) view.findViewById(R.id.creamBox);
+        cream.setTypeface(general);
         apply.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

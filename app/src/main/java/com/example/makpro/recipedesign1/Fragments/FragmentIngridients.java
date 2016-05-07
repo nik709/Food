@@ -4,6 +4,7 @@ import android.app.FragmentTransaction;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Bundle;
 //import android.support.v4.app.Fragment;
@@ -13,6 +14,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.example.makpro.recipedesign1.DBHelper;
@@ -41,8 +43,9 @@ public class FragmentIngridients extends Fragment implements View.OnClickListene
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
-    Button meatB, veganB, result, milkB, fruitB, cornB, nutB, herbB, seasoningB, juiceB, seafoodB,
-    eggB, mushB, groceryB;
+    Button result;
+    ImageButton milkB, meatB, fruitB, groceryB, mushB, veganB, cornB, nutB, seasoningB, juiceB,
+    herbB, eggB, seafoodB;
     View view;
     MeatFragment mF;
     vegetableFragment vF;
@@ -116,7 +119,11 @@ public class FragmentIngridients extends Fragment implements View.OnClickListene
         mushF = new mushroom();
         groceryF = new grocery();
 
+<<<<<<< HEAD
 
+=======
+        staticString.str = new ArrayList<String>();
+>>>>>>> 48d16f6e7a0201b6906857a150e8dcc6950d1b26
         staticString.NameRecipe = new ArrayList<String>();
         staticString.NameCuisine = new ArrayList<String>();
         staticString.NameCategory = new ArrayList<String>();
@@ -167,21 +174,21 @@ public class FragmentIngridients extends Fragment implements View.OnClickListene
         Log.d(LOG_TAG, "--- ---");
 
 //--------------------------------------------------------------------------------------------------
-
-        meatB = (Button) view.findViewById(R.id.meatButton);
-        cornB = (Button) view.findViewById(R.id.cornBN);
-        veganB = (Button) view.findViewById(R.id.vegetableButton);
-        milkB = (Button) view.findViewById(R.id.milkB);
-        fruitB = (Button) view.findViewById(R.id.fruitButton);
+        Typeface ingredientFont = Typeface.createFromAsset(getActivity().getAssets(), "Peace Sans Webfont.ttf");
+        meatB = (ImageButton) view.findViewById(R.id.meatButton);
+        cornB = (ImageButton) view.findViewById(R.id.cornBN);
+        veganB = (ImageButton) view.findViewById(R.id.vegetableButton);
+        milkB = (ImageButton) view.findViewById(R.id.milkButton);
+        fruitB = (ImageButton) view.findViewById(R.id.fruitButton);
         result = (Button) view.findViewById(R.id.search);
-        nutB = (Button) view.findViewById(R.id.nutButton);
-        herbB = (Button) view.findViewById(R.id.herbButton);
-        seasoningB = (Button) view.findViewById(R.id.seasoningButton);
-        juiceB = (Button) view.findViewById(R.id.juiceButton);
-        seafoodB = (Button) view.findViewById(R.id.seafoodButton);
-        eggB = (Button) view.findViewById(R.id.eggButton);
-        mushB = (Button) view.findViewById(R.id.mushroomButton);
-        groceryB = (Button) view.findViewById(R.id.groceryButton);
+        nutB = (ImageButton) view.findViewById(R.id.nutButton);
+        herbB = (ImageButton) view.findViewById(R.id.herbButton);
+        seasoningB = (ImageButton) view.findViewById(R.id.seasoningButton);
+        juiceB = (ImageButton) view.findViewById(R.id.juiceButton);
+        seafoodB = (ImageButton) view.findViewById(R.id.seafoodButton);
+        eggB = (ImageButton) view.findViewById(R.id.eggButton);
+        mushB = (ImageButton) view.findViewById(R.id.mushroomButton);
+        groceryB = (ImageButton) view.findViewById(R.id.groceryButton);
         result.setOnClickListener(this);
         meatB.setOnClickListener(this);
         veganB.setOnClickListener(this);
@@ -255,13 +262,14 @@ public class FragmentIngridients extends Fragment implements View.OnClickListene
             case R.id.vegetableButton:
                 fTrans.replace(R.id.conteiner, vF);
                 break;
-            case R.id.milkB:
+            case R.id.milkButton:
                 fTrans.replace(R.id.conteiner, milkF);
                 break;
             case R.id.search: {
                 //---------------------------------------------------------------------------------
 
                 String chislo = Integer.toString(staticString.str.size());
+<<<<<<< HEAD
                 String inquiry = "select Recipe_name, Cuisine_name, Category_name, Method_name, Time_name, Description_cooking_method, Caloric_content "
                         + "from Recipe "
                         + "inner join Cuisine on Rec_Cuisine_ID = Cuisine_ID "
@@ -311,6 +319,60 @@ public class FragmentIngridients extends Fragment implements View.OnClickListene
                 Log.d(LOG_TAG,Integer.toString(staticString.quantityRecipe));
                 logCursor(cursor);
                 cursor.close();
+=======
+                staticString.quantityRecipe = 0 ;
+                if (staticString.str.size()>0) {
+
+                    String inquiry = "select Recipe_name, Cuisine_name, Category_name, Method_name, Time_name, Description_cooking_method, Caloric_content "
+                            + "from Recipe "
+                            + "inner join Cuisine on Rec_Cuisine_ID = Cuisine_ID "
+                            + "inner join Category on Rec_Category_ID = Category_ID "
+                            + "inner join Cooking_method on Rec_Cooking_method_ID = Cooking_method_ID "
+                            + "inner join Time on Rec_Time_ID = Time_ID "
+                            + "inner join Composition on Recipe_ID = Comp_recipe_ID "
+                            + "where Recipe_ID in "
+                            + "(select Recipe_ID "
+                            + "from Composition "
+                            + "inner join Recipe on Recipe_ID = Comp_Recipe_ID "
+                            + "where " + tmp + " group by Recipe_ID "
+                            + "having count(Comp_ingredient_ID)=" + chislo + " order by Recipe_ID) "
+                            + "group by Recipe_ID";
+                    cursor = sqLiteDatabase.rawQuery(inquiry, null);
+
+
+                    if (cursor.moveToFirst()) {
+                        int recipeColIndex = cursor.getColumnIndex("Recipe_name");
+                        int cuisineColIndex = cursor.getColumnIndex("Cuisine_name");
+                        int categoryColIndex = cursor.getColumnIndex("Category_name");
+                        int methodColIndex = cursor.getColumnIndex("Method_name");
+                        int timeColIndex = cursor.getColumnIndex("Time_name");
+                        int descriptionColIndex = cursor.getColumnIndex("Description_cooking_method");
+                        int caloricColIndex = cursor.getColumnIndex("Caloric_content");
+
+                        Log.d(LOG_TAG, cursor.getString(recipeColIndex));
+
+
+                        do {
+                            //присваивание в каждый рецепт
+                            staticString.NameRecipe.add(cursor.getString(recipeColIndex));
+                            staticString.NameCuisine.add(cursor.getString(cuisineColIndex));
+                            staticString.NameCategory.add(cursor.getString(categoryColIndex));
+                            staticString.NameMethod.add(cursor.getString(methodColIndex));
+                            staticString.NameTime.add(cursor.getString(timeColIndex));
+                            staticString.Description.add(cursor.getString(descriptionColIndex));
+                            staticString.Caloric.add(cursor.getString(caloricColIndex));
+
+                            staticString.quantityRecipe = staticString.quantityRecipe + 1;
+
+                        } while (cursor.moveToNext());
+                    } else
+                        //сказать что ТАКИХ РЕЦЕПТОВ НЕТ , ВЫ ГУРМАН. МОЖЕТ ДОБАВИТЕ СВОЙ?
+                        ;
+                    Log.d(LOG_TAG, Integer.toString(staticString.quantityRecipe));
+                    logCursor(cursor);
+                    cursor.close();
+                }
+>>>>>>> 48d16f6e7a0201b6906857a150e8dcc6950d1b26
 
                 //--------------------------------------------------------------------------------
 
