@@ -123,6 +123,9 @@ public class FragmentIngridients extends Fragment implements View.OnClickListene
 
 =======
         staticString.str = new ArrayList<String>();
+<<<<<<< HEAD
+>>>>>>> 48d16f6e7a0201b6906857a150e8dcc6950d1b26
+=======
 >>>>>>> 48d16f6e7a0201b6906857a150e8dcc6950d1b26
         staticString.NameRecipe = new ArrayList<String>();
         staticString.NameCuisine = new ArrayList<String>();
@@ -270,6 +273,7 @@ public class FragmentIngridients extends Fragment implements View.OnClickListene
 
                 String chislo = Integer.toString(staticString.str.size());
 <<<<<<< HEAD
+<<<<<<< HEAD
                 String inquiry = "select Recipe_name, Cuisine_name, Category_name, Method_name, Time_name, Description_cooking_method, Caloric_content "
                         + "from Recipe "
                         + "inner join Cuisine on Rec_Cuisine_ID = Cuisine_ID "
@@ -320,6 +324,8 @@ public class FragmentIngridients extends Fragment implements View.OnClickListene
                 logCursor(cursor);
                 cursor.close();
 =======
+=======
+>>>>>>> 48d16f6e7a0201b6906857a150e8dcc6950d1b26
                 staticString.quantityRecipe = 0 ;
                 if (staticString.str.size()>0) {
 
@@ -372,6 +378,9 @@ public class FragmentIngridients extends Fragment implements View.OnClickListene
                     logCursor(cursor);
                     cursor.close();
                 }
+<<<<<<< HEAD
+>>>>>>> 48d16f6e7a0201b6906857a150e8dcc6950d1b26
+=======
 >>>>>>> 48d16f6e7a0201b6906857a150e8dcc6950d1b26
 
                 //--------------------------------------------------------------------------------
