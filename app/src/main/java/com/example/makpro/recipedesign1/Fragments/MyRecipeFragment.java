@@ -32,10 +32,13 @@ public class MyRecipeFragment extends Fragment implements View.OnClickListener {
     private String mParam2;
 
     View view;
-    Button time, cuisine, category, cookingMethod;
+    Button time, cuisine, category, cookingMethod, dopSearch;
     FragmentTransaction fTrans;
     TimeFragment tF;
     CuisineFragment cuisineFragmentF;
+    CategoryFragment categoryFragment;
+    Cooking_methodFragment cooking_methodFragment;
+    ResultFragment resultFragment;
 
     private OnFragmentInteractionListener mListener;
 
@@ -66,6 +69,9 @@ public class MyRecipeFragment extends Fragment implements View.OnClickListener {
         super.onCreate(savedInstanceState);
         tF = new TimeFragment();
         cuisineFragmentF = new CuisineFragment();
+        categoryFragment = new CategoryFragment();
+        cooking_methodFragment = new Cooking_methodFragment();
+        resultFragment = new ResultFragment();
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
@@ -80,10 +86,12 @@ public class MyRecipeFragment extends Fragment implements View.OnClickListener {
         cuisine = (Button) view.findViewById(R.id.cuisineB);
         category = (Button) view.findViewById(R.id.categoryB);
         cookingMethod = (Button) view.findViewById(R.id.CookingmethodB);
+        dopSearch = (Button) view.findViewById(R.id.dopSearch);
         time.setOnClickListener(this);
         cuisine.setOnClickListener(this);
         category.setOnClickListener(this);
         cookingMethod.setOnClickListener(this);
+        dopSearch.setOnClickListener(this);
         return view;
     }
 
@@ -119,8 +127,13 @@ public class MyRecipeFragment extends Fragment implements View.OnClickListener {
                 fTrans.replace(R.id.conteiner, cuisineFragmentF);
                 break;
             case R.id.categoryB:
+                fTrans.replace(R.id.conteiner, categoryFragment);
                 break;
             case R.id.CookingmethodB:
+                fTrans.replace(R.id.conteiner, cooking_methodFragment);
+                break;
+            case R.id.dopSearch:
+                fTrans.replace(R.id.conteiner, resultFragment);
                 break;
         }
 
