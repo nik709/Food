@@ -172,16 +172,16 @@ public class FragmentIngridients extends Fragment implements View.OnClickListene
         Log.d(LOG_TAG, "--- ---");
 
 //--------------------------------------------------------------------------------------------------
-        Typeface ingredientFont = Typeface.createFromAsset(getActivity().getAssets(), "Peace Sans Webfont.ttf");
+        Typeface ingredientFont = Typeface.createFromAsset(getActivity().getAssets(), "Mateur.ttf");
         meatB = (ImageButton) view.findViewById(R.id.meatButton);
-        cornB = (ImageButton) view.findViewById(R.id.cornBN);
+        cornB = (ImageButton) view.findViewById(R.id.cornButton);
         veganB = (ImageButton) view.findViewById(R.id.vegetableButton);
         milkB = (ImageButton) view.findViewById(R.id.milkButton);
         fruitB = (ImageButton) view.findViewById(R.id.fruitButton);
         result = (Button) view.findViewById(R.id.search);
+        result.setTypeface(ingredientFont);
         nutB = (ImageButton) view.findViewById(R.id.nutButton);
         herbB = (ImageButton) view.findViewById(R.id.herbButton);
-        seasoningB = (ImageButton) view.findViewById(R.id.seasoningButton);
         juiceB = (ImageButton) view.findViewById(R.id.juiceButton);
         seafoodB = (ImageButton) view.findViewById(R.id.seafoodButton);
         eggB = (ImageButton) view.findViewById(R.id.eggButton);
@@ -195,21 +195,20 @@ public class FragmentIngridients extends Fragment implements View.OnClickListene
         cornB.setOnClickListener(this);
         nutB.setOnClickListener(this);
         herbB.setOnClickListener(this);
-        seasoningB.setOnClickListener(this);
         juiceB.setOnClickListener(this);
         seafoodB.setOnClickListener(this);
         eggB.setOnClickListener(this);
         mushB.setOnClickListener(this);
         groceryB.setOnClickListener(this);
-        txt = (TextView) view.findViewById(R.id.textView2);
-        txt.setText(tmp);
-        for (int i=0; i<staticString.str.size(); i++) {
-            if (i!=staticString.str.size()-1)
-            tmp+=staticString.str.get(i)+" or ";
-            else
-                tmp+=staticString.str.get(i);
-        }
-        txt.setText(tmp);
+        //txt = (TextView) view.findViewById(R.id.textView2);
+        //txt.setText(tmp);
+        //for (int i=0; i<staticString.str.size(); i++) {
+         //   if (i!=staticString.str.size()-1)
+          //  tmp+=staticString.str.get(i)+" or ";
+          //  else
+          //      tmp+=staticString.str.get(i);
+     //   }
+    //    txt.setText(tmp);
         return view;
     }
 
@@ -326,7 +325,7 @@ public class FragmentIngridients extends Fragment implements View.OnClickListene
             case R.id.fruitButton:
                 fTrans.replace(R.id.conteiner, fruitF);
                 break;
-            case R.id.cornBN:
+            case R.id.cornButton:
                 fTrans.replace(R.id.conteiner, cornF);
                 break;
             case R.id.nutButton:
@@ -334,9 +333,6 @@ public class FragmentIngridients extends Fragment implements View.OnClickListene
                 break;
             case R.id.herbButton:
                 fTrans.replace(R.id.conteiner, herbF);
-                break;
-            case R.id.seasoningButton:
-                fTrans.replace(R.id.conteiner, seasoningF);
                 break;
             case R.id.juiceButton:
                 fTrans.replace(R.id.conteiner, juiceF);

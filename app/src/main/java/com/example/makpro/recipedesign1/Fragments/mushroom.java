@@ -3,6 +3,7 @@ package com.example.makpro.recipedesign1.Fragments;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.content.Context;
+import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Bundle;
 import android.app.Fragment;
@@ -93,9 +94,14 @@ public class mushroom extends Fragment {
                 return false;
             }
         });
+        Typeface general = Typeface.createFromAsset(getActivity().getAssets(), "Peace Sans Webfont.ttf");
+        Typeface general1 = Typeface.createFromAsset(getActivity().getAssets(), "Mateur.ttf");
         whitemush = (CheckBox) view.findViewById(R.id.whitemBox);
+        whitemush.setTypeface(general);
         champignon = (CheckBox) view.findViewById(R.id.champignonBox);
+        champignon.setTypeface(general);
         apply = (Button) view.findViewById(R.id.applyMushroom);
+        apply.setTypeface(general1);
         apply.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

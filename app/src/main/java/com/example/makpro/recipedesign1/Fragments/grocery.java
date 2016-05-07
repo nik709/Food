@@ -96,11 +96,18 @@ public class grocery extends Fragment {
                 return false;
             }
         });
+        Typeface general = Typeface.createFromAsset(getActivity().getAssets(), "Mateur.ttf");
+        Typeface general2 = Typeface.createFromAsset(getActivity().getAssets(), "Peace Sans Webfont.ttf");
         spagetti = (CheckBox) view.findViewById(R.id.spagettiBox);
+        spagetti.setTypeface(general2);
         puffPastry = (CheckBox) view.findViewById(R.id.puffpastryBox);
+        puffPastry.setTypeface(general2);
         yeastDough = (CheckBox) view.findViewById(R.id.yeastdoughBox);
+        yeastDough.setTypeface(general2);
         rozhok = (CheckBox) view.findViewById(R.id.rozhokBox);
+        rozhok.setTypeface(general2);
         apply = (Button) view.findViewById(R.id.applyGrocery);
+        apply.setTypeface(general);
         Typeface buttonFace = Typeface.createFromAsset(getActivity().getAssets(), "Mateur.ttf");
         rozhok.setTypeface(buttonFace);
         spagetti.setTypeface(buttonFace);
