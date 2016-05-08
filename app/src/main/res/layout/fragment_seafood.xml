@@ -3,7 +3,8 @@
     android:orientation="horizontal"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.makpro.recipedesign1.Fragments.seafood">
+    tools:context="com.example.makpro.recipedesign1.Fragments.seafood"
+    android:background="@drawable/seafood">
 
     <!-- TODO: Update blank fragment layout -->
 
@@ -23,42 +24,54 @@
                 android:layout_height="wrap_content"
                 android:text="Окунь"
                 android:id="@+id/ocunBox"
-                android:checked="false" />
+                android:checked="false"
+                android:textSize="20dp"
+                android:textColor="#ffb7b7" />
 
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Горбуша"
                 android:id="@+id/gorbushaBox"
-                android:checked="false" />
+                android:checked="false"
+                android:textSize="20dp"
+                android:textColor="#ffb7b7" />
 
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Сельдь"
                 android:id="@+id/seldBox"
-                android:checked="false" />
+                android:checked="false"
+                android:textSize="20dp"
+                android:textColor="#ffb7b7" />
 
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Скумбрия"
                 android:id="@+id/scumBox"
-                android:checked="false" />
+                android:checked="false"
+                android:textSize="20dp"
+                android:textColor="#ffb7b7" />
 
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Красная икра"
                 android:id="@+id/redcaviarBox"
-                android:checked="false" />
+                android:checked="false"
+                android:textSize="20dp"
+                android:textColor="#ffb7b7" />
 
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Черная икра"
                 android:id="@+id/blackcaviarBox"
-                android:checked="false" />
+                android:checked="false"
+                android:textSize="20dp"
+                android:textColor="#ffb7b7" />
         </LinearLayout>
     </ScrollView>
 

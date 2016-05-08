@@ -3,6 +3,7 @@ package com.example.makpro.recipedesign1.Fragments;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.content.Context;
+import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Bundle;
 import android.app.Fragment;
@@ -94,11 +95,18 @@ public class herb extends Fragment {
                 return false;
             }
         });
+        Typeface gen = Typeface.createFromAsset(getActivity().getAssets(), "Peace Sans Webfont.ttf");
+        Typeface gen2 = Typeface.createFromAsset(getActivity().getAssets(), "Mateur.ttf");
         lavr = (CheckBox) view.findViewById(R.id.lavrBox);
+        lavr.setTypeface(gen);
         mint = (CheckBox) view.findViewById(R.id.mintBox);
+        mint.setTypeface(gen);
         melisa = (CheckBox) view.findViewById(R.id.melisaBox);
+        melisa.setTypeface(gen);
         origana = (CheckBox) view.findViewById(R.id.origanaBox);
+        origana.setTypeface(gen);
         apply = (Button) view.findViewById(R.id.herbApply);
+        apply.setTypeface(gen2);
         apply.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {

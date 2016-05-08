@@ -3,7 +3,8 @@
     android:orientation="horizontal"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.makpro.recipedesign1.Fragments.egg">
+    tools:context="com.example.makpro.recipedesign1.Fragments.egg"
+    android:background="@drawable/egg1">
 
     <!-- TODO: Update blank fragment layout -->
 
@@ -23,14 +24,18 @@
                 android:layout_height="wrap_content"
                 android:text="Куриные яйца"
                 android:id="@+id/chickeneBox"
-                android:checked="false" />
+                android:checked="false"
+                android:textSize="20dp"
+                android:textColor="#192118" />
 
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Перепелиные яйца"
                 android:id="@+id/perepeBox"
-                android:checked="false" />
+                android:checked="false"
+                android:textSize="20dp"
+                android:textColor="#192118" />
         </LinearLayout>
     </ScrollView>
 
@@ -43,6 +48,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="APPLY"
-            android:id="@+id/applyEgg" />
+            android:id="@+id/applyEgg"
+            android:background="#ec932d" />
     </LinearLayout>
 </LinearLayout>
