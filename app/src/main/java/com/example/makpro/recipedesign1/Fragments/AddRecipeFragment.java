@@ -1,16 +1,21 @@
 package com.example.makpro.recipedesign1.Fragments;
 
 import android.app.FragmentTransaction;
+import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
 import android.os.Bundle;
 import android.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.example.makpro.recipedesign1.DBHelper;
 import com.example.makpro.recipedesign1.R;
 import com.example.makpro.recipedesign1.staticString;
 
@@ -36,6 +41,13 @@ public class AddRecipeFragment extends Fragment implements View.OnClickListener 
     View view;
     Button addIngr, addTime, addCuisine, addCategory, addMethod, addDescription, ADD;
     TextView test;
+    ContentValues contentValues;
+
+    String cuisine;
+    String category;
+    String cookingmethod;
+    String time;
+    String ingredients;
 
     FragmentTransaction fTrans;
     FragmentIngridients fragmentIngridients;
@@ -44,6 +56,12 @@ public class AddRecipeFragment extends Fragment implements View.OnClickListener 
     CategoryFragment categoryFragment;
     Cooking_methodFragment cooking_methodFragment;
     AddDescriptionFragment addDescriptionFragment;
+
+    final String LOG_TAG = "myLogs";
+    public SQLiteDatabase sqLiteDatabase;
+    public DBHelper dbHelper;
+
+    Cursor cursor;
 
     private OnFragmentInteractionListener mListener;
 
@@ -82,6 +100,8 @@ public class AddRecipeFragment extends Fragment implements View.OnClickListener 
         staticString.addCuisine = new ArrayList<String>();
         staticString.addCategory = new ArrayList<String>();
         staticString.addCookingMethod = new ArrayList<String>();
+
+        contentValues = new ContentValues();
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
@@ -107,11 +127,38 @@ public class AddRecipeFragment extends Fragment implements View.OnClickListener 
         addMethod.setOnClickListener(this);
         addDescription.setOnClickListener(this);
         test = (TextView) view.findViewById(R.id.textView3);
-        String testStr;
-        testStr ="";
+        //подлючаемся к базе данных
+        dbHelper = new DBHelper(view.getContext());
+        sqLiteDatabase = dbHelper.getWritableDatabase();
+
+
+        cuisine ="";
+        category ="";
+        cookingmethod ="";
+        time ="";
+        ingredients ="";
+
+
+        for (int i=0; i<staticString.addCuisine.size(); i++)
+            cuisine+=staticString.addCuisine.get(i);
+        test.setText(cuisine);
+
+        for (int i=0; i<staticString.addCategory.size(); i++)
+            category+=staticString.addCategory.get(i);
+        test.setText(category);
+
+        for (int i=0; i<staticString.addCookingMethod.size(); i++)
+            cookingmethod+=staticString.addCookingMethod.get(i);
+        test.setText(cookingmethod);
+
         for (int i=0; i<staticString.addTime.size(); i++)
-            testStr+=staticString.addTime.get(i);
-        test.setText(testStr);
+            time+=staticString.addTime.get(i);
+        test.setText(time);
+
+        for (int i=0; i<staticString.addIngridients.size(); i++)
+            ingredients+=staticString.addIngridients.get(i);
+        test.setText(ingredients);
+
         return view;
     }
 
@@ -161,11 +208,67 @@ public class AddRecipeFragment extends Fragment implements View.OnClickListener 
                 break;
             case R.id.ADD:
                 //ДОБАВЛЕНИЕ РЕЦЕПТА В БД
+                String last = "select Recipe_ID from Recipe ORDER by Recipe_ID DESC LIMIT 1";
+                cursor = sqLiteDatabase.rawQuery(last,null);
+                int colRecMaxId = cursor.getColumnIndex("Recipe_ID");
+                logCursor(cursor);
+                Log.d(LOG_TAG,Integer.toString(colRecMaxId));
+                cursor.moveToFirst();
+                int lastID = cursor.getInt(colRecMaxId);
+
+                contentValues.put("Recipe_ID", lastID+1);
+                contentValues.put("Rec_Cuisine_ID", String.valueOf(cuisine));
+                contentValues.put("Rec_Category_ID", String.valueOf(category));
+                contentValues.put("Rec_Cooking_method_ID", String.valueOf(cookingmethod));
+                contentValues.put("Rec_Time_ID", String.valueOf(time));
+                contentValues.put("Description_cooking_method", staticString.addDescription);
+                contentValues.put("Recipe_name", staticString.addName);
+              //  contentValues.put("Caloric_content", staticString.addCaloricContent);
+                sqLiteDatabase.insert("Recipe",null,contentValues);
+                cursor.close();
+
+                contentValues.clear();
+
+
+                last = "select max(Comp_ID) from Composition";
+                cursor = sqLiteDatabase.rawQuery(last,null);
+                int colCompMaxId = cursor.getColumnIndex("max(Comp_ID)");
+                cursor.moveToFirst();
+                int lastCompID = cursor.getInt(colCompMaxId);
+                int chislo = staticString.addIngridients.size();
+                int j = 0;
+                for (int i = (lastCompID+1); i<(lastCompID+chislo+1); i++)
+                {
+                    contentValues.put("Comp_ID", lastCompID+1+j);
+                    contentValues.put("Comp_Ingredient_ID",staticString.addIngridients.get(j));
+                    contentValues.put("Comp_recipe_ID",lastID+1);
+                    sqLiteDatabase.insert("Composition", null, contentValues);
+                    contentValues.clear();
+
+                }
+                cursor.close();
                 break;
         }
         fTrans.addToBackStack(null);
         fTrans.commit();
     }
+
+    void logCursor(Cursor c) {
+        if (c != null) {
+            if (c.moveToFirst()) {
+                String str;
+                do {
+                    str = "";
+                    for (String cn : c.getColumnNames()) {
+                        str = str.concat(cn + " = " + c.getString(c.getColumnIndex(cn)) + "; ");
+                    }
+                    Log.d(LOG_TAG, str);
+                } while (c.moveToNext());
+            }
+        } else
+            Log.d(LOG_TAG, "Cursor is null");
+    }
+
 
     /**
      * This interface must be implemented by activities that contain this
