@@ -3,7 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="horizontal"
-    tools:context="com.example.makpro.recipedesign1.Fragments.CategoryFragment">
+    tools:context="com.example.makpro.recipedesign1.Fragments.CategoryFragment"
+    android:background="@drawable/categorypic">
 
     <!-- TODO: Update blank fragment layout -->
 
@@ -23,33 +24,43 @@
                 android:layout_height="wrap_content"
                 android:text="Закуска"
                 android:id="@+id/CBsnack"
-                android:checked="false" />
+                android:checked="false"
+                android:textSize="20dp"
+                android:textColor="#ff4378" />
 
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Салат"
                 android:id="@+id/CBsalad"
-                android:checked="false" />
+                android:checked="false"
+                android:textSize="20dp"
+                android:textColor="#ff4378" />
 
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Первое"
                 android:id="@+id/CBFirst"
-                android:checked="false" />
+                android:checked="false"
+                android:textSize="20dp"
+                android:textColor="#ff4378" />
 
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Второе"
-                android:id="@+id/CBSecond" />
+                android:id="@+id/CBSecond"
+                android:textSize="20dp"
+                android:textColor="#ff4378" />
 
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Десерт"
-                android:id="@+id/CBdessert" />
+                android:id="@+id/CBdessert"
+                android:textSize="20dp"
+                android:textColor="#ff4378" />
         </LinearLayout>
     </ScrollView>
 
@@ -58,5 +69,6 @@
         android:layout_height="wrap_content"
         android:text="Apply"
         android:id="@+id/CategoryApply"
-        android:layout_weight="0.6" />
+        android:layout_weight="0.6"
+        android:background="#ff4378" />
 </LinearLayout>

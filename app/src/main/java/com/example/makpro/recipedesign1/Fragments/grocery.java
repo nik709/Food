@@ -108,12 +108,6 @@ public class grocery extends Fragment {
         rozhok.setTypeface(general2);
         apply = (Button) view.findViewById(R.id.applyGrocery);
         apply.setTypeface(general);
-        Typeface buttonFace = Typeface.createFromAsset(getActivity().getAssets(), "Mateur.ttf");
-        rozhok.setTypeface(buttonFace);
-        spagetti.setTypeface(buttonFace);
-        puffPastry.setTypeface(buttonFace);
-        yeastDough.setTypeface(buttonFace);
-        spagetti.setTypeface(buttonFace);
         apply.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

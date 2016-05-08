@@ -1,6 +1,7 @@
 package com.example.makpro.recipedesign1.Fragments;
 
 import android.content.Context;
+import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Bundle;
 import android.app.Fragment;
@@ -75,10 +76,15 @@ public class DescriptionOfRecipeFragment extends Fragment implements View.OnClic
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_description_of_recipe, container, false);
+        Typeface des = Typeface.createFromAsset(getActivity().getAssets(), "Mateur.ttf");
+        Typeface name = Typeface.createFromAsset(getActivity().getAssets(), "Peace Sans Webfont.ttf");
         addComment = (Button) view.findViewById(R.id.addComment);
+        addComment.setTypeface(name);
         addComment.setOnClickListener(this);
         RecipeName = (TextView) view.findViewById(R.id.IDRecipeName);
+        RecipeName.setTypeface(name);
         Description = (TextView) view.findViewById(R.id.IDDescription);
+        Description.setTypeface(des);
         RecipeName.setText(staticString.RecipeName);
         Description.setText(staticString.Description.get(staticString.IDofRecipe));
         return  view;

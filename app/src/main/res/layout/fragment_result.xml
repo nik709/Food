@@ -4,7 +4,8 @@
     android:layout_height="match_parent"
     android:orientation="horizontal"
     tools:context="com.example.makpro.recipedesign1.Fragments.ResultFragment"
-    android:weightSum="1">
+    android:weightSum="1"
+    android:background="@drawable/result">
 
     <!-- TODO: Update blank fragment layout -->
 

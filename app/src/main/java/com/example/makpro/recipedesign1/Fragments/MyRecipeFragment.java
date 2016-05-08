@@ -2,6 +2,7 @@ package com.example.makpro.recipedesign1.Fragments;
 
 import android.app.FragmentTransaction;
 import android.content.Context;
+import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Bundle;
 //import android.support.v4.app.Fragment;
@@ -82,11 +83,17 @@ public class MyRecipeFragment extends Fragment implements View.OnClickListener {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_my_recipe, container, false);
+        Typeface rec = Typeface.createFromAsset(getActivity().getAssets(), "Mateur.ttf");
         time = (Button) view.findViewById(R.id.timeB);
+        time.setTypeface(rec);
         cuisine = (Button) view.findViewById(R.id.cuisineB);
+        cuisine.setTypeface(rec);
         category = (Button) view.findViewById(R.id.categoryB);
+        category.setTypeface(rec);
         cookingMethod = (Button) view.findViewById(R.id.CookingmethodB);
+        cookingMethod.setTypeface(rec);
         dopSearch = (Button) view.findViewById(R.id.dopSearch);
+        dopSearch.setTypeface(rec);
         time.setOnClickListener(this);
         cuisine.setOnClickListener(this);
         category.setOnClickListener(this);

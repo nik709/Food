@@ -3,7 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="horizontal"
-    tools:context="com.example.makpro.recipedesign1.Fragments.Cooking_methodFragment">
+    tools:context="com.example.makpro.recipedesign1.Fragments.Cooking_methodFragment"
+    android:background="@drawable/cookingmethod">
 
     <!-- TODO: Update blank fragment layout -->
 
@@ -22,19 +23,25 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Вареное"
-                android:id="@+id/CBboiled" />
+                android:id="@+id/CBboiled"
+                android:textSize="20dp"
+                android:textColor="#e10808" />
 
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Тушеное"
-                android:id="@+id/CBstew" />
+                android:id="@+id/CBstew"
+                android:textSize="20dp"
+                android:textColor="#e10808" />
 
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Жареное"
-                android:id="@+id/CBfry" />
+                android:id="@+id/CBfry"
+                android:textSize="20dp"
+                android:textColor="#e10808" />
         </LinearLayout>
     </ScrollView>
 
@@ -43,5 +50,6 @@
         android:layout_height="wrap_content"
         android:text="Apply"
         android:id="@+id/CookingMethodApply"
-        android:layout_weight="0.6" />
+        android:layout_weight="0.6"
+        android:background="#e10808" />
 </LinearLayout>

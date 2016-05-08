@@ -62,7 +62,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Apply"
-            android:id="@+id/applyJuice" />
+            android:id="@+id/applyJuice"
+            android:textColor="#ffffff"
+            android:background="#000000" />
     </LinearLayout>
 
 </LinearLayout>

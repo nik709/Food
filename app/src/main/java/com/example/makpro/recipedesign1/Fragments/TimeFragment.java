@@ -3,9 +3,11 @@ package com.example.makpro.recipedesign1.Fragments;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.content.Context;
+import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Bundle;
 import android.app.Fragment;
+import android.renderscript.Type;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -92,14 +94,24 @@ public class TimeFragment extends Fragment {
                 return false;
             }
         });
+        Typeface tim = Typeface.createFromAsset(getActivity().getAssets(), "Peace Sans Webfont.ttf");
+        Typeface timee = Typeface.createFromAsset(getActivity().getAssets(), "Mateur.ttf");
         apply = (Button) view.findViewById(R.id.ApplyTime);
+        apply.setTypeface(timee);
         time1 = (CheckBox) view.findViewById(R.id.CBtime1);
+        time1.setTypeface(tim);
         time2 = (CheckBox) view.findViewById(R.id.CBtime2);
+        time2.setTypeface(tim);
         time3 = (CheckBox) view.findViewById(R.id.CBtime3);
+        time3.setTypeface(tim);
         time4 = (CheckBox) view.findViewById(R.id.CBtime4);
+        time4.setTypeface(tim);
         time5 = (CheckBox) view.findViewById(R.id.CBtime5);
+        time5.setTypeface(tim);
         time6 = (CheckBox) view.findViewById(R.id.CBtime6);
+        time6.setTypeface(tim);
         time7 = (CheckBox) view.findViewById(R.id.CBtime7);
+        time7.setTypeface(tim);
         apply.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v)
