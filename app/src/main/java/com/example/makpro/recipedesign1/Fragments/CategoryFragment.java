@@ -112,39 +112,48 @@ public class CategoryFragment extends Fragment implements View.OnClickListener {
             public void onClick(View v)
             {
                 if (snack.isChecked()) {
-                    staticString.str.remove("snack");
-                    staticString.str.add("snack");
+                    staticString.SearchCategory.remove("11");
+                    staticString.SearchCategory.add("11");
                 }
                 else
-                    staticString.str.remove("snack");
+                    staticString.SearchCategory.remove("11");
 
                 if (salad.isChecked()) {
-                    staticString.str.remove("salad");
-                    staticString.str.add("salad");
+                    staticString.SearchCategory.remove("12");
+                    staticString.SearchCategory.add("12");
                 }
                 else
-                    staticString.str.remove("salad");
+                    staticString.SearchCategory.remove("12");
 
                 if (first.isChecked()) {
-                    staticString.str.remove("first");
-                    staticString.str.add("first");
+                    staticString.SearchCategory.remove("13");
+                    staticString.SearchCategory.add("13");
                 }
                 else
-                    staticString.str.remove("first");
+                    staticString.SearchCategory.remove("13");
 
                 if (second.isChecked()) {
-                    staticString.str.remove("second");
-                    staticString.str.add("second");
+                    staticString.SearchCategory.remove("14");
+                    staticString.SearchCategory.add("14");
                 }
                 else
-                    staticString.str.remove("second");
+                    staticString.SearchCategory.remove("14");
 
                 if (dessert.isChecked()) {
-                    staticString.str.remove("dessert");
-                    staticString.str.add("dessert");
+                    staticString.SearchCategory.remove("15");
+                    staticString.SearchCategory.add("15");
                 }
                 else
-                    staticString.str.remove("dessert");
+                    staticString.SearchCategory.remove("15");
+
+                if (staticString.IsAdd){
+                    for (int i=0; i<staticString.addCategory.size(); i++)
+                        staticString.addCategory.remove(i);
+                    for (int i=0; i<staticString.SearchTime.size(); i++)
+                        staticString.addCategory.add(staticString.SearchCategory.get(i));
+                    for (int i=0; i<staticString.SearchCategory.size(); i++)
+                        staticString.SearchCategory.remove(i);
+                }
 
                 FragmentManager fm = getFragmentManager();
                 fm.popBackStack();

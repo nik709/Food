@@ -108,25 +108,34 @@ public class Cooking_methodFragment extends Fragment implements View.OnClickList
             public void onClick(View v)
             {
                 if (boiled.isChecked()) {
-                    staticString.str.remove("boiled");
-                    staticString.str.add("boiled");
+                    staticString.SearchCookingMethod.remove("16");
+                    staticString.SearchCookingMethod.add("16");
                 }
                 else
-                    staticString.str.remove("boiled");
+                    staticString.SearchCookingMethod.remove("16");
 
                 if (stew.isChecked()) {
-                    staticString.str.remove("stew");
-                    staticString.str.add("stew");
+                    staticString.SearchCookingMethod.remove("17");
+                    staticString.SearchCookingMethod.add("17");
                 }
                 else
-                    staticString.str.remove("stew");
+                    staticString.SearchCookingMethod.remove("17");
 
                 if (fry.isChecked()) {
-                    staticString.str.remove("fry");
-                    staticString.str.add("fry");
+                    staticString.SearchCookingMethod.remove("18");
+                    staticString.SearchCookingMethod.add("18");
                 }
                 else
-                    staticString.str.remove("fry");
+                    staticString.SearchCookingMethod.remove("18");
+
+                if (staticString.IsAdd){
+                    for (int i=0; i<staticString.addCookingMethod.size(); i++)
+                        staticString.addCookingMethod.remove(i);
+                    for (int i=0; i<staticString.SearchTime.size(); i++)
+                        staticString.addCookingMethod.add(staticString.SearchCookingMethod.get(i));
+                    for (int i=0; i<staticString.SearchCookingMethod.size(); i++)
+                        staticString.SearchCookingMethod.remove(i);
+                }
 
                 FragmentManager fm = getFragmentManager();
                 fm.popBackStack();

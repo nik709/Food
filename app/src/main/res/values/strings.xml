@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">ЕДА</string>
+    <string name="app_name">IT LUNCH</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -36,6 +36,7 @@
     <string name="Пшено">Пшено</string>
     <string name="Гречка">Гречка</string>
     <string name="otherSearch">Дополнительный поиск</string>
+    <string name="addYourRecipe">Добавление своих рецептов</string>
 
     //Название продукта
     <string-array name="Ingredient_name">
@@ -246,7 +247,7 @@
         <item>более 1 час</item>
     </string-array>
 
-    //id способа приготовления
+    //id времени
     <integer-array name="Time_ID">
         <item>1001</item>
         <item>1002</item>

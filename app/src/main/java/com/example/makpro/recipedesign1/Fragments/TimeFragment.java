@@ -117,53 +117,62 @@ public class TimeFragment extends Fragment {
             public void onClick(View v)
             {
                 if (time1.isChecked()) {
-                    staticString.str.remove("time1");
-                    staticString.str.add("time1");
+                    staticString.SearchTime.remove("1001");
+                    staticString.SearchTime.add("1001");
                 }
                 else
-                    staticString.str.remove("time1");
+                    staticString.SearchTime.remove("1001");
 
                 if (time2.isChecked()) {
-                    staticString.str.remove("time2");
-                    staticString.str.add("time2");
+                    staticString.SearchTime.remove("1002");
+                    staticString.SearchTime.add("1002");
                 }
                 else
-                    staticString.str.remove("time2");
+                    staticString.SearchTime.remove("1002");
 
                 if (time3.isChecked()) {
-                    staticString.str.remove("time3");
-                    staticString.str.add("time3");
+                    staticString.SearchTime.remove("1003");
+                    staticString.SearchTime.add("1003");
                 }
                 else
-                    staticString.str.remove("time3");
+                    staticString.SearchTime.remove("1003");
 
                 if (time4.isChecked()) {
-                    staticString.str.remove("time4");
-                    staticString.str.add("time4");
+                    staticString.SearchTime.remove("1004");
+                    staticString.SearchTime.add("1004");
                 }
                 else
-                    staticString.str.remove("time4");
+                    staticString.SearchTime.remove("1004");
 
                 if (time5.isChecked()) {
-                    staticString.str.remove("time5");
-                    staticString.str.add("time5");
+                    staticString.SearchTime.remove("1005");
+                    staticString.SearchTime.add("1005");
                 }
                 else
-                    staticString.str.remove("time5");
+                    staticString.SearchTime.remove("1005");
 
                 if (time6.isChecked()) {
-                    staticString.str.remove("time6");
-                    staticString.str.add("time6");
+                    staticString.SearchTime.remove("1006");
+                    staticString.SearchTime.add("1006");
                 }
                 else
-                    staticString.str.remove("time6");
+                    staticString.SearchTime.remove("1006");
 
                 if (time7.isChecked()) {
-                    staticString.str.remove("time7");
-                    staticString.str.add("time7");
+                    staticString.SearchTime.remove("1007");
+                    staticString.SearchTime.add("1007");
                 }
                 else
-                    staticString.str.remove("time7");
+                    staticString.SearchTime.remove("1007");
+
+                if (staticString.IsAdd){
+                    for (int i=0; i<staticString.addTime.size(); i++)
+                        staticString.addTime.remove(i);
+                    for (int i=0; i<staticString.SearchTime.size(); i++)
+                        staticString.addTime.add(staticString.SearchTime.get(i));
+                    for (int i=0; i<staticString.SearchTime.size(); i++)
+                        staticString.SearchTime.remove(i);
+                }
 
                 FragmentManager fm = getFragmentManager();
                 fm.popBackStack();

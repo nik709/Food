@@ -17,6 +17,7 @@ import android.view.MenuItem;
 import android.app.FragmentTransaction;
 import android.widget.Button;
 
+import com.example.makpro.recipedesign1.Fragments.AddRecipeFragment;
 import com.example.makpro.recipedesign1.Fragments.FragmentIngridients;
 import com.example.makpro.recipedesign1.Fragments.MyRecipeFragment;
 
@@ -27,6 +28,7 @@ public class NavigatActivity extends AppCompatActivity
 
     FragmentIngridients FragIngridient;
     MyRecipeFragment dopSearch;
+    AddRecipeFragment addRecipeFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,7 +56,20 @@ public class NavigatActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
         FragIngridient = new FragmentIngridients();
         dopSearch = new MyRecipeFragment();
+        addRecipeFragment = new AddRecipeFragment();
         staticString.str = new ArrayList<String>();
+        staticString.addIngridients = new ArrayList<String>();
+        staticString.NameRecipe = new ArrayList<String>();
+        staticString.NameCuisine = new ArrayList<String>();
+        staticString.NameCategory = new ArrayList<String>();
+        staticString.NameMethod = new ArrayList<String>();
+        staticString.NameTime = new ArrayList<String>();
+        staticString.Description = new ArrayList<String>();
+        staticString.Caloric = new ArrayList<String>();
+        staticString.SearchCuisine = new ArrayList<String>();
+        staticString.SearchCategory = new ArrayList<String>();
+        staticString.SearchTime = new ArrayList<String>();
+        staticString.SearchCookingMethod = new ArrayList<String>();
 
     }
 
@@ -100,12 +115,16 @@ public class NavigatActivity extends AppCompatActivity
         FragmentManager fm = getFragmentManager();
         FragmentTransaction ftrans = fm.beginTransaction();
         if (id == R.id.nav_camera) {
+            staticString.IsAdd = false;
             ftrans.replace(R.id.conteiner, FragIngridient);
 
         } else if (id == R.id.nav_gallery) {
+            staticString.IsAdd = false;
             ftrans.replace(R.id.conteiner, dopSearch);
 
         } else if (id == R.id.nav_slideshow) {
+            staticString.IsAdd = true;
+            ftrans.replace(R.id.conteiner, addRecipeFragment);
 
         } else if (id == R.id.nav_manage) {
 

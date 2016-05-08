@@ -1,5 +1,6 @@
 package com.example.makpro.recipedesign1.Fragments;
 
+import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.content.Context;
 import android.database.Cursor;
@@ -10,6 +11,7 @@ import android.os.Bundle;
 //import android.support.v4.app.Fragment;
 import  android.app.Fragment;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -120,15 +122,7 @@ public class FragmentIngridients extends Fragment implements View.OnClickListene
         groceryF = new grocery();
 
 
-        staticString.str = new ArrayList<String>();
-
-        staticString.NameRecipe = new ArrayList<String>();
-        staticString.NameCuisine = new ArrayList<String>();
-        staticString.NameCategory = new ArrayList<String>();
-        staticString.NameMethod = new ArrayList<String>();
-        staticString.NameTime = new ArrayList<String>();
-        staticString.Description = new ArrayList<String>();
-        staticString.Caloric = new ArrayList<String>();
+        //staticString.str = new ArrayList<String>();
 
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
@@ -200,6 +194,56 @@ public class FragmentIngridients extends Fragment implements View.OnClickListene
         eggB.setOnClickListener(this);
         mushB.setOnClickListener(this);
         groceryB.setOnClickListener(this);
+<<<<<<< HEAD
+        txt = (TextView) view.findViewById(R.id.textView2);
+        txt.setText(tmp);
+        for (int i=0; i<staticString.str.size(); i++) {
+            if (i!=staticString.str.size()-1)
+            tmp+=staticString.str.get(i)+" or ";
+            else
+                tmp+=staticString.str.get(i);
+        }
+        txt.setText(tmp);
+        if (staticString.IsAdd)
+        {
+            view.setFocusableInTouchMode(true);
+            view.requestFocus();
+
+            view.setOnKeyListener(new View.OnKeyListener() {
+                @Override
+                public boolean onKey(View v, int keyCode, KeyEvent event) {
+                    if (event.getAction() == KeyEvent.ACTION_UP) {
+                        if (keyCode == KeyEvent.KEYCODE_BACK) {
+                            FragmentManager fm = getFragmentManager();
+                            fm.popBackStack();
+                            FragmentTransaction ft = fm.beginTransaction();
+                            ft.commit();
+                            return true;
+                        }
+                    }
+                    return false;
+                }
+            });
+
+            result.setText("Принять");
+            result.setOnClickListener(new View.OnClickListener(){
+                @Override
+                public void onClick(View v){
+                    for (int i=0; i<staticString.addIngridients.size(); i++)
+                        staticString.addIngridients.remove(i);
+                    for (int i=0; i<staticString.str.size(); i++)
+                        staticString.addIngridients.add(staticString.str.get(i));
+                    for (int i=0; i<staticString.str.size(); i++)
+                        staticString.str.remove(i);
+
+                    FragmentManager fm = getFragmentManager();
+                    fm.popBackStack();
+                    FragmentTransaction ft = fm.beginTransaction();
+                    ft.commit();
+                }
+            });
+        }
+=======
         //txt = (TextView) view.findViewById(R.id.textView2);
         //txt.setText(tmp);
         //for (int i=0; i<staticString.str.size(); i++) {
@@ -209,6 +253,7 @@ public class FragmentIngridients extends Fragment implements View.OnClickListene
           //      tmp+=staticString.str.get(i);
      //   }
     //    txt.setText(tmp);
+>>>>>>> 7c1123cc65979f350b03435a8111d0cf30a376f9
         return view;
     }
 
@@ -266,56 +311,62 @@ public class FragmentIngridients extends Fragment implements View.OnClickListene
                 //---------------------------------------------------------------------------------
 
                 String chislo = Integer.toString(staticString.str.size());
+                staticString.quantityRecipe = 0;
 
-                String inquiry = "select Recipe_name, Cuisine_name, Category_name, Method_name, Time_name, Description_cooking_method, Caloric_content "
-                        + "from Recipe "
-                        + "inner join Cuisine on Rec_Cuisine_ID = Cuisine_ID "
-                        + "inner join Category on Rec_Category_ID = Category_ID "
-                        + "inner join Cooking_method on Rec_Cooking_method_ID = Cooking_method_ID "
-                        + "inner join Time on Rec_Time_ID = Time_ID "
-                        + "inner join Composition on Recipe_ID = Comp_recipe_ID "
-                        + "where Recipe_ID in "
-                        + "(select Recipe_ID "
-                        + "from Composition "
-                        + "inner join Recipe on Recipe_ID = Comp_Recipe_ID "
-                        + "where " + tmp + " group by Recipe_ID "
-                        + "having count(Comp_ingredient_ID)=" + chislo + " order by Recipe_ID) "
-                        + "group by Recipe_ID";
-                cursor = sqLiteDatabase.rawQuery(inquiry, null);
-                staticString.quantityRecipe = 0 ;
-                if (cursor.moveToFirst()) {
-                    int recipeColIndex = cursor.getColumnIndex("Recipe_name");
-                    int cuisineColIndex = cursor.getColumnIndex("Cuisine_name");
-                    int categoryColIndex = cursor.getColumnIndex("Category_name");
-                    int methodColIndex = cursor.getColumnIndex("Method_name");
-                    int timeColIndex = cursor.getColumnIndex("Time_name");
-                    int descriptionColIndex = cursor.getColumnIndex("Description_cooking_method");
-                    int caloricColIndex = cursor.getColumnIndex("Caloric_content");
+                if(staticString.str.size()>0) {
+                    staticString.Products = tmp;
+                    String inquiry = "select Recipe_name, Cuisine_name, Category_name, Method_name, Time_name, Description_cooking_method, Caloric_content "
+                            + "from Recipe "
+                            + "inner join Cuisine on Rec_Cuisine_ID = Cuisine_ID "
+                            + "inner join Category on Rec_Category_ID = Category_ID "
+                            + "inner join Cooking_method on Rec_Cooking_method_ID = Cooking_method_ID "
+                            + "inner join Time on Rec_Time_ID = Time_ID "
+                            + "inner join Composition on Recipe_ID = Comp_recipe_ID "
+                            + "where Recipe_ID in "
+                            + "(select Recipe_ID "
+                            + "from Composition "
+                            + "inner join Recipe on Recipe_ID = Comp_Recipe_ID "
+                            + "where " + tmp + " group by Recipe_ID "
+                            + "having count(Comp_ingredient_ID)=" + chislo + " order by Recipe_ID) "
+                            + "group by Recipe_ID";
+                    cursor = sqLiteDatabase.rawQuery(inquiry, null);
 
-                    Log.d(LOG_TAG,cursor.getString(recipeColIndex));
+                    if (cursor.moveToFirst()) {
+                        int recipeColIndex = cursor.getColumnIndex("Recipe_name");
+                        int cuisineColIndex = cursor.getColumnIndex("Cuisine_name");
+                        int categoryColIndex = cursor.getColumnIndex("Category_name");
+                        int methodColIndex = cursor.getColumnIndex("Method_name");
+                        int timeColIndex = cursor.getColumnIndex("Time_name");
+                        int descriptionColIndex = cursor.getColumnIndex("Description_cooking_method");
+                        int caloricColIndex = cursor.getColumnIndex("Caloric_content");
+
+                        Log.d(LOG_TAG, cursor.getString(recipeColIndex));
 
 
+                        do {
+                            //присваивание в каждый рецепт
+                            staticString.NameRecipe.add(cursor.getString(recipeColIndex));
+                            staticString.NameCuisine.add(cursor.getString(cuisineColIndex));
+                            staticString.NameCategory.add(cursor.getString(categoryColIndex));
+                            staticString.NameMethod.add(cursor.getString(methodColIndex));
+                            staticString.NameTime.add(cursor.getString(timeColIndex));
+                            staticString.Description.add(cursor.getString(descriptionColIndex));
+                            staticString.Caloric.add(cursor.getString(caloricColIndex));
 
-                    do {
-                        //присваивание в каждый рецепт
-                        staticString.NameRecipe.add(cursor.getString(recipeColIndex));
-                        staticString.NameCuisine.add(cursor.getString(cuisineColIndex));
-                        staticString.NameCategory.add(cursor.getString(categoryColIndex));
-                        staticString.NameMethod.add(cursor.getString(methodColIndex));
-                        staticString.NameTime.add(cursor.getString(timeColIndex));
-                        staticString.Description.add(cursor.getString(descriptionColIndex));
-                        staticString.Caloric.add(cursor.getString(caloricColIndex));
+                            staticString.quantityRecipe = staticString.quantityRecipe + 1;
 
-                        staticString.quantityRecipe = staticString.quantityRecipe + 1;
-
-                    } while (cursor.moveToNext());
+                        } while (cursor.moveToNext());
+                    } else
+                        //сказать что ТАКИХ РЕЦЕПТОВ НЕТ , ВЫ ГУРМАН. МОЖЕТ ДОБАВИТЕ СВОЙ?
+                        ;
+                    Log.d(LOG_TAG, Integer.toString(staticString.quantityRecipe));
+                    logCursor(cursor);
+                    cursor.close();
                 }
-                    else
-                //сказать что ТАКИХ РЕЦЕПТОВ НЕТ , ВЫ ГУРМАН. МОЖЕТ ДОБАВИТЕ СВОЙ?
-                ;
-                Log.d(LOG_TAG,Integer.toString(staticString.quantityRecipe));
-                logCursor(cursor);
-                cursor.close();
+                else
+                {
+                    //НАПИСАТЬ ЧТО НИЧЕГО НЕ ВЫБРАНО!
+                }
 
                 //--------------------------------------------------------------------------------
 

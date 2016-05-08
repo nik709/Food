@@ -111,33 +111,40 @@ public class CuisineFragment extends Fragment implements View.OnClickListener {
             public void onClick(View v)
             {
                 if (Russia.isChecked()) {
-                    staticString.str.remove("Russia");
-                    staticString.str.add("Russia");
+                    staticString.SearchCuisine.remove("1");
+                    staticString.SearchCuisine.add("1");
                 }
                 else
-                    staticString.str.remove("Russia");
+                    staticString.SearchCuisine.remove("1");
 
                 if (Europe.isChecked()) {
-                    staticString.str.remove("Europe");
-                    staticString.str.add("Europe");
+                    staticString.SearchCuisine.remove("2");
+                    staticString.SearchCuisine.add("2");
                 }
                 else
-                    staticString.str.remove("Europe");
+                    staticString.SearchCuisine.remove("2");
 
                 if (Asia.isChecked()) {
-                    staticString.str.remove("Asia");
-                    staticString.str.add("Asia");
+                    staticString.SearchCuisine.remove("3");
+                    staticString.SearchCuisine.add("3");
                 }
                 else
-                    staticString.str.remove("Asia");
+                    staticString.SearchCuisine.remove("3");
 
                 if (Kavkas.isChecked()) {
-                    staticString.str.remove("Kavkas");
-                    staticString.str.add("Kavkas");
+                    staticString.SearchCuisine.remove("4");
+                    staticString.SearchCuisine.add("4");
                 }
                 else
-                    staticString.str.remove("Kavkas");
-
+                    staticString.SearchCuisine.remove("4");
+                if (staticString.IsAdd){
+                    for (int i=0; i<staticString.addCuisine.size(); i++)
+                        staticString.addCuisine.remove(i);
+                    for (int i=0; i<staticString.SearchCuisine.size(); i++)
+                        staticString.addCuisine.add(staticString.SearchCuisine.get(i));
+                    for (int i=0; i<staticString.SearchCuisine.size(); i++)
+                        staticString.SearchCuisine.remove(i);
+                }
 
                 FragmentManager fm = getFragmentManager();
                 fm.popBackStack();

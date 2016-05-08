@@ -2,17 +2,27 @@ package com.example.makpro.recipedesign1.Fragments;
 
 import android.app.FragmentTransaction;
 import android.content.Context;
+<<<<<<< HEAD
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
+=======
 import android.graphics.Typeface;
+>>>>>>> 7c1123cc65979f350b03435a8111d0cf30a376f9
 import android.net.Uri;
 import android.os.Bundle;
 //import android.support.v4.app.Fragment;
 import  android.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
+import com.example.makpro.recipedesign1.DBHelper;
 import com.example.makpro.recipedesign1.R;
+import com.example.makpro.recipedesign1.staticString;
+
+import java.util.ArrayList;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -40,8 +50,16 @@ public class MyRecipeFragment extends Fragment implements View.OnClickListener {
     CategoryFragment categoryFragment;
     Cooking_methodFragment cooking_methodFragment;
     ResultFragment resultFragment;
+    String tmp1, tmp2, tmp3, tmp4;
 
     private OnFragmentInteractionListener mListener;
+
+    public SQLiteDatabase sqLiteDatabase;
+    public DBHelper dbHelper;
+
+   //Описание курсора
+    Cursor cursor;
+    final String LOG_TAG = "myLogs";
 
     public MyRecipeFragment() {
         // Required empty public constructor
@@ -77,13 +95,30 @@ public class MyRecipeFragment extends Fragment implements View.OnClickListener {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+
+
+
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
+        tmp1 = "";
+        tmp2 = "";
+        tmp3 = "";
+        tmp4 = "";
+
         view = inflater.inflate(R.layout.fragment_my_recipe, container, false);
+<<<<<<< HEAD
+
+        //подлючаемся к базе данных
+        dbHelper = new DBHelper(view.getContext());
+        sqLiteDatabase = dbHelper.getWritableDatabase();
+
+=======
         Typeface rec = Typeface.createFromAsset(getActivity().getAssets(), "Mateur.ttf");
+>>>>>>> 7c1123cc65979f350b03435a8111d0cf30a376f9
         time = (Button) view.findViewById(R.id.timeB);
         time.setTypeface(rec);
         cuisine = (Button) view.findViewById(R.id.cuisineB);
@@ -99,6 +134,41 @@ public class MyRecipeFragment extends Fragment implements View.OnClickListener {
         category.setOnClickListener(this);
         cookingMethod.setOnClickListener(this);
         dopSearch.setOnClickListener(this);
+
+        for (int i=0; i<staticString.SearchCuisine.size(); i++) {
+            if (i!=staticString.SearchCuisine.size()-1)
+                tmp1+=staticString.SearchCuisine.get(i)+" or ";
+            else
+                tmp1+=staticString.SearchCuisine.get(i);
+        }
+        for (int i=0; i<staticString.SearchCategory.size(); i++) {
+            if (i!=staticString.SearchCategory.size()-1)
+                tmp2+=staticString.SearchCategory.get(i)+" or ";
+            else
+                tmp2+=staticString.SearchCategory.get(i);
+        }
+        for (int i=0; i<staticString.SearchCookingMethod.size(); i++) {
+            if (i!=staticString.SearchCookingMethod.size()-1)
+                tmp3+=staticString.SearchCookingMethod.get(i)+" or ";
+            else
+                tmp3+=staticString.SearchCookingMethod.get(i);
+        }
+        for (int i=0; i<staticString.SearchTime.size(); i++) {
+            if (i!=staticString.SearchTime.size()-1)
+                tmp4+=staticString.SearchTime.get(i)+" or ";
+            else
+                tmp4+=staticString.SearchTime.get(i);
+        }
+
+        if (tmp1 == "")
+            tmp1 = "Cuisine_ID";
+        if (tmp2 == "")
+            tmp2 = "Category_ID";
+        if (tmp3 == "")
+            tmp3 = "Cooking_method_ID";
+        if (tmp4 == "")
+            tmp4 = "Time_ID";
+
         return view;
     }
 
@@ -122,6 +192,21 @@ public class MyRecipeFragment extends Fragment implements View.OnClickListener {
         super.onDetach();
         mListener = null;
     }
+    void logCursor(Cursor c) {
+        if (c != null) {
+            if (c.moveToFirst()) {
+                String str;
+                do {
+                    str = "";
+                    for (String cn : c.getColumnNames()) {
+                        str = str.concat(cn + " = " + c.getString(c.getColumnIndex(cn)) + "; ");
+                    }
+                    Log.d(LOG_TAG, str);
+                } while (c.moveToNext());
+            }
+        } else
+            Log.d(LOG_TAG, "Cursor is null");
+    }
 
     @Override
     public void onClick(View v) {
@@ -140,6 +225,104 @@ public class MyRecipeFragment extends Fragment implements View.OnClickListener {
                 fTrans.replace(R.id.conteiner, cooking_methodFragment);
                 break;
             case R.id.dopSearch:
+                String chislo = Integer.toString(staticString.str.size());
+                staticString.quantityRecipe = 0;
+
+                if(staticString.str.size()>0) {
+                    String inquiry = "select Recipe_name, Cuisine_name, Category_name, Method_name, Time_name, Description_cooking_method, Caloric_content "
+                            + "from Recipe "
+                            + "inner join Cuisine on Rec_Cuisine_ID = Cuisine_ID "
+                            + "inner join Category on Rec_Category_ID = Category_ID "
+                            + "inner join Cooking_method on Rec_Cooking_method_ID = Cooking_method_ID "
+                            + "inner join Time on Rec_Time_ID = Time_ID "
+                            + "inner join Composition on Recipe_ID = Comp_recipe_ID "
+                            + "where (Cuisine_ID = " + tmp1 + " and Category_ID = " + tmp2
+                            + " and Cooking_method_ID = " + tmp3 +" and Time_ID = " + tmp4
+                            + ") and Recipe_ID in "
+                            + "(select Recipe_ID "
+                            + "from Composition "
+                            + "inner join Recipe on Recipe_ID = Comp_Recipe_ID "
+                            + "where " + staticString.Products + " group by Recipe_ID "
+                            + "having count(Comp_ingredient_ID)=" + chislo + " order by Recipe_ID) "
+                            + "group by Recipe_ID";
+                    cursor = sqLiteDatabase.rawQuery(inquiry, null);
+
+                    if (cursor.moveToFirst()) {
+                        int recipeColIndex = cursor.getColumnIndex("Recipe_name");
+                        int cuisineColIndex = cursor.getColumnIndex("Cuisine_name");
+                        int categoryColIndex = cursor.getColumnIndex("Category_name");
+                        int methodColIndex = cursor.getColumnIndex("Method_name");
+                        int timeColIndex = cursor.getColumnIndex("Time_name");
+                        int descriptionColIndex = cursor.getColumnIndex("Description_cooking_method");
+                        int caloricColIndex = cursor.getColumnIndex("Caloric_content");
+
+                        Log.d(LOG_TAG, cursor.getString(recipeColIndex));
+
+                        do {
+                            //присваивание в каждый рецепт
+                            staticString.NameRecipe.add(cursor.getString(recipeColIndex));
+                            staticString.NameCuisine.add(cursor.getString(cuisineColIndex));
+                            staticString.NameCategory.add(cursor.getString(categoryColIndex));
+                            staticString.NameMethod.add(cursor.getString(methodColIndex));
+                            staticString.NameTime.add(cursor.getString(timeColIndex));
+                            staticString.Description.add(cursor.getString(descriptionColIndex));
+                            staticString.Caloric.add(cursor.getString(caloricColIndex));
+
+                            staticString.quantityRecipe = staticString.quantityRecipe + 1;
+
+                        } while (cursor.moveToNext());
+                    } else
+                        //сказать что ТАКИХ РЕЦЕПТОВ НЕТ , ВЫ ГУРМАН. МОЖЕТ ДОБАВИТЕ СВОЙ?
+                        ;
+                    Log.d(LOG_TAG, Integer.toString(staticString.quantityRecipe));
+                    logCursor(cursor);
+                    cursor.close();
+                }
+                else {
+                    String inquiry = "select Recipe_name, Cuisine_name, Category_name, Method_name, Time_name, Description_cooking_method, Caloric_content "
+                            + "from Recipe "
+                            + "inner join Cuisine on Rec_Cuisine_ID = Cuisine_ID "
+                            + "inner join Category on Rec_Category_ID = Category_ID "
+                            + "inner join Cooking_method on Rec_Cooking_method_ID = Cooking_method_ID "
+                            + "inner join Time on Rec_Time_ID = Time_ID "
+                            + "inner join Composition on Recipe_ID = Comp_recipe_ID "
+                            + "where (Cuisine_ID = " + tmp1 + " and Category_ID = " + tmp2
+                            + " and Cooking_method_ID = " + tmp3 +" and Time_ID = " + tmp4
+                            + ") "
+                            + "group by Recipe_ID";
+                    cursor = sqLiteDatabase.rawQuery(inquiry, null);
+
+                    if (cursor.moveToFirst()) {
+                        int recipeColIndex = cursor.getColumnIndex("Recipe_name");
+                        int cuisineColIndex = cursor.getColumnIndex("Cuisine_name");
+                        int categoryColIndex = cursor.getColumnIndex("Category_name");
+                        int methodColIndex = cursor.getColumnIndex("Method_name");
+                        int timeColIndex = cursor.getColumnIndex("Time_name");
+                        int descriptionColIndex = cursor.getColumnIndex("Description_cooking_method");
+                        int caloricColIndex = cursor.getColumnIndex("Caloric_content");
+
+                        Log.d(LOG_TAG, cursor.getString(recipeColIndex));
+
+                        do {
+                            //присваивание в каждый рецепт
+                            staticString.NameRecipe.add(cursor.getString(recipeColIndex));
+                            staticString.NameCuisine.add(cursor.getString(cuisineColIndex));
+                            staticString.NameCategory.add(cursor.getString(categoryColIndex));
+                            staticString.NameMethod.add(cursor.getString(methodColIndex));
+                            staticString.NameTime.add(cursor.getString(timeColIndex));
+                            staticString.Description.add(cursor.getString(descriptionColIndex));
+                            staticString.Caloric.add(cursor.getString(caloricColIndex));
+
+                            staticString.quantityRecipe = staticString.quantityRecipe + 1;
+
+                        } while (cursor.moveToNext());
+                    } else
+                        //сказать что ТАКИХ РЕЦЕПТОВ НЕТ , ВЫ ГУРМАН. МОЖЕТ ДОБАВИТЕ СВОЙ?
+                        ;
+                    Log.d(LOG_TAG, Integer.toString(staticString.quantityRecipe));
+                    logCursor(cursor);
+                    cursor.close();
+                }
                 fTrans.replace(R.id.conteiner, resultFragment);
                 break;
         }
