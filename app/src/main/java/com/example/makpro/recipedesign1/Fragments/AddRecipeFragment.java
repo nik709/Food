@@ -43,12 +43,6 @@ public class AddRecipeFragment extends Fragment implements View.OnClickListener 
     TextView test;
     ContentValues contentValues;
 
-    String cuisine;
-    String category;
-    String cookingmethod;
-    String time;
-    String ingredients;
-
     FragmentTransaction fTrans;
     FragmentIngridients fragmentIngridients;
     TimeFragment timeFragment;
@@ -132,33 +126,6 @@ public class AddRecipeFragment extends Fragment implements View.OnClickListener 
         sqLiteDatabase = dbHelper.getWritableDatabase();
 
 
-        cuisine ="";
-        category ="";
-        cookingmethod ="";
-        time ="";
-        ingredients ="";
-
-
-        for (int i=0; i<staticString.addCuisine.size(); i++)
-            cuisine+=staticString.addCuisine.get(i);
-        test.setText(cuisine);
-
-        for (int i=0; i<staticString.addCategory.size(); i++)
-            category+=staticString.addCategory.get(i);
-        test.setText(category);
-
-        for (int i=0; i<staticString.addCookingMethod.size(); i++)
-            cookingmethod+=staticString.addCookingMethod.get(i);
-        test.setText(cookingmethod);
-
-        for (int i=0; i<staticString.addTime.size(); i++)
-            time+=staticString.addTime.get(i);
-        test.setText(time);
-
-        for (int i=0; i<staticString.addIngridients.size(); i++)
-            ingredients+=staticString.addIngridients.get(i);
-        test.setText(ingredients);
-
         return view;
     }
 
@@ -215,12 +182,13 @@ public class AddRecipeFragment extends Fragment implements View.OnClickListener 
                 Log.d(LOG_TAG,Integer.toString(colRecMaxId));
                 cursor.moveToFirst();
                 int lastID = cursor.getInt(colRecMaxId);
+                Log.d(LOG_TAG,String.valueOf(staticString.addCategory));
 
                 contentValues.put("Recipe_ID", lastID+1);
-                contentValues.put("Rec_Cuisine_ID", String.valueOf(cuisine));
-                contentValues.put("Rec_Category_ID", String.valueOf(category));
-                contentValues.put("Rec_Cooking_method_ID", String.valueOf(cookingmethod));
-                contentValues.put("Rec_Time_ID", String.valueOf(time));
+                contentValues.put("Rec_Cuisine_ID", String.valueOf(staticString.addCuisine));
+                contentValues.put("Rec_Category_ID", String.valueOf(staticString.addCategory));
+                contentValues.put("Rec_Cooking_method_ID", String.valueOf(staticString.addCookingMethod));
+                contentValues.put("Rec_Time_ID", String.valueOf(staticString.addTime));
                 contentValues.put("Description_cooking_method", staticString.addDescription);
                 contentValues.put("Recipe_name", staticString.addName);
               //  contentValues.put("Caloric_content", staticString.addCaloricContent);
