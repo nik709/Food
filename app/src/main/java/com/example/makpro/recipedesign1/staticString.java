@@ -34,4 +34,5 @@ public class staticString {
     public static ArrayList<String> addCookingMethod; //НОВЫЙ СПОСОБ ПРИГОТОВЛЕНИЯ
     public static String addName; //НОВОЕ ИМЯ
     public static String addDescription; //НОВОЕ ОПИСАНИЕ
+    public static String addCaloricContent; //НОВОЕ ОПИСАНИЕ
 }
