@@ -131,7 +131,7 @@ public class Cooking_methodFragment extends Fragment implements View.OnClickList
                 if (staticString.IsAdd){
                     for (int i=0; i<staticString.addCookingMethod.size(); i++)
                         staticString.addCookingMethod.remove(i);
-                    for (int i=0; i<staticString.SearchTime.size(); i++)
+                    for (int i=0; i<staticString.SearchCookingMethod.size(); i++)
                         staticString.addCookingMethod.add(staticString.SearchCookingMethod.get(i));
                     for (int i=0; i<staticString.SearchCookingMethod.size(); i++)
                         staticString.SearchCookingMethod.remove(i);
