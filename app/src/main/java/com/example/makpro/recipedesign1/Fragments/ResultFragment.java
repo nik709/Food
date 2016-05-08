@@ -81,7 +81,6 @@ public class ResultFragment extends Fragment implements View.OnClickListener {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_result,container, false);
-<<<<<<< HEAD
         view.setFocusableInTouchMode(true);
         view.requestFocus();
         view.setOnKeyListener(new View.OnKeyListener() {
@@ -99,9 +98,7 @@ public class ResultFragment extends Fragment implements View.OnClickListener {
                 return false;
             }
         });
-=======
         Typeface res = Typeface.createFromAsset(getActivity().getAssets(), "Mateur.ttf");
->>>>>>> 7c1123cc65979f350b03435a8111d0cf30a376f9
         scroll = (ScrollView) view.findViewById(R.id.resultScroll);
         linearLayout = (LinearLayout) view.findViewById(R.id.resultLayout);
         //-------------СОЗДАНИЕ И ИНИЦИАЛИЗАЦИЯ ПАРАМЕТРОВ ЛЕЙАУТА-------------

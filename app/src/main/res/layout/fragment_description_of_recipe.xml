@@ -23,12 +23,9 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Medium Text"
         android:id="@+id/IDDescription"
-<<<<<<< HEAD
         android:layout_weight="0.38" />
-=======
         android:layout_weight="0.25"
         android:textColor="#e8ecca" />
->>>>>>> 7c1123cc65979f350b03435a8111d0cf30a376f9
 
     <Button
         android:layout_width="wrap_content"

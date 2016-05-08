@@ -194,16 +194,15 @@ public class FragmentIngridients extends Fragment implements View.OnClickListene
         eggB.setOnClickListener(this);
         mushB.setOnClickListener(this);
         groceryB.setOnClickListener(this);
-<<<<<<< HEAD
-        txt = (TextView) view.findViewById(R.id.textView2);
-        txt.setText(tmp);
+        //txt = (TextView) view.findViewById(R.id.textView5);
+        //txt.setText(tmp);
         for (int i=0; i<staticString.str.size(); i++) {
             if (i!=staticString.str.size()-1)
             tmp+=staticString.str.get(i)+" or ";
             else
                 tmp+=staticString.str.get(i);
         }
-        txt.setText(tmp);
+        //txt.setText(tmp);
         if (staticString.IsAdd)
         {
             view.setFocusableInTouchMode(true);
@@ -243,7 +242,6 @@ public class FragmentIngridients extends Fragment implements View.OnClickListene
                 }
             });
         }
-=======
         //txt = (TextView) view.findViewById(R.id.textView2);
         //txt.setText(tmp);
         //for (int i=0; i<staticString.str.size(); i++) {
@@ -253,7 +251,6 @@ public class FragmentIngridients extends Fragment implements View.OnClickListene
           //      tmp+=staticString.str.get(i);
      //   }
     //    txt.setText(tmp);
->>>>>>> 7c1123cc65979f350b03435a8111d0cf30a376f9
         return view;
     }
 
