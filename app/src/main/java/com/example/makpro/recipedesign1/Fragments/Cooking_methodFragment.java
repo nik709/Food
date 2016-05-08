@@ -3,6 +3,7 @@ package com.example.makpro.recipedesign1.Fragments;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.content.Context;
+import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Bundle;
 import android.app.Fragment;
@@ -92,11 +93,16 @@ public class Cooking_methodFragment extends Fragment implements View.OnClickList
                 return false;
             }
         });
-
+        Typeface general = Typeface.createFromAsset(getActivity().getAssets(), "Peace Sans Webfont.ttf");
+        Typeface general1 = Typeface.createFromAsset(getActivity().getAssets(), "Mateur.ttf");
         boiled = (CheckBox) view.findViewById(R.id.CBboiled);
+        boiled.setTypeface(general);
         stew = (CheckBox) view.findViewById(R.id.CBstew);
+        stew.setTypeface(general);
         fry = (CheckBox) view.findViewById(R.id.CBfry);
+        fry.setTypeface(general);
         apply = (Button) view.findViewById(R.id.CookingMethodApply);
+        apply.setTypeface(general1);
         apply.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v)

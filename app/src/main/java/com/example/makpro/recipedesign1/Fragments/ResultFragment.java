@@ -3,6 +3,7 @@ package com.example.makpro.recipedesign1.Fragments;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.content.Context;
+import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Bundle;
 import android.app.Fragment;
@@ -80,6 +81,7 @@ public class ResultFragment extends Fragment implements View.OnClickListener {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_result,container, false);
+<<<<<<< HEAD
         view.setFocusableInTouchMode(true);
         view.requestFocus();
         view.setOnKeyListener(new View.OnKeyListener() {
@@ -97,6 +99,9 @@ public class ResultFragment extends Fragment implements View.OnClickListener {
                 return false;
             }
         });
+=======
+        Typeface res = Typeface.createFromAsset(getActivity().getAssets(), "Mateur.ttf");
+>>>>>>> 7c1123cc65979f350b03435a8111d0cf30a376f9
         scroll = (ScrollView) view.findViewById(R.id.resultScroll);
         linearLayout = (LinearLayout) view.findViewById(R.id.resultLayout);
         //-------------СОЗДАНИЕ И ИНИЦИАЛИЗАЦИЯ ПАРАМЕТРОВ ЛЕЙАУТА-------------
@@ -110,6 +115,7 @@ public class ResultFragment extends Fragment implements View.OnClickListener {
         for (int i=0; i<staticString.quantityRecipe; i++) {
             TextView textView = new TextView(view.getContext());
             textView.setText(staticString.NameRecipe.get(i));
+            textView.setTypeface(res);
             textView.setId(i);
             linearLayout.addView(textView, lParams);
         }

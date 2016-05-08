@@ -101,9 +101,10 @@ public class milk extends Fragment {
                 return false;
             }
         });
-        Typeface general = Typeface.createFromAsset(getActivity().getAssets(), "Mateur.ttf");
+        Typeface general = Typeface.createFromAsset(getActivity().getAssets(), "Peace Sans Webfont.ttf");
+        Typeface general1 = Typeface.createFromAsset(getActivity().getAssets(), "Mateur.ttf");
         apply = (Button) view.findViewById(R.id.milkApply);
-        apply.setTypeface(general);
+        apply.setTypeface(general1);
         milk = (CheckBox) view.findViewById(R.id.milkBox);
         milk.setTypeface(general);
         cheese = (CheckBox) view.findViewById(R.id.cheeseBox);

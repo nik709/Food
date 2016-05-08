@@ -2,7 +2,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.makpro.recipedesign1.Fragments.MyRecipeFragment">
+    tools:context="com.example.makpro.recipedesign1.Fragments.MyRecipeFragment"
+    android:background="@drawable/myrecipe">
 
     <!-- TODO: Update blank fragment layout -->
 
@@ -14,7 +15,8 @@
             android:text="Time"
             android:id="@+id/timeB"
             android:layout_column="10"
-            android:layout_width="fill_parent" />
+            android:layout_width="fill_parent"
+            android:background="#cc9b57" />
     </TableRow>
 
     <TableRow
@@ -24,7 +26,8 @@
         <Button
             android:text="cuisine"
             android:id="@+id/cuisineB"
-            android:layout_column="10" />
+            android:layout_column="10"
+            android:background="#cc9b57" />
     </TableRow>
 
     <TableRow
@@ -34,7 +37,8 @@
         <Button
             android:text="category"
             android:id="@+id/categoryB"
-            android:layout_column="10" />
+            android:layout_column="10"
+            android:background="#cc9b57" />
     </TableRow>
 
     <TableRow
@@ -44,7 +48,8 @@
         <Button
             android:text="Cooking method"
             android:id="@+id/CookingmethodB"
-            android:layout_column="10" />
+            android:layout_column="10"
+            android:background="#cc9b57" />
     </TableRow>
 
     <TableRow
@@ -186,6 +191,8 @@
         <Button
             android:text="Поиск"
             android:id="@+id/dopSearch"
-            android:layout_column="10" />
+            android:layout_column="10"
+            android:background="#cc9b57"
+            android:textColor="#88e1ff" />
     </TableRow>
 </TableLayout>

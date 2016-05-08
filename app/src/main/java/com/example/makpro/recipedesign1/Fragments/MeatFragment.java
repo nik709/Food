@@ -87,8 +87,9 @@ public class MeatFragment extends Fragment implements View.OnClickListener {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        view = inflater.inflate(R.layout.fragment_meat2,container, false);
-        Typeface general = Typeface.createFromAsset(getActivity().getAssets(), "Mateur.ttf");
+        view = inflater.inflate(R.layout.fragment_meat2, container, false);
+        Typeface general1 = Typeface.createFromAsset(getActivity().getAssets(), "Mateur.ttf");
+        Typeface general = Typeface.createFromAsset(getActivity().getAssets(), "Peace Sans Webfont.ttf");
         view.setFocusableInTouchMode(true);
         view.requestFocus();
 
@@ -108,80 +109,73 @@ public class MeatFragment extends Fragment implements View.OnClickListener {
             }
         });
         apply = (Button) view.findViewById(R.id.apply);
-        apply.setTypeface(general);
+        apply.setTypeface(general1);
         chicken = (CheckBox) view.findViewById(R.id.CBchicken);
         chicken.setTypeface(general);
-        Pig =(CheckBox) view.findViewById(R.id.CBpig);
+        Pig = (CheckBox) view.findViewById(R.id.CBpig);
         Pig.setTypeface(general);
-        turkey =(CheckBox) view.findViewById(R.id.CBturkey);
+        turkey = (CheckBox) view.findViewById(R.id.CBturkey);
         turkey.setTypeface(general);
-        cow =(CheckBox) view.findViewById(R.id.CBcow);
+        cow = (CheckBox) view.findViewById(R.id.CBcow);
         cow.setTypeface(general);
-        rabbit =(CheckBox) view.findViewById(R.id.CBrabbit);
+        rabbit = (CheckBox) view.findViewById(R.id.CBrabbit);
         rabbit.setTypeface(general);
-        bear =(CheckBox) view.findViewById(R.id.CBbear);
+        bear = (CheckBox) view.findViewById(R.id.CBbear);
         bear.setTypeface(general);
-        apply.setOnClickListener(new View.OnClickListener(){
-           @Override
-            public void onClick(View v)
-           {
-               if (chicken.isChecked()) {
-                   staticString.str.remove("Comp_Ingredient_ID = 135");
-                   staticString.str.add("Comp_Ingredient_ID = 135");
-               }
-               else
-                   staticString.str.remove("Comp_Ingredient_ID = 135");
-
-               if (Pig.isChecked()) {
-                   staticString.str.remove("Comp_Ingredient_ID = 134");
-                   staticString.str.add("Comp_Ingredient_ID = 134");
-               }
-               else
-                   staticString.str.remove("Comp_Ingredient_ID = 134");
-
-               if (turkey.isChecked()) {
-                   staticString.str.remove("Comp_Ingredient_ID = 136");
-                   staticString.str.add("Comp_Ingredient_ID = 136");
-               }
-               else
-                   staticString.str.remove("Comp_Ingredient_ID = 136");
-
-               if (cow.isChecked()) {
-                   staticString.str.remove("Comp_Ingredient_ID = 133");
-                   staticString.str.add("Comp_Ingredient_ID = 133");
-               }
-               else
-                   staticString.str.remove("Comp_Ingredient_ID = 133");
-
-               if (rabbit.isChecked()) {
-                   staticString.str.remove("Comp_Ingredient_ID = 137");
-                   staticString.str.add("Comp_Ingredient_ID = 137");
-               }
-               else
-                   staticString.str.remove("Comp_Ingredient_ID = 137");
-
-               if (bear.isChecked()) {
-                   staticString.str.remove("bear");
-                   staticString.str.add("bear");
-               }
-               else
-                   staticString.str.remove("bear");
-
-               FragmentManager fm = getFragmentManager();
-               fm.popBackStack();
-               FragmentTransaction ft = fm.beginTransaction();
-               ft.commit();
-           }
-        });
-        choose_all = (Button) view.findViewById(R.id.choose_all);
-        choose_all.setOnClickListener(new View.OnClickListener()
-        {
+        apply.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v)
-            {
-                
+            public void onClick(View v) {
+                if (chicken.isChecked()) {
+                    staticString.str.remove("Comp_Ingredient_ID = 135");
+                    staticString.str.add("Comp_Ingredient_ID = 135");
+                } else
+                    staticString.str.remove("Comp_Ingredient_ID = 135");
+
+                if (Pig.isChecked()) {
+                    staticString.str.remove("Comp_Ingredient_ID = 134");
+                    staticString.str.add("Comp_Ingredient_ID = 134");
+                } else
+                    staticString.str.remove("Comp_Ingredient_ID = 134");
+
+                if (turkey.isChecked()) {
+                    staticString.str.remove("Comp_Ingredient_ID = 136");
+                    staticString.str.add("Comp_Ingredient_ID = 136");
+                } else
+                    staticString.str.remove("Comp_Ingredient_ID = 136");
+
+                if (cow.isChecked()) {
+                    staticString.str.remove("Comp_Ingredient_ID = 133");
+                    staticString.str.add("Comp_Ingredient_ID = 133");
+                } else
+                    staticString.str.remove("Comp_Ingredient_ID = 133");
+
+                if (rabbit.isChecked()) {
+                    staticString.str.remove("Comp_Ingredient_ID = 137");
+                    staticString.str.add("Comp_Ingredient_ID = 137");
+                } else
+                    staticString.str.remove("Comp_Ingredient_ID = 137");
+
+                if (bear.isChecked()) {
+                    staticString.str.remove("bear");
+                    staticString.str.add("bear");
+                } else
+                    staticString.str.remove("bear");
+
+                FragmentManager fm = getFragmentManager();
+                fm.popBackStack();
+                FragmentTransaction ft = fm.beginTransaction();
+                ft.commit();
             }
         });
+        //choose_all = (Button) view.findViewById(R.id.choose_all);
+        //choose_all.setOnClickListener(new View.OnClickListener()
+        //{
+        //    @Override
+        //    public void onClick(View v)
+        //    {
+
+        //    }
+        //});
         return view;
     }
 

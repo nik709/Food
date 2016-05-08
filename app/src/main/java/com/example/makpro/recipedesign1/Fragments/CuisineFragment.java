@@ -3,9 +3,11 @@ package com.example.makpro.recipedesign1.Fragments;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.content.Context;
+import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Bundle;
 import android.app.Fragment;
+import android.renderscript.Type;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -92,11 +94,18 @@ public class CuisineFragment extends Fragment implements View.OnClickListener {
                 return false;
             }
         });
+        Typeface general = Typeface.createFromAsset(getActivity().getAssets(), "Peace Sans Webfont.ttf");
+        Typeface general1 = Typeface.createFromAsset(getActivity().getAssets(), "Mateur.ttf");
         apply = (Button) view.findViewById(R.id.CuisineApply);
+        apply.setTypeface(general1);
         Russia = (CheckBox) view.findViewById(R.id.CBRussia);
+        Russia.setTypeface(general);
         Europe= (CheckBox) view.findViewById(R.id.CBEurope);
+        Europe.setTypeface(general);
         Asia= (CheckBox) view.findViewById(R.id.CBAsia);
+        Asia.setTypeface(general);
         Kavkas = (CheckBox) view.findViewById(R.id.CBKavkas);
+        Kavkas.setTypeface(general);
         apply.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v)

@@ -3,7 +3,8 @@
     android:orientation="horizontal"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.makpro.recipedesign1.Fragments.juice">
+    tools:context="com.example.makpro.recipedesign1.Fragments.juice"
+    android:background="@drawable/juice">
 
     <!-- TODO: Update blank fragment layout -->
 
@@ -23,28 +24,32 @@
                 android:layout_height="wrap_content"
                 android:text="Лимонный сок"
                 android:id="@+id/lemonjBox"
-                android:checked="false" />
+                android:checked="false"
+                android:textSize="20dp" />
 
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Апельсиновый сок"
                 android:id="@+id/orangejBox"
-                android:checked="false" />
+                android:checked="false"
+                android:textSize="20dp" />
 
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Яблочный сок"
                 android:id="@+id/applejBox"
-                android:checked="false" />
+                android:checked="false"
+                android:textSize="20dp" />
 
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Томатный сок"
                 android:id="@+id/tomatojBox"
-                android:checked="false" />
+                android:checked="false"
+                android:textSize="20dp" />
         </LinearLayout>
     </ScrollView>
 
@@ -57,7 +62,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Apply"
-            android:id="@+id/applyJuice" />
+            android:id="@+id/applyJuice"
+            android:textColor="#ffffff"
+            android:background="#000000" />
     </LinearLayout>
 
 </LinearLayout>
