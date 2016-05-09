@@ -212,6 +212,15 @@ public class MyRecipeFragment extends Fragment implements View.OnClickListener {
                 fTrans.replace(R.id.conteiner, cooking_methodFragment);
                 break;
             case R.id.dopSearch:
+
+                staticString.NameRecipe.clear();
+                staticString.NameCuisine.clear();
+                staticString.NameCategory.clear();
+                staticString.NameMethod.clear();
+                staticString.NameTime.clear();
+                staticString.Description.clear();
+                staticString.Caloric.clear();
+
                 String chislo = Integer.toString(staticString.str.size());
                 staticString.quantityRecipe = 0;
 

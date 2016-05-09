@@ -126,39 +126,39 @@ public class MeatFragment extends Fragment implements View.OnClickListener {
             public void onClick(View v)
            {
                if (chicken.isChecked()) {
-                   staticString.str.remove("Comp_Ingredient_ID = 135");
-                   staticString.str.add("Comp_Ingredient_ID = 135");
+                   staticString.str.remove("135");
+                   staticString.str.add("135");
                }
                else
-                   staticString.str.remove("Comp_Ingredient_ID = 135");
+                   staticString.str.remove("135");
 
                if (Pig.isChecked()) {
-                   staticString.str.remove("Comp_Ingredient_ID = 134");
-                   staticString.str.add("Comp_Ingredient_ID = 134");
+                   staticString.str.remove("134");
+                   staticString.str.add("134");
                }
                else
-                   staticString.str.remove("Comp_Ingredient_ID = 134");
+                   staticString.str.remove("134");
 
                if (turkey.isChecked()) {
-                   staticString.str.remove("Comp_Ingredient_ID = 136");
-                   staticString.str.add("Comp_Ingredient_ID = 136");
+                   staticString.str.remove("136");
+                   staticString.str.add("136");
                }
                else
-                   staticString.str.remove("Comp_Ingredient_ID = 136");
+                   staticString.str.remove("136");
 
                if (cow.isChecked()) {
-                   staticString.str.remove("Comp_Ingredient_ID = 133");
-                   staticString.str.add("Comp_Ingredient_ID = 133");
+                   staticString.str.remove("133");
+                   staticString.str.add("133");
                }
                else
-                   staticString.str.remove("Comp_Ingredient_ID = 133");
+                   staticString.str.remove("133");
 
                if (rabbit.isChecked()) {
-                   staticString.str.remove("Comp_Ingredient_ID = 137");
-                   staticString.str.add("Comp_Ingredient_ID = 137");
+                   staticString.str.remove("137");
+                   staticString.str.add("137");
                }
                else
-                   staticString.str.remove("Comp_Ingredient_ID = 137");
+                   staticString.str.remove("137");
 
                if (bear.isChecked()) {
                    staticString.str.remove("bear");
