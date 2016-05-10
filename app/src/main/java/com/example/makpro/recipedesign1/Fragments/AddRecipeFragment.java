@@ -197,6 +197,10 @@ public class AddRecipeFragment extends Fragment implements View.OnClickListener 
 
                 contentValues.clear();
 
+                cursor = sqLiteDatabase.query("Composition", null, null, null, null, null, null);
+                logCursor(cursor);
+                cursor.close();
+
 
                 last = "select max(Comp_ID) from Composition";
                 cursor = sqLiteDatabase.rawQuery(last,null);
@@ -212,6 +216,7 @@ public class AddRecipeFragment extends Fragment implements View.OnClickListener 
                     contentValues.put("Comp_recipe_ID",lastID+1);
                     sqLiteDatabase.insert("Composition", null, contentValues);
                     contentValues.clear();
+                    j++;
 
                 }
                 cursor.close();
