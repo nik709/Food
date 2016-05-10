@@ -8,9 +8,11 @@ import android.os.Bundle;
 import android.app.Fragment;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 
@@ -76,10 +78,49 @@ public class AddDescriptionFragment extends Fragment implements View.OnClickList
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_add_description, container, false);
+        view.setFocusableInTouchMode(true);
+        view.requestFocus();
+
+        view.setOnKeyListener(new View.OnKeyListener() {
+            @Override
+            public boolean onKey(View v, int keyCode, KeyEvent event) {
+                if (event.getAction() == KeyEvent.ACTION_UP) {
+                    if (keyCode == KeyEvent.KEYCODE_BACK) {
+                        FragmentManager fm = getFragmentManager();
+                        fm.popBackStack();
+                        FragmentTransaction ft = fm.beginTransaction();
+                        ft.commit();
+                        return true;
+                    }
+                }
+                return false;
+            }
+        });
+        view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+            }
+        });
         nameRecipe = (EditText) view.findViewById(R.id.editNameRecipe);
         description = (EditText) view.findViewById(R.id.editDescriptionRecipe);
         apply = (Button) view.findViewById(R.id.addDescriptionApply);
         apply.setOnClickListener(this);
+        nameRecipe.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View v, boolean hasFocus) {
+                Context context = view.getContext();
+                InputMethodManager imm = (InputMethodManager)context.getSystemService(Context.INPUT_METHOD_SERVICE);
+                imm.hideSoftInputFromWindow(nameRecipe.getWindowToken(), 0);
+            }
+        });
+        description.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View v, boolean hasFocus) {
+                Context context = view.getContext();
+                InputMethodManager imm = (InputMethodManager)context.getSystemService(Context.INPUT_METHOD_SERVICE);
+                imm.hideSoftInputFromWindow(nameRecipe.getWindowToken(), 0);
+            }
+        });
         return view;
     }
 

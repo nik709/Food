@@ -39,8 +39,7 @@ public class AddRecipeFragment extends Fragment implements View.OnClickListener 
     private String mParam1;
     private String mParam2;
     View view;
-    Button addIngr, addTime, addCuisine, addCategory, addMethod, addDescription, ADD;
-    TextView test;
+    Button addIngr, addTime, addCuisine, addCategory, addMethod, addDescription,addCalories ,ADD;
     ContentValues contentValues;
 
     FragmentTransaction fTrans;
@@ -50,6 +49,7 @@ public class AddRecipeFragment extends Fragment implements View.OnClickListener 
     CategoryFragment categoryFragment;
     Cooking_methodFragment cooking_methodFragment;
     AddDescriptionFragment addDescriptionFragment;
+    addCaloriesFragment addCaloriesFragment;
 
     final String LOG_TAG = "myLogs";
     public SQLiteDatabase sqLiteDatabase;
@@ -90,6 +90,7 @@ public class AddRecipeFragment extends Fragment implements View.OnClickListener 
         categoryFragment = new CategoryFragment();
         cooking_methodFragment = new Cooking_methodFragment();
         addDescriptionFragment = new AddDescriptionFragment();
+        addCaloriesFragment = new addCaloriesFragment();
         staticString.addTime = new ArrayList<String>();
         staticString.addCuisine = new ArrayList<String>();
         staticString.addCategory = new ArrayList<String>();
@@ -112,6 +113,7 @@ public class AddRecipeFragment extends Fragment implements View.OnClickListener 
         addCategory = (Button) view.findViewById(R.id.addCategory);
         addMethod = (Button) view.findViewById(R.id.addMethod);
         addDescription = (Button) view.findViewById(R.id.addDescription);
+        addCalories = (Button) view.findViewById(R.id.addCalories);
         ADD = (Button) view.findViewById(R.id.ADD);
         ADD.setOnClickListener(this);
         addIngr.setOnClickListener(this);
@@ -120,7 +122,7 @@ public class AddRecipeFragment extends Fragment implements View.OnClickListener 
         addCategory.setOnClickListener(this);
         addMethod.setOnClickListener(this);
         addDescription.setOnClickListener(this);
-        test = (TextView) view.findViewById(R.id.textView3);
+        addCalories.setOnClickListener(this);
         //подлючаемся к базе данных
         dbHelper = new DBHelper(view.getContext());
         sqLiteDatabase = dbHelper.getWritableDatabase();
@@ -220,6 +222,9 @@ public class AddRecipeFragment extends Fragment implements View.OnClickListener 
 
                 }
                 cursor.close();
+                break;
+            case R.id.addCalories:
+                fTrans.replace(R.id.conteiner, addCaloriesFragment);
                 break;
         }
         fTrans.addToBackStack(null);
