@@ -194,6 +194,37 @@ public class DBHelper extends SQLiteOpenHelper {
         db.insert("Composition",null,contentValues);
 
 
+        contentValues.clear();
+        contentValues.put("Recipe_ID",2);
+        contentValues.put("Rec_Cuisine_ID",2);
+        contentValues.put("Rec_Category_ID",11);
+        contentValues.put("Rec_Cooking_method_ID",16);
+        contentValues.put("Rec_Time_ID",1001);
+        contentValues.put("Description_cooking_method","Лухури");
+        contentValues.put("Recipe_name","Лухури");
+        contentValues.put("Caloric_content","1ккал");
+        db.insert("Recipe",null,contentValues);
+
+
+        contentValues.clear();
+        contentValues.put("Comp_ID",4);
+        contentValues.put("Comp_recipe_ID",2);
+        contentValues.put("Comp_Ingredient_ID",110);
+        db.insert("Composition",null,contentValues);
+
+        contentValues.clear();
+        contentValues.put("Comp_ID",5);
+        contentValues.put("Comp_recipe_ID",2);
+        contentValues.put("Comp_Ingredient_ID",133);
+        db.insert("Composition",null,contentValues);
+
+        contentValues.clear();
+        contentValues.put("Comp_ID",6);
+        contentValues.put("Comp_recipe_ID",2);
+        contentValues.put("Comp_Ingredient_ID",107);
+        db.insert("Composition",null,contentValues);
+
+
 
 
     }

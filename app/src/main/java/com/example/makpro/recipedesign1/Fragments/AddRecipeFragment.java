@@ -1,16 +1,21 @@
 package com.example.makpro.recipedesign1.Fragments;
 
 import android.app.FragmentTransaction;
+import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
 import android.os.Bundle;
 import android.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.example.makpro.recipedesign1.DBHelper;
 import com.example.makpro.recipedesign1.R;
 import com.example.makpro.recipedesign1.staticString;
 
@@ -34,8 +39,8 @@ public class AddRecipeFragment extends Fragment implements View.OnClickListener 
     private String mParam1;
     private String mParam2;
     View view;
-    Button addIngr, addTime, addCuisine, addCategory, addMethod, addDescription, ADD;
-    TextView test;
+    Button addIngr, addTime, addCuisine, addCategory, addMethod, addDescription,addCalories ,ADD;
+    ContentValues contentValues;
 
     FragmentTransaction fTrans;
     FragmentIngridients fragmentIngridients;
@@ -44,6 +49,13 @@ public class AddRecipeFragment extends Fragment implements View.OnClickListener 
     CategoryFragment categoryFragment;
     Cooking_methodFragment cooking_methodFragment;
     AddDescriptionFragment addDescriptionFragment;
+    addCaloriesFragment addCaloriesFragment;
+
+    final String LOG_TAG = "myLogs";
+    public SQLiteDatabase sqLiteDatabase;
+    public DBHelper dbHelper;
+
+    Cursor cursor;
 
     private OnFragmentInteractionListener mListener;
 
@@ -78,10 +90,13 @@ public class AddRecipeFragment extends Fragment implements View.OnClickListener 
         categoryFragment = new CategoryFragment();
         cooking_methodFragment = new Cooking_methodFragment();
         addDescriptionFragment = new AddDescriptionFragment();
+        addCaloriesFragment = new addCaloriesFragment();
         staticString.addTime = new ArrayList<String>();
         staticString.addCuisine = new ArrayList<String>();
         staticString.addCategory = new ArrayList<String>();
         staticString.addCookingMethod = new ArrayList<String>();
+
+        contentValues = new ContentValues();
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
@@ -98,6 +113,7 @@ public class AddRecipeFragment extends Fragment implements View.OnClickListener 
         addCategory = (Button) view.findViewById(R.id.addCategory);
         addMethod = (Button) view.findViewById(R.id.addMethod);
         addDescription = (Button) view.findViewById(R.id.addDescription);
+        addCalories = (Button) view.findViewById(R.id.addCalories);
         ADD = (Button) view.findViewById(R.id.ADD);
         ADD.setOnClickListener(this);
         addIngr.setOnClickListener(this);
@@ -106,12 +122,12 @@ public class AddRecipeFragment extends Fragment implements View.OnClickListener 
         addCategory.setOnClickListener(this);
         addMethod.setOnClickListener(this);
         addDescription.setOnClickListener(this);
-        test = (TextView) view.findViewById(R.id.textView3);
-        String testStr;
-        testStr ="";
-        for (int i=0; i<staticString.addTime.size(); i++)
-            testStr+=staticString.addTime.get(i);
-        test.setText(testStr);
+        addCalories.setOnClickListener(this);
+        //подлючаемся к базе данных
+        dbHelper = new DBHelper(view.getContext());
+        sqLiteDatabase = dbHelper.getWritableDatabase();
+
+
         return view;
     }
 
@@ -161,11 +177,76 @@ public class AddRecipeFragment extends Fragment implements View.OnClickListener 
                 break;
             case R.id.ADD:
                 //ДОБАВЛЕНИЕ РЕЦЕПТА В БД
+                String last = "select Recipe_ID from Recipe ORDER by Recipe_ID DESC LIMIT 1";
+                cursor = sqLiteDatabase.rawQuery(last,null);
+                int colRecMaxId = cursor.getColumnIndex("Recipe_ID");
+                logCursor(cursor);
+                Log.d(LOG_TAG,Integer.toString(colRecMaxId));
+                cursor.moveToFirst();
+                int lastID = cursor.getInt(colRecMaxId);
+                Log.d(LOG_TAG,String.valueOf(staticString.addCategory));
+
+                contentValues.put("Recipe_ID", lastID+1);
+                contentValues.put("Rec_Cuisine_ID", String.valueOf(staticString.addCuisine));
+                contentValues.put("Rec_Category_ID", String.valueOf(staticString.addCategory));
+                contentValues.put("Rec_Cooking_method_ID", String.valueOf(staticString.addCookingMethod));
+                contentValues.put("Rec_Time_ID", String.valueOf(staticString.addTime));
+                contentValues.put("Description_cooking_method", staticString.addDescription);
+                contentValues.put("Recipe_name", staticString.addName);
+              //  contentValues.put("Caloric_content", staticString.addCaloricContent);
+                sqLiteDatabase.insert("Recipe",null,contentValues);
+                cursor.close();
+
+                contentValues.clear();
+
+                cursor = sqLiteDatabase.query("Composition", null, null, null, null, null, null);
+                logCursor(cursor);
+                cursor.close();
+
+
+                last = "select max(Comp_ID) from Composition";
+                cursor = sqLiteDatabase.rawQuery(last,null);
+                int colCompMaxId = cursor.getColumnIndex("max(Comp_ID)");
+                cursor.moveToFirst();
+                int lastCompID = cursor.getInt(colCompMaxId);
+                int chislo = staticString.addIngridients.size();
+                int j = 0;
+                for (int i = (lastCompID+1); i<(lastCompID+chislo+1); i++)
+                {
+                    contentValues.put("Comp_ID", lastCompID+1+j);
+                    contentValues.put("Comp_Ingredient_ID",staticString.addIngridients.get(j));
+                    contentValues.put("Comp_recipe_ID",lastID+1);
+                    sqLiteDatabase.insert("Composition", null, contentValues);
+                    contentValues.clear();
+                    j++;
+
+                }
+                cursor.close();
+                break;
+            case R.id.addCalories:
+                fTrans.replace(R.id.conteiner, addCaloriesFragment);
                 break;
         }
         fTrans.addToBackStack(null);
         fTrans.commit();
     }
+
+    void logCursor(Cursor c) {
+        if (c != null) {
+            if (c.moveToFirst()) {
+                String str;
+                do {
+                    str = "";
+                    for (String cn : c.getColumnNames()) {
+                        str = str.concat(cn + " = " + c.getString(c.getColumnIndex(cn)) + "; ");
+                    }
+                    Log.d(LOG_TAG, str);
+                } while (c.moveToNext());
+            }
+        } else
+            Log.d(LOG_TAG, "Cursor is null");
+    }
+
 
     /**
      * This interface must be implemented by activities that contain this

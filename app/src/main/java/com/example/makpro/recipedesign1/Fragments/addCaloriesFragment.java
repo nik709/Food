@@ -3,16 +3,18 @@ package com.example.makpro.recipedesign1.Fragments;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.content.Context;
-import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Bundle;
 import android.app.Fragment;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
-import android.widget.CheckBox;
+import android.widget.EditText;
 
 import com.example.makpro.recipedesign1.R;
 import com.example.makpro.recipedesign1.staticString;
@@ -20,12 +22,12 @@ import com.example.makpro.recipedesign1.staticString;
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link Cooking_methodFragment.OnFragmentInteractionListener} interface
+ * {@link addCaloriesFragment.OnFragmentInteractionListener} interface
  * to handle interaction events.
- * Use the {@link Cooking_methodFragment#newInstance} factory method to
+ * Use the {@link addCaloriesFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class Cooking_methodFragment extends Fragment implements View.OnClickListener {
+public class addCaloriesFragment extends Fragment implements View.OnClickListener {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -34,13 +36,15 @@ public class Cooking_methodFragment extends Fragment implements View.OnClickList
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+
     View view;
-    CheckBox boiled, stew, fry;
+
+    EditText editCalories;
     Button apply;
 
     private OnFragmentInteractionListener mListener;
 
-    public Cooking_methodFragment() {
+    public addCaloriesFragment() {
         // Required empty public constructor
     }
 
@@ -50,11 +54,11 @@ public class Cooking_methodFragment extends Fragment implements View.OnClickList
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment Cooking_methodFragment.
+     * @return A new instance of fragment addCaloriesFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static Cooking_methodFragment newInstance(String param1, String param2) {
-        Cooking_methodFragment fragment = new Cooking_methodFragment();
+    public static addCaloriesFragment newInstance(String param1, String param2) {
+        addCaloriesFragment fragment = new addCaloriesFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -74,10 +78,10 @@ public class Cooking_methodFragment extends Fragment implements View.OnClickList
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        view = inflater.inflate(R.layout.fragment_cooking_method, container, false);
-
+        view = inflater.inflate(R.layout.fragment_add_calories, container, false);
         view.setFocusableInTouchMode(true);
         view.requestFocus();
+
         view.setOnKeyListener(new View.OnKeyListener() {
             @Override
             public boolean onKey(View v, int keyCode, KeyEvent event) {
@@ -93,56 +97,23 @@ public class Cooking_methodFragment extends Fragment implements View.OnClickList
                 return false;
             }
         });
-        Typeface general = Typeface.createFromAsset(getActivity().getAssets(), "Peace Sans Webfont.ttf");
-        Typeface general1 = Typeface.createFromAsset(getActivity().getAssets(), "Mateur.ttf");
-        boiled = (CheckBox) view.findViewById(R.id.CBboiled);
-        boiled.setTypeface(general);
-        stew = (CheckBox) view.findViewById(R.id.CBstew);
-        stew.setTypeface(general);
-        fry = (CheckBox) view.findViewById(R.id.CBfry);
-        fry.setTypeface(general);
-        apply = (Button) view.findViewById(R.id.CookingMethodApply);
-        apply.setTypeface(general1);
-        apply.setOnClickListener(new View.OnClickListener(){
+
+        apply = (Button) view.findViewById(R.id.applyCalories);
+        editCalories = (EditText) view.findViewById(R.id.editCalories);
+        editCalories.setOnFocusChangeListener(new View.OnFocusChangeListener() {
             @Override
-            public void onClick(View v)
-            {
-                if (boiled.isChecked()) {
-                    staticString.SearchCookingMethod.remove("16");
-                    staticString.SearchCookingMethod.add("16");
-                }
-                else
-                    staticString.SearchCookingMethod.remove("16");
-
-                if (stew.isChecked()) {
-                    staticString.SearchCookingMethod.remove("17");
-                    staticString.SearchCookingMethod.add("17");
-                }
-                else
-                    staticString.SearchCookingMethod.remove("17");
-
-                if (fry.isChecked()) {
-                    staticString.SearchCookingMethod.remove("18");
-                    staticString.SearchCookingMethod.add("18");
-                }
-                else
-                    staticString.SearchCookingMethod.remove("18");
-
-                if (staticString.IsAdd){
-                    for (int i=0; i<staticString.addCookingMethod.size(); i++)
-                        staticString.addCookingMethod.remove(i);
-                    for (int i=0; i<staticString.SearchCookingMethod.size(); i++)
-                        staticString.addCookingMethod.add(staticString.SearchCookingMethod.get(i));
-                    for (int i=0; i<staticString.SearchCookingMethod.size(); i++)
-                        staticString.SearchCookingMethod.remove(i);
-                }
-
-                FragmentManager fm = getFragmentManager();
-                fm.popBackStack();
-                FragmentTransaction ft = fm.beginTransaction();
-                ft.commit();
+            public void onFocusChange(View v, boolean hasFocus) {
+                Context context = view.getContext();
+                InputMethodManager imm = (InputMethodManager)context.getSystemService(Context.INPUT_METHOD_SERVICE);
+                imm.hideSoftInputFromWindow(editCalories.getWindowToken(), 0);
             }
         });
+        view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+            }
+        });
+        apply.setOnClickListener(this);
         return view;
     }
 
@@ -169,7 +140,13 @@ public class Cooking_methodFragment extends Fragment implements View.OnClickList
 
     @Override
     public void onClick(View v) {
-
+        if (v.getId() == R.id.applyCalories) {
+            staticString.addCaloricContent = editCalories.getText().toString();
+            FragmentManager fm = getFragmentManager();
+            fm.popBackStack();
+            FragmentTransaction ft = fm.beginTransaction();
+            ft.commit();
+        }
     }
 
     /**

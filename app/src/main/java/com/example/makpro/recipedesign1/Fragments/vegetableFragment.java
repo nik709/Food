@@ -121,25 +121,25 @@ public class vegetableFragment extends Fragment {
             public void onClick(View v)
             {
                 if (potatoes.isChecked()) {
-                    staticString.str.remove("Comp_Ingredient_ID = 107");
-                    staticString.str.add("Comp_Ingredient_ID = 107");
+                    staticString.str.remove("107");
+                    staticString.str.add("107");
                 }
                 else
-                    staticString.str.remove("Comp_Ingredient_ID = 107");
+                    staticString.str.remove("107");
 
                 if (carrot.isChecked()) {
-                    staticString.str.remove("Comp_Ingredient_ID = 108");
-                    staticString.str.add("Comp_Ingredient_ID = 108");
+                    staticString.str.remove("108");
+                    staticString.str.add("108");
                 }
                 else
-                    staticString.str.remove("Comp_Ingredient_ID = 108");
+                    staticString.str.remove("108");
 
                 if (beet.isChecked()) {
-                    staticString.str.remove("Comp_Ingredient_ID = 112");
-                    staticString.str.add("Comp_Ingredient_ID = 112");
+                    staticString.str.remove("112");
+                    staticString.str.add("112");
                 }
                 else
-                    staticString.str.remove("Comp_Ingredient_ID = 112");
+                    staticString.str.remove("112");
 
                 if (boot.isChecked()) {
                     staticString.str.remove("boot");

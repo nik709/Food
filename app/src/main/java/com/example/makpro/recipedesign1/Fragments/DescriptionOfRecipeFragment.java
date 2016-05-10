@@ -12,6 +12,7 @@ import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
@@ -41,6 +42,8 @@ public class DescriptionOfRecipeFragment extends Fragment implements View.OnClic
     TextView Description;
     Button addComment;
     View view;
+    boolean comm;
+    EditText editText;
 
     private OnFragmentInteractionListener mListener;
 
@@ -79,6 +82,10 @@ public class DescriptionOfRecipeFragment extends Fragment implements View.OnClic
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_description_of_recipe, container, false);
+<<<<<<< HEAD
+=======
+
+>>>>>>> nik709/master
         view.setFocusableInTouchMode(true);
         view.requestFocus();
         view.setOnKeyListener(new View.OnKeyListener() {
@@ -96,6 +103,15 @@ public class DescriptionOfRecipeFragment extends Fragment implements View.OnClic
                 return false;
             }
         });
+<<<<<<< HEAD
+=======
+        view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+>>>>>>> nik709/master
         Typeface des = Typeface.createFromAsset(getActivity().getAssets(), "Mateur.ttf");
         Typeface name = Typeface.createFromAsset(getActivity().getAssets(), "Peace Sans Webfont.ttf");
         addComment = (Button) view.findViewById(R.id.addComment);
@@ -107,6 +123,7 @@ public class DescriptionOfRecipeFragment extends Fragment implements View.OnClic
         Description.setTypeface(des);
         RecipeName.setText(staticString.RecipeName);
         Description.setText(staticString.Description.get(staticString.IDofRecipe));
+        comm = false;
         return  view;
     }
 
@@ -135,13 +152,24 @@ public class DescriptionOfRecipeFragment extends Fragment implements View.OnClic
     public void onClick(View v) {
         switch(v.getId()){
             case R.id.addComment:
-                LinearLayout layout = (LinearLayout) view.findViewById(R.id.description);
-                LinearLayout.LayoutParams lParams = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-                int gravity = Gravity.LEFT; //по левому краю
-                lParams.gravity = gravity;
-                EditText editText = new EditText(view.getContext());
-                layout.addView(editText, lParams);
-                break;
+                if (!comm) {
+                    LinearLayout layout = (LinearLayout) view.findViewById(R.id.description);
+                    LinearLayout.LayoutParams lParams = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+                    int gravity = Gravity.LEFT; //по левому краю
+                    lParams.gravity = gravity;
+                    editText = new EditText(view.getContext());
+                    layout.addView(editText, lParams);
+                    editText.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+                        @Override
+                        public void onFocusChange(View v, boolean hasFocus) {
+                            Context context = view.getContext();
+                            InputMethodManager imm = (InputMethodManager)context.getSystemService(Context.INPUT_METHOD_SERVICE);
+                            imm.hideSoftInputFromWindow(editText.getWindowToken(), 0);
+                        }
+                    });
+                    comm=true;
+                    break;
+                }
         }
     }
 

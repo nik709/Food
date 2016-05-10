@@ -133,7 +133,7 @@ public class FragmentIngridients extends Fragment implements View.OnClickListene
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        tmp = "";
+        tmp = " ";
         view = inflater.inflate(R.layout.fragment_fragment_ingridients, container, false);
 
         //------------------------------------------------------------------------------------------------
@@ -194,12 +194,16 @@ public class FragmentIngridients extends Fragment implements View.OnClickListene
         eggB.setOnClickListener(this);
         mushB.setOnClickListener(this);
         groceryB.setOnClickListener(this);
+<<<<<<< HEAD
+=======
+        //txt = (TextView) view.findViewById(R.id.textView5);
+>>>>>>> nik709/master
         //txt.setText(tmp);
         for (int i=0; i<staticString.str.size(); i++) {
             if (i!=staticString.str.size()-1)
-            tmp+=staticString.str.get(i)+" or ";
+            tmp+="Comp_Ingredient_ID = "+staticString.str.get(i)+" or ";
             else
-                tmp+=staticString.str.get(i);
+                tmp+="Comp_Ingredient_ID = "+staticString.str.get(i);
         }
         //txt.setText(tmp);
         if (staticString.IsAdd)
@@ -250,7 +254,10 @@ public class FragmentIngridients extends Fragment implements View.OnClickListene
           //      tmp+=staticString.str.get(i);
      //   }
     //    txt.setText(tmp);
+<<<<<<< HEAD
 
+=======
+>>>>>>> nik709/master
         return view;
     }
 
@@ -307,6 +314,15 @@ public class FragmentIngridients extends Fragment implements View.OnClickListene
             case R.id.search: {
                 //---------------------------------------------------------------------------------
 
+                staticString.NameRecipe.clear();
+                staticString.NameCuisine.clear();
+                staticString.NameCategory.clear();
+                staticString.NameMethod.clear();
+                staticString.NameTime.clear();
+                staticString.Description.clear();
+                staticString.Caloric.clear();
+
+
                 String chislo = Integer.toString(staticString.str.size());
                 staticString.quantityRecipe = 0;
 
@@ -326,6 +342,7 @@ public class FragmentIngridients extends Fragment implements View.OnClickListene
                             + "where " + tmp + " group by Recipe_ID "
                             + "having count(Comp_ingredient_ID)=" + chislo + " order by Recipe_ID) "
                             + "group by Recipe_ID";
+                    Log.d(LOG_TAG,inquiry);
                     cursor = sqLiteDatabase.rawQuery(inquiry, null);
 
                     if (cursor.moveToFirst()) {
