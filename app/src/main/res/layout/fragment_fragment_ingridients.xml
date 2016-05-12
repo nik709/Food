@@ -3,7 +3,7 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     tools:context="com.example.makpro.recipedesign1.Fragments.FragmentIngridients"
-    android:background="#000000"
+    android:background="@drawable/fragming"
     android:backgroundTint="#000000"
     android:focusableInTouchMode="false"
     android:clickable="false"
@@ -17,7 +17,7 @@
         android:layout_height="wrap_content"
         android:text="Поиск"
         android:id="@+id/search"
-        android:background="#0080ff"
+        android:background="#ff73be"
         android:textSize="20dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
@@ -55,7 +55,7 @@
         android:layout_height="100dp"
         android:id="@+id/cornButton"
         android:background="@drawable/psheno_gavno"
-        android:layout_above="@+id/seafoodButton"
+        android:layout_below="@+id/eggButton"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
@@ -73,13 +73,13 @@
         android:layout_height="90dp"
         android:id="@+id/milkButton"
         android:background="@drawable/moloko"
-        android:layout_above="@+id/juiceButton"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignBottom="@+id/vegetableButton"
+        android:layout_alignLeft="@+id/eggButton"
+        android:layout_alignStart="@+id/eggButton" />
 
     <ImageButton
         android:layout_width="100dp"
-        android:layout_height="95dp"
+        android:layout_height="90dp"
         android:id="@+id/fruitButton"
         android:background="@drawable/vish"
         android:layout_alignTop="@+id/seafoodButton"
@@ -113,7 +113,7 @@
 
     <ImageButton
         android:layout_width="100dp"
-        android:layout_height="95dp"
+        android:layout_height="90dp"
         android:id="@+id/juiceButton"
         android:background="@drawable/sochok"
         android:layout_alignTop="@+id/fruitButton"
@@ -122,10 +122,10 @@
 
     <ImageButton
         android:layout_width="100dp"
-        android:layout_height="95dp"
+        android:layout_height="90dp"
         android:id="@+id/seafoodButton"
         android:background="@drawable/ryba"
-        android:layout_above="@+id/search"
+        android:layout_below="@+id/cornButton"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 

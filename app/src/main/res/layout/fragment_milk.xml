@@ -13,7 +13,7 @@
         android:layout_width="wrap_content"
         android:layout_height="385dp"
         android:id="@+id/scrollView3"
-        android:layout_weight="0.68">
+        android:layout_weight="0.8">
 
         <LinearLayout
             android:orientation="vertical"
@@ -26,8 +26,8 @@
                 android:text="@string/milk"
                 android:id="@+id/milkBox"
                 android:checked="false"
-                android:textColor="#0b765c"
-                android:textSize="20dp"
+                android:textColor="#000000"
+                android:textSize="21dp"
                 android:textColorHighlight="#000000" />
 
             <CheckBox
@@ -36,18 +36,18 @@
                 android:text="@string/cheese"
                 android:id="@+id/cheeseBox"
                 android:checked="false"
-                android:textColor="#0b765c"
-                android:textSize="20dp"
+                android:textColor="#000000"
+                android:textSize="21dp"
                 android:textColorHighlight="#000000" />
 
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/kefir"
+                android:text="Кефир"
                 android:id="@+id/curdBox"
                 android:checked="false"
-                android:textColor="#0b765c"
-                android:textSize="20dp"
+                android:textColor="#000000"
+                android:textSize="21dp"
                 android:textColorHighlight="#000000"
                 android:textColorHint="#000000"
                 android:textColorLink="#000000" />
@@ -58,8 +58,8 @@
                 android:text="@string/sour"
                 android:id="@+id/sourBox"
                 android:checked="false"
-                android:textColor="#0b765c"
-                android:textSize="20dp"
+                android:textColor="#000000"
+                android:textSize="21dp"
                 android:textColorHighlight="#000000" />
 
             <CheckBox
@@ -68,16 +68,16 @@
                 android:text="@string/cream"
                 android:id="@+id/creamBox"
                 android:checked="false"
-                android:textColor="#0b765c"
-                android:textSize="20dp"
+                android:textColor="#000000"
+                android:textSize="21dp"
                 android:textColorHighlight="#000000" />
         </LinearLayout>
     </ScrollView>
 
     <LinearLayout
         android:orientation="vertical"
-        android:layout_width="112dp"
-        android:layout_height="87dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_weight="0.23">
 
         <Button
@@ -85,7 +85,7 @@
             android:layout_height="wrap_content"
             android:text="@string/apply3"
             android:id="@+id/milkApply"
-            android:background="#0a9472" />
+            android:background="#0a9451" />
     </LinearLayout>
 
 </LinearLayout>

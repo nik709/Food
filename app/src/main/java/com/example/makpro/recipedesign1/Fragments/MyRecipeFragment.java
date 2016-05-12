@@ -2,18 +2,17 @@ package com.example.makpro.recipedesign1.Fragments;
 
 import android.app.FragmentTransaction;
 import android.content.Context;
-<<<<<<< HEAD
+
 
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
 import android.graphics.Typeface;
 
-=======
+
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Typeface;
->>>>>>> nik709/master
 import android.net.Uri;
 import android.os.Bundle;
 //import android.support.v4.app.Fragment;
@@ -116,20 +115,14 @@ public class MyRecipeFragment extends Fragment implements View.OnClickListener {
         tmp4 = "";
 
         view = inflater.inflate(R.layout.fragment_my_recipe, container, false);
-<<<<<<< HEAD
 
-=======
->>>>>>> nik709/master
 
         //подлючаемся к базе данных
         dbHelper = new DBHelper(view.getContext());
         sqLiteDatabase = dbHelper.getWritableDatabase();
 
         Typeface rec = Typeface.createFromAsset(getActivity().getAssets(), "Mateur.ttf");
-<<<<<<< HEAD
 
-=======
->>>>>>> nik709/master
         time = (Button) view.findViewById(R.id.timeB);
         time.setTypeface(rec);
         cuisine = (Button) view.findViewById(R.id.cuisineB);

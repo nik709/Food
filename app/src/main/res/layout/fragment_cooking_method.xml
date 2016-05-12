@@ -24,24 +24,24 @@
                 android:layout_height="wrap_content"
                 android:text="Вареное"
                 android:id="@+id/CBboiled"
-                android:textSize="20dp"
-                android:textColor="#e10808" />
+                android:textSize="25dp"
+                android:textColor="#000000" />
 
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Тушеное"
                 android:id="@+id/CBstew"
-                android:textSize="20dp"
-                android:textColor="#e10808" />
+                android:textSize="25dp"
+                android:textColor="#000000" />
 
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Жареное"
                 android:id="@+id/CBfry"
-                android:textSize="20dp"
-                android:textColor="#e10808" />
+                android:textSize="25dp"
+                android:textColor="#000000" />
         </LinearLayout>
     </ScrollView>
 
@@ -51,5 +51,5 @@
         android:text="Apply"
         android:id="@+id/CookingMethodApply"
         android:layout_weight="0.6"
-        android:background="#e10808" />
+        android:background="#d77c7c" />
 </LinearLayout>

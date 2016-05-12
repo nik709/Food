@@ -82,10 +82,7 @@ public class DescriptionOfRecipeFragment extends Fragment implements View.OnClic
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_description_of_recipe, container, false);
-<<<<<<< HEAD
-=======
 
->>>>>>> nik709/master
         view.setFocusableInTouchMode(true);
         view.requestFocus();
         view.setOnKeyListener(new View.OnKeyListener() {
@@ -103,15 +100,14 @@ public class DescriptionOfRecipeFragment extends Fragment implements View.OnClic
                 return false;
             }
         });
-<<<<<<< HEAD
-=======
+
         view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
             }
         });
->>>>>>> nik709/master
+
         Typeface des = Typeface.createFromAsset(getActivity().getAssets(), "Mateur.ttf");
         Typeface name = Typeface.createFromAsset(getActivity().getAssets(), "Peace Sans Webfont.ttf");
         addComment = (Button) view.findViewById(R.id.addComment);
@@ -158,7 +154,17 @@ public class DescriptionOfRecipeFragment extends Fragment implements View.OnClic
                     int gravity = Gravity.LEFT; //по левому краю
                     lParams.gravity = gravity;
                     editText = new EditText(view.getContext());
+                    editText.setMinWidth(300);
+                    Button tmp = new Button(view.getContext());
+                    tmp.setText("Принять");
                     layout.addView(editText, lParams);
+                    layout.addView(tmp, lParams);
+                    tmp.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            staticString.addComment=editText.getText().toString();
+                        }
+                    });
                     editText.setOnFocusChangeListener(new View.OnFocusChangeListener() {
                         @Override
                         public void onFocusChange(View v, boolean hasFocus) {

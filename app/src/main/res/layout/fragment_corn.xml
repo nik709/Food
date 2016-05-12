@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.makpro.recipedesign1.Fragments.corn"
-    android:background="@drawable/corn">
+    android:background="@drawable/categorypic"
+    android:baselineAligned="true">
 
     <!-- TODO: Update blank fragment layout -->
 
@@ -25,8 +26,8 @@
                 android:text="@string/Рис"
                 android:id="@+id/riceB"
                 android:checked="false"
-                android:textSize="20dp"
-                android:textColor="#0075fd" />
+                android:textSize="25dp"
+                android:textColor="#000000" />
 
             <CheckBox
                 android:layout_width="wrap_content"
@@ -34,8 +35,8 @@
                 android:text="@string/Овсянка"
                 android:id="@+id/oatmealB"
                 android:checked="false"
-                android:textSize="20dp"
-                android:textColor="#0075fd" />
+                android:textSize="25dp"
+                android:textColor="#000000" />
 
             <CheckBox
                 android:layout_width="wrap_content"
@@ -43,8 +44,8 @@
                 android:text="@string/Пшено"
                 android:id="@+id/milletB"
                 android:checked="false"
-                android:textSize="20dp"
-                android:textColor="#0075fd" />
+                android:textSize="25dp"
+                android:textColor="#000000" />
 
             <CheckBox
                 android:layout_width="wrap_content"
@@ -52,8 +53,8 @@
                 android:text="@string/Гречка"
                 android:id="@+id/buckwheatB"
                 android:checked="false"
-                android:textSize="20dp"
-                android:textColor="#0075fd" />
+                android:textSize="25dp"
+                android:textColor="#000000" />
         </LinearLayout>
     </ScrollView>
 
@@ -67,7 +68,7 @@
             android:layout_height="wrap_content"
             android:text="APPLY"
             android:id="@+id/applyCorn"
-            android:background="#0075fd" />
+            android:background="#b677ee" />
     </LinearLayout>
 
 </LinearLayout>

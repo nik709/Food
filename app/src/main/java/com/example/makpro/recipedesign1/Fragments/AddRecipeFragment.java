@@ -5,6 +5,7 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Bundle;
 import android.app.Fragment;
@@ -107,14 +108,24 @@ public class AddRecipeFragment extends Fragment implements View.OnClickListener 
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_add_recipe, container, false);
+        Typeface gen1 = Typeface.createFromAsset(getActivity().getAssets(), "Peace Sans Webfont.ttf");
+        Typeface gen = Typeface.createFromAsset(getActivity().getAssets(), "Mateur.ttf");
         addIngr = (Button) view.findViewById(R.id.addIngr);
+        addIngr.setTypeface(gen);
         addTime = (Button) view.findViewById(R.id.addTime);
+        addTime.setTypeface(gen);
         addCuisine = (Button) view.findViewById(R.id.addCuisine);
+        addCuisine.setTypeface(gen);
         addCategory = (Button) view.findViewById(R.id.addCategory);
+        addCategory.setTypeface(gen);
         addMethod = (Button) view.findViewById(R.id.addMethod);
+        addMethod.setTypeface(gen);
         addDescription = (Button) view.findViewById(R.id.addDescription);
+        addDescription.setTypeface(gen);
         addCalories = (Button) view.findViewById(R.id.addCalories);
+        addCalories.setTypeface(gen);
         ADD = (Button) view.findViewById(R.id.ADD);
+        ADD.setTypeface(gen1);
         ADD.setOnClickListener(this);
         addIngr.setOnClickListener(this);
         addTime.setOnClickListener(this);

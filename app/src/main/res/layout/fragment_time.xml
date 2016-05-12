@@ -83,5 +83,6 @@
         android:layout_height="wrap_content"
         android:text="Apply"
         android:id="@+id/ApplyTime"
-        android:layout_weight="0.66" />
+        android:layout_weight="0.66"
+        android:background="#dc7d45" />
 </LinearLayout>

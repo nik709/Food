@@ -81,10 +81,7 @@ public class ResultFragment extends Fragment implements View.OnClickListener {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_result,container, false);
-<<<<<<< HEAD
 
-=======
->>>>>>> nik709/master
         view.setFocusableInTouchMode(true);
         view.requestFocus();
         view.setOnKeyListener(new View.OnKeyListener() {
@@ -102,13 +99,7 @@ public class ResultFragment extends Fragment implements View.OnClickListener {
                 return false;
             }
         });
-<<<<<<< HEAD
-
         Typeface res = Typeface.createFromAsset(getActivity().getAssets(), "Mateur.ttf");
-
-=======
-        Typeface res = Typeface.createFromAsset(getActivity().getAssets(), "Mateur.ttf");
->>>>>>> nik709/master
         scroll = (ScrollView) view.findViewById(R.id.resultScroll);
         linearLayout = (LinearLayout) view.findViewById(R.id.resultLayout);
         //-------------СОЗДАНИЕ И ИНИЦИАЛИЗАЦИЯ ПАРАМЕТРОВ ЛЕЙАУТА-------------

@@ -3,6 +3,7 @@ package com.example.makpro.recipedesign1.Fragments;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.content.Context;
+import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Bundle;
 import android.app.Fragment;
@@ -15,6 +16,7 @@ import android.view.ViewGroup;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import com.example.makpro.recipedesign1.R;
 import com.example.makpro.recipedesign1.staticString;
@@ -41,7 +43,7 @@ public class addCaloriesFragment extends Fragment implements View.OnClickListene
 
     EditText editCalories;
     Button apply;
-
+    TextView head;
     private OnFragmentInteractionListener mListener;
 
     public addCaloriesFragment() {
@@ -97,9 +99,14 @@ public class addCaloriesFragment extends Fragment implements View.OnClickListene
                 return false;
             }
         });
-
+        Typeface cal = Typeface.createFromAsset(getActivity().getAssets(), "Mateur.ttf");
+        Typeface cal1 = Typeface.createFromAsset(getActivity().getAssets(), "Peace Sans Webfont.ttf");
+        head = (TextView) view.findViewById(R.id.textView2);
+        head.setTypeface(cal1);
         apply = (Button) view.findViewById(R.id.applyCalories);
+        apply.setTypeface(cal);
         editCalories = (EditText) view.findViewById(R.id.editCalories);
+        editCalories.setTypeface(cal);
         editCalories.setOnFocusChangeListener(new View.OnFocusChangeListener() {
             @Override
             public void onFocusChange(View v, boolean hasFocus) {
