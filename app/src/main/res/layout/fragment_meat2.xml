@@ -28,7 +28,7 @@
                 android:id="@+id/CBchicken"
                 android:checked="false"
                 android:textSize="20sp"
-                android:textColor="#ffe100" />
+                android:textColor="#000000" />
 
             <CheckBox
                 android:layout_width="wrap_content"
@@ -37,7 +37,7 @@
                 android:id="@+id/CBpig"
                 android:checked="false"
                 android:textSize="20sp"
-                android:textColor="#ffe100" />
+                android:textColor="#000000" />
 
             <CheckBox
                 android:layout_width="wrap_content"
@@ -46,7 +46,7 @@
                 android:id="@+id/CBturkey"
                 android:checked="false"
                 android:textSize="20sp"
-                android:textColor="#ffe100" />
+                android:textColor="#000000" />
 
             <CheckBox
                 android:layout_width="wrap_content"
@@ -55,7 +55,7 @@
                 android:id="@+id/CBcow"
                 android:checked="false"
                 android:textSize="20sp"
-                android:textColor="#ffe100" />
+                android:textColor="#000000" />
 
             <CheckBox
                 android:layout_width="wrap_content"
@@ -64,7 +64,7 @@
                 android:id="@+id/CBrabbit"
                 android:checked="false"
                 android:textSize="20sp"
-                android:textColor="#ffe100" />
+                android:textColor="#000000" />
 
             <CheckBox
                 android:layout_width="wrap_content"
@@ -73,7 +73,7 @@
                 android:id="@+id/CBbear"
                 android:checked="false"
                 android:textSize="20sp"
-                android:textColor="#ffe100"
+                android:textColor="#000000"
                 android:textColorHighlight="#000000" />
 
         </LinearLayout>
@@ -89,7 +89,7 @@
             android:layout_height="wrap_content"
             android:text="@string/apply"
             android:id="@+id/apply"
-            android:background="#ffe100" />
+            android:background="#ef8d8d" />
 
     </LinearLayout>
 

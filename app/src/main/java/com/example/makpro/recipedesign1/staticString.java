@@ -18,6 +18,7 @@ public class staticString {
     public static ArrayList<String> NameTime;
     public static ArrayList<String> Description;
     public static ArrayList<String> Caloric;
+    public static String addComment;
 
     public static ArrayList<String> SearchCuisine;
     public static ArrayList<String> SearchCategory;

@@ -100,12 +100,14 @@ public class DescriptionOfRecipeFragment extends Fragment implements View.OnClic
                 return false;
             }
         });
+
         view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
             }
         });
+
         Typeface des = Typeface.createFromAsset(getActivity().getAssets(), "Mateur.ttf");
         Typeface name = Typeface.createFromAsset(getActivity().getAssets(), "Peace Sans Webfont.ttf");
         addComment = (Button) view.findViewById(R.id.addComment);
@@ -152,7 +154,17 @@ public class DescriptionOfRecipeFragment extends Fragment implements View.OnClic
                     int gravity = Gravity.LEFT; //по левому краю
                     lParams.gravity = gravity;
                     editText = new EditText(view.getContext());
+                    editText.setMinWidth(300);
+                    Button tmp = new Button(view.getContext());
+                    tmp.setText("Принять");
                     layout.addView(editText, lParams);
+                    layout.addView(tmp, lParams);
+                    tmp.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            staticString.addComment=editText.getText().toString();
+                        }
+                    });
                     editText.setOnFocusChangeListener(new View.OnFocusChangeListener() {
                         @Override
                         public void onFocusChange(View v, boolean hasFocus) {

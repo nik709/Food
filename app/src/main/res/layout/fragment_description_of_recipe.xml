@@ -23,6 +23,7 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Medium Text"
         android:id="@+id/IDDescription"
+
         android:layout_weight="0.38" />
         android:layout_weight="0.25"
         android:textColor="#e8ecca" />

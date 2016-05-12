@@ -194,6 +194,7 @@ public class FragmentIngridients extends Fragment implements View.OnClickListene
         eggB.setOnClickListener(this);
         mushB.setOnClickListener(this);
         groceryB.setOnClickListener(this);
+
         //txt = (TextView) view.findViewById(R.id.textView5);
         //txt.setText(tmp);
         for (int i=0; i<staticString.str.size(); i++) {
@@ -251,6 +252,7 @@ public class FragmentIngridients extends Fragment implements View.OnClickListene
           //      tmp+=staticString.str.get(i);
      //   }
     //    txt.setText(tmp);
+
         return view;
     }
 

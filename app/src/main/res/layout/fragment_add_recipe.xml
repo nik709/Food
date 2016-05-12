@@ -3,7 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.makpro.recipedesign1.Fragments.AddRecipeFragment">
+    tools:context="com.example.makpro.recipedesign1.Fragments.AddRecipeFragment"
+    android:background="@drawable/addrec">
 
     <!-- TODO: Update blank fragment layout -->
 
@@ -11,47 +12,55 @@
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:text="Ингридиенты"
-        android:id="@+id/addIngr" />
+        android:id="@+id/addIngr"
+        android:background="#f6eca9" />
 
     <Button
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:text="Время"
-        android:id="@+id/addTime" />
+        android:id="@+id/addTime"
+        android:background="#f6eca9" />
 
     <Button
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:text="Кухня"
-        android:id="@+id/addCuisine" />
+        android:id="@+id/addCuisine"
+        android:background="#f6eca9" />
 
     <Button
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:text="Категория"
-        android:id="@+id/addCategory" />
+        android:id="@+id/addCategory"
+        android:background="#f6eca9" />
 
     <Button
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:text="Способ приготовления"
-        android:id="@+id/addMethod" />
+        android:id="@+id/addMethod"
+        android:background="#f6eca9" />
 
     <Button
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:text="Описание"
-        android:id="@+id/addDescription" />
+        android:id="@+id/addDescription"
+        android:background="#f6eca9" />
 
     <Button
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:text="Калории"
-        android:id="@+id/addCalories" />
+        android:id="@+id/addCalories"
+        android:background="#f6eca9" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Добавить"
-        android:id="@+id/ADD" />
+        android:id="@+id/ADD"
+        android:background="#f6eca9" />
 </LinearLayout>

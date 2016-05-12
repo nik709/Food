@@ -98,7 +98,8 @@ public class fruit extends Fragment {
                 return false;
             }
         });
-        Typeface general = Typeface.createFromAsset(getActivity().getAssets(), "Mateur.ttf");
+        Typeface general = Typeface.createFromAsset(getActivity().getAssets(), "Peace Sans Webfont.ttf");
+        Typeface general1 = Typeface.createFromAsset(getActivity().getAssets(), "Mateur.ttf");
         apple = (CheckBox) view.findViewById(R.id.appleB);
         apple.setTypeface(general);
         pear = (CheckBox) view.findViewById(R.id.pearB);
@@ -112,7 +113,7 @@ public class fruit extends Fragment {
         grape = (CheckBox) view.findViewById(R.id.grapeB);
         grape.setTypeface(general);
         apply = (Button) view.findViewById(R.id.applyF);
-        apply.setTypeface(general);
+        apply.setTypeface(general1);
         apply.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

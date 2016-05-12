@@ -9,7 +9,11 @@
     </CLASSES>
     <JAVADOC />
     <SOURCES>
+<<<<<<< HEAD
       <root url="jar://$PROJECT_DIR$/../../../SDK/extras/android/m2repository/com/android/support/appcompat-v7/23.3.0/appcompat-v7-23.3.0-sources.jar!/" />
+=======
+      <root url="jar://$USER_HOME$/Library/Android/sdk/extras/android/m2repository/com/android/support/appcompat-v7/23.3.0/appcompat-v7-23.3.0-sources.jar!/" />
+>>>>>>> 7043f66701546b00ed96b5c45fba4c283b204718
     </SOURCES>
   </library>
 </component>

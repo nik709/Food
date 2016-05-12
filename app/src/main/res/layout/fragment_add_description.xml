@@ -4,7 +4,8 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="com.example.makpro.recipedesign1.Fragments.AddDescriptionFragment"
-    android:weightSum="1">
+    android:weightSum="1"
+    android:background="@drawable/addrec">
 
     <!-- TODO: Update blank fragment layout -->
 
@@ -13,7 +14,9 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Название блюда:"
-        android:id="@+id/textView4" />
+        android:id="@+id/textView4"
+        android:textColor="#1cdc15"
+        android:textSize="26dp" />
 
     <EditText
         android:layout_width="match_parent"
@@ -25,7 +28,8 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Опишите блюдо:"
-        android:id="@+id/textView5" />
+        android:id="@+id/textView5"
+        android:textSize="26dp" />
 
     <EditText
         android:layout_width="match_parent"

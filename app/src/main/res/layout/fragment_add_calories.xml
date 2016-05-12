@@ -3,7 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.makpro.recipedesign1.Fragments.addCaloriesFragment">
+    tools:context="com.example.makpro.recipedesign1.Fragments.addCaloriesFragment"
+    android:background="@drawable/calories">
 
     <!-- TODO: Update blank fragment layout -->
 
@@ -12,16 +13,24 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Введите количество калорий:"
-        android:id="@+id/textView2" />
+        android:id="@+id/textView2"
+        android:textColor="#c2002d"
+        android:textSize="28dp"
+        android:textIsSelectable="true" />
 
     <EditText
         android:layout_width="210dp"
         android:layout_height="wrap_content"
-        android:id="@+id/editCalories" />
+        android:id="@+id/editCalories"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        android:textIsSelectable="false" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Apply"
-        android:id="@+id/applyCalories" />
+        android:id="@+id/applyCalories"
+        android:background="#c2002d" />
+
 </LinearLayout>
