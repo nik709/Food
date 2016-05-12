@@ -111,32 +111,32 @@ public class juice extends Fragment {
             public void onClick(View v) {
                 if (tomato.isChecked())
                 {
-                    staticString.str.remove("Томатный сок");
-                    staticString.str.add("Томатный сок");
+                    staticString.str.remove("173");
+                    staticString.str.add("173");
                 }
                 else
-                    staticString.str.remove("Томатный сок");
+                    staticString.str.remove("173");
                 if (orange.isChecked())
                 {
-                    staticString.str.remove("Апельсиновый сок");
-                    staticString.str.add("Апельсиновый сок");
+                    staticString.str.remove("171");
+                    staticString.str.add("171");
                 }
                 else
-                    staticString.str.remove("Апельсиновый сок");
+                    staticString.str.remove("171");
                 if (apple.isChecked())
                 {
-                    staticString.str.remove("Яблочный сок");
-                    staticString.str.add("Яблочный сок");
+                    staticString.str.remove("172");
+                    staticString.str.add("172");
                 }
                 else
-                    staticString.str.remove("Яблочный сок");
+                    staticString.str.remove("172");
                 if (lemon.isChecked())
                 {
-                    staticString.str.remove("Лимонный сок");
-                    staticString.str.add("Лимонный сок");
+                    staticString.str.remove("170");
+                    staticString.str.add("170");
                 }
                 else
-                    staticString.str.remove("Лимонный сок");
+                    staticString.str.remove("170");
 
                 FragmentManager fm = getFragmentManager();
                 fm.popBackStack();

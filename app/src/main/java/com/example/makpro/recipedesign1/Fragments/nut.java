@@ -112,31 +112,31 @@ public class nut extends Fragment {
             public void onClick(View v) {
                 if (arahis.isChecked())
                 {
-                    staticString.str.remove("Arahis");
-                    staticString.str.add("Arahis");
+                    staticString.str.remove("122");
+                    staticString.str.add("122");
                 }
                 else
-                    staticString.str.remove("Arahis");
+                    staticString.str.remove("122");
                 if (mindal.isChecked())
                 {
-                    staticString.str.remove("Mindal");
-                    staticString.str.add("Mindal");
+                    staticString.str.remove("123");
+                    staticString.str.add("123");
                 }
                 else
-                    staticString.str.remove("Mindal");
+                    staticString.str.remove("123");
                 if (cache.isChecked())
                 {
-                    staticString.str.remove("Кешью");
-                    staticString.str.add("Кешью");
+                    staticString.str.remove("125");
+                    staticString.str.add("125");
                 }
                 else
-                    staticString.str.remove("Кешью");
+                    staticString.str.remove("125");
                 if (funduk.isChecked()) {
-                    staticString.str.remove("Funduk");
-                    staticString.str.add("Funduk");
+                    staticString.str.remove("124");
+                    staticString.str.add("124");
                 }
                 else
-                    staticString.str.remove("Funduk");
+                    staticString.str.remove("124");
                 FragmentManager fm = getFragmentManager();
                 fm.popBackStack();
                 FragmentTransaction ft = fm.beginTransaction();

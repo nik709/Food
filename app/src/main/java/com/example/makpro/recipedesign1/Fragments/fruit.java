@@ -118,46 +118,46 @@ public class fruit extends Fragment {
             public void onClick(View v) {
                 if (apple.isChecked())
                 {
-                    staticString.str.remove("apple");
-                    staticString.str.add("apple");
+                    staticString.str.remove("101");
+                    staticString.str.add("101");
                 }
                 else
-                    staticString.str.remove("apple");
+                    staticString.str.remove("101");
                 if (pear.isChecked())
                 {
-                    staticString.str.remove("pear");
-                    staticString.str.add("pear");
+                    staticString.str.remove("104");
+                    staticString.str.add("104");
                 }
                 else
-                    staticString.str.remove("pear");
+                    staticString.str.remove("104");
                 if (orange.isChecked())
                 {
-                    staticString.str.remove("orange");
-                    staticString.str.add("orange");
+                    staticString.str.remove("103");
+                    staticString.str.add("103");
                 }
                 else
-                    staticString.str.remove("orange");
+                    staticString.str.remove("103");
                 if (ananas.isChecked())
                 {
-                    staticString.str.remove("ananas");
-                    staticString.str.add("ananas");
+                    staticString.str.remove("106");
+                    staticString.str.add("106");
                 }
                 else
-                    staticString.str.remove("ananas");
+                    staticString.str.remove("106");
                 if (banana.isChecked())
                 {
-                    staticString.str.remove("banana");
-                    staticString.str.add("banana");
+                    staticString.str.remove("102");
+                    staticString.str.add("102");
                 }
                 else
-                    staticString.str.remove("banana");
+                    staticString.str.remove("102");
                 if (grape.isChecked())
                 {
-                    staticString.str.remove("grape");
-                    staticString.str.add("grape");
+                    staticString.str.remove("105");
+                    staticString.str.add("105");
                 }
                 else
-                    staticString.str.remove("grape");
+                    staticString.str.remove("105");
                 FragmentManager fm = getFragmentManager();
                 fm.popBackStack();
                 FragmentTransaction ft = fm.beginTransaction();

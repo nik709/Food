@@ -18,23 +18,23 @@
     <string name="Rabbit">Крольчатина</string>
     <string name="Bear">Медвежатина</string>
     <string name="apply">Apply</string>
-    <string name="potatoes">Potatoes</string>
-    <string name="carrot">Carrot</string>
-    <string name="beet">Beet</string>
-    <string name="boot">Boot</string>
-    <string name="garlic">Garlic</string>
-    <string name="cucumber">Cucumber</string>
+    <string name="potatoes">Картофель</string>
+    <string name="carrot">Морковь</string>
+    <string name="beet">Лук</string>
+    <string name="boot">Свекла</string>
+    <string name="garlic">Капупста</string>
+    <string name="cucumber">Огурец</string>
     <string name="apply3">Apply</string>
-    <string name="kefir">kefir</string>
+    <string name="kefir">Кефир</string>
     <string name="cheese">Сыр</string>
     <string name="milk">Молоко</string>
     <string name="sour">Сметана</string>
     <string name="cream">Сливки</string>
     <string name="milkb">Milk</string>
     <string name="Рис">Рис</string>
-    <string name="Овсянка">Овсянка</string>
+    <string name="Овсянка">Овсянная крупа</string>
     <string name="Пшено">Пшено</string>
-    <string name="Гречка">Гречка</string>
+    <string name="Гречка">Гречневая крупа</string>
     <string name="otherSearch">Дополнительный поиск</string>
     <string name="addYourRecipe">Добавление своих рецептов</string>
 
@@ -110,6 +110,14 @@
         <item>Тесто дрожжевое</item>
         <item>Морская кпуста</item>//------------ВОДОРОСЛИ---------------
         <item>Рольные водоросли</item>
+        <item>Огурец</item>
+        <item>Куриное яйцо</item>
+        <item>Перепелиное яйцо</item>
+        <item>Лимонный сок</item>
+        <item>Апельсиновый сок</item>
+        <item>Яблочный сок</item>
+        <item>Томатный сок</item>
+        <item>Медвежатина</item>
     </string-array>
 
     //id продукта
@@ -180,6 +188,14 @@
         <item>164</item>
         <item>165</item>
         <item>166</item>
+        <item>167</item>
+        <item>168</item>
+        <item>169</item>
+        <item>170</item>
+        <item>171</item>
+        <item>172</item>
+        <item>173</item>
+        <item>174</item>
     </integer-array>
 
     //------------------------------------------------------------------------------------------

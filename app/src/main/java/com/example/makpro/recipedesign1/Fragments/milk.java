@@ -120,39 +120,39 @@ public class milk extends Fragment {
             public void onClick(View v) {
                 if (milk.isChecked())
                 {
-                    staticString.str.remove("milk");
-                    staticString.str.add("milk");
+                    staticString.str.remove("147");
+                    staticString.str.add("147");
                 }
                 else
-                    staticString.str.remove("milk");
+                    staticString.str.remove("147");
                 if (cheese.isChecked())
                 {
-                    staticString.str.remove("cheese");
-                    staticString.str.add("cheese");
+                    staticString.str.remove("150");
+                    staticString.str.add("150");
                 }
                 else
-                    staticString.str.remove("cheese");
+                    staticString.str.remove("150");
                 if (curd.isChecked())
                 {
-                    staticString.str.remove("kefir");
-                    staticString.str.add("kefir");
+                    staticString.str.remove("148");
+                    staticString.str.add("148");
                 }
                 else
-                    staticString.str.remove("kefir");
+                    staticString.str.remove("148");
                 if (sour.isChecked())
                 {
-                    staticString.str.remove("sour");
-                    staticString.str.add("sour");
+                    staticString.str.remove("149");
+                    staticString.str.add("149");
                 }
                 else
-                    staticString.str.remove("sour");
+                    staticString.str.remove("149");
                 if (cream.isChecked())
                 {
-                    staticString.str.remove("cream");
-                    staticString.str.add("cream");
+                    staticString.str.remove("151");
+                    staticString.str.add("151");
                 }
                 else
-                    staticString.str.remove("cream");
+                    staticString.str.remove("151");
 
                 FragmentManager fm = getFragmentManager();
                 fm.popBackStack();

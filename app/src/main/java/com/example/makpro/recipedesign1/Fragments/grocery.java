@@ -113,32 +113,32 @@ public class grocery extends Fragment {
             public void onClick(View v) {
                 if (spagetti.isChecked())
                 {
-                    staticString.str.remove("Спагетти");
-                    staticString.str.add("Спагетти");
+                    staticString.str.remove("161");
+                    staticString.str.add("161");
                 }
                 else
-                    staticString.str.remove("Спагетти");
+                    staticString.str.remove("161");
                 if (rozhok.isChecked())
                 {
-                    staticString.str.remove("Рожки");
-                    staticString.str.add("Рожки");
+                    staticString.str.remove("162");
+                    staticString.str.add("162");
                 }
                 else
-                    staticString.str.remove("Рожки");
+                    staticString.str.remove("162");
                 if (puffPastry.isChecked())
                 {
-                    staticString.str.remove("Тесто слоеное");
-                    staticString.str.add("Тесто слоеное");
+                    staticString.str.remove("163");
+                    staticString.str.add("163");
                 }
                 else
-                    staticString.str.remove("Тесто слоеное");
+                    staticString.str.remove("163");
                 if (yeastDough.isChecked())
                 {
-                    staticString.str.remove("Тесто дрожжевое");
-                    staticString.str.add("Тесто дрожжевое");
+                    staticString.str.remove("164");
+                    staticString.str.add("164");
                 }
                 else
-                    staticString.str.remove("Тесто дрожжевое");
+                    staticString.str.remove("164");
 
                 FragmentManager fm = getFragmentManager();
                 fm.popBackStack();

@@ -107,18 +107,18 @@ public class mushroom extends Fragment {
             public void onClick(View v) {
                 if (whitemush.isChecked())
                 {
-                    staticString.str.remove("Белые грибы");
-                    staticString.str.add("Белые грибы");
+                    staticString.str.remove("154");
+                    staticString.str.add("154");
                 }
                 else
-                    staticString.str.remove("Белые грибы");
+                    staticString.str.remove("154");
                 if (champignon.isChecked())
                 {
-                    staticString.str.remove("Шампиньоны");
-                    staticString.str.add("Шампиньоны");
+                    staticString.str.remove("155");
+                    staticString.str.add("155");
                 }
                 else
-                    staticString.str.remove("Шампиньоны");
+                    staticString.str.remove("155");
 
                 FragmentManager fm = getFragmentManager();
                 fm.popBackStack();

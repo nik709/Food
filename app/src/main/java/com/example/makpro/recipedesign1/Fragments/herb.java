@@ -112,32 +112,32 @@ public class herb extends Fragment {
             public void onClick(View v) {
                 if (melisa.isChecked())
                 {
-                    staticString.str.remove("Мелиса");
-                    staticString.str.add("Мелиса");
+                    staticString.str.remove("129");
+                    staticString.str.add("129");
                 }
                 else
-                    staticString.str.remove("Мелиса");
+                    staticString.str.remove("129");
                 if (origana.isChecked())
                 {
-                    staticString.str.remove("Оригана");
-                    staticString.str.add("Оригана");
+                    staticString.str.remove("127");
+                    staticString.str.add("127");
                 }
                 else
-                    staticString.str.remove("Оригана");
+                    staticString.str.remove("127");
                 if (lavr.isChecked())
                 {
-                    staticString.str.remove("Лавр");
-                    staticString.str.add("Лавр");
+                    staticString.str.remove("126");
+                    staticString.str.add("126");
                 }
                 else
-                    staticString.str.remove("Лавр");
+                    staticString.str.remove("126");
                 if (mint.isChecked())
                 {
-                    staticString.str.remove("Мята");
-                    staticString.str.add("Мята");
+                    staticString.str.remove("128");
+                    staticString.str.add("128");
                 }
                 else
-                    staticString.str.remove("Мята");
+                    staticString.str.remove("128");
 
                 FragmentManager fm = getFragmentManager();
                 fm.popBackStack();

@@ -115,46 +115,46 @@ public class seafood extends Fragment {
             public void onClick(View v) {
                 if (scum.isChecked())
                 {
-                    staticString.str.remove("Скумбрия");
-                    staticString.str.add("Скумбрия");
+                    staticString.str.remove("141");
+                    staticString.str.add("141");
                 }
                 else
-                    staticString.str.remove("Скумбрия");
+                    staticString.str.remove("141");
                 if (ocun.isChecked())
                 {
-                    staticString.str.remove("Окунь");
-                    staticString.str.add("Окунь");
+                    staticString.str.remove("138");
+                    staticString.str.add("138");
                 }
                 else
-                    staticString.str.remove("Окунь");
+                    staticString.str.remove("138");
                 if (gorbusha.isChecked())
                 {
-                    staticString.str.remove("Горбуша");
-                    staticString.str.add("Горбуша");
+                    staticString.str.remove("139");
+                    staticString.str.add("139");
                 }
                 else
-                    staticString.str.remove("Горбуша");
+                    staticString.str.remove("139");
                 if (seld.isChecked())
                 {
-                    staticString.str.remove("Сельдь");
-                    staticString.str.add("Сельдь");
+                    staticString.str.remove("140");
+                    staticString.str.add("140");
                 }
                 else
-                    staticString.str.remove("Сельдь");
+                    staticString.str.remove("140");
                 if (redcaviar.isChecked())
                 {
-                    staticString.str.remove("Красная икра");
-                    staticString.str.add("Красная икра");
+                    staticString.str.remove("144");
+                    staticString.str.add("144");
                 }
                 else
-                    staticString.str.remove("Красная икра");
+                    staticString.str.remove("144");
                 if (blackcaviar.isChecked())
                 {
-                    staticString.str.remove("Черная икра");
-                    staticString.str.add("Черная икра");
+                    staticString.str.remove("145");
+                    staticString.str.add("145");
                 }
                 else
-                    staticString.str.remove("Черная икра");
+                    staticString.str.remove("145");
                 FragmentManager fm = getFragmentManager();
                 fm.popBackStack();
                 FragmentTransaction ft = fm.beginTransaction();

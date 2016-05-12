@@ -155,10 +155,10 @@ public class MeatFragment extends Fragment implements View.OnClickListener {
                 staticString.str.remove("137");
 
             if (bear.isChecked()) {
-                staticString.str.remove("bear");
-                staticString.str.add("bear");
+                staticString.str.remove("174");
+                staticString.str.add("174");
             } else
-                staticString.str.remove("bear");
+                staticString.str.remove("174");
 
             FragmentManager fm = getFragmentManager();
             fm.popBackStack();

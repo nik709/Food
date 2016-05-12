@@ -135,32 +135,32 @@ public class vegetableFragment extends Fragment {
                     staticString.str.remove("108");
 
                 if (beet.isChecked()) {
-                    staticString.str.remove("112");
-                    staticString.str.add("112");
+                    staticString.str.remove("109");
+                    staticString.str.add("109");
                 }
                 else
-                    staticString.str.remove("112");
+                    staticString.str.remove("109");
 
                 if (boot.isChecked()) {
-                    staticString.str.remove("boot");
-                    staticString.str.add("boot");
+                    staticString.str.remove("110");
+                    staticString.str.add("110");
                 }
                 else
-                    staticString.str.remove("boot");
+                    staticString.str.remove("110");
 
                 if (garlic.isChecked()) {
-                    staticString.str.remove("garlic");
-                    staticString.str.add("garlic");
+                    staticString.str.remove("113");
+                    staticString.str.add("113");
                 }
                 else
-                    staticString.str.remove("garlic");
+                    staticString.str.remove("113");
 
                 if (cucumber.isChecked()) {
-                    staticString.str.remove("cucumber");
-                    staticString.str.add("cucumber");
+                    staticString.str.remove("167");
+                    staticString.str.add("167");
                 }
                 else
-                    staticString.str.remove("cucumber");
+                    staticString.str.remove("167");
 
                 FragmentManager fm = getFragmentManager();
                 fm.popBackStack();

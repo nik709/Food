@@ -108,18 +108,18 @@ public class egg extends Fragment {
             public void onClick(View v) {
                 if (chicken.isChecked())
                 {
-                    staticString.str.remove("Куриные яйца");
-                    staticString.str.add("Куриные яйца");
+                    staticString.str.remove("168");
+                    staticString.str.add("168");
                 }
                 else
-                    staticString.str.remove("Куриные яйца");
+                    staticString.str.remove("168");
                 if (perepel.isChecked())
                 {
-                    staticString.str.remove("Перепелиные яйца");
-                    staticString.str.add("Перепелиные яйца");
+                    staticString.str.remove("169");
+                    staticString.str.add("169");
                 }
                 else
-                    staticString.str.remove("Перепелиные яйца");
+                    staticString.str.remove("169");
 
                 FragmentManager fm = getFragmentManager();
                 fm.popBackStack();

@@ -111,32 +111,32 @@ public class corn extends Fragment {
             public void onClick(View v) {
                 if (rice.isChecked())
                 {
-                    staticString.str.remove("Rice");
-                    staticString.str.add("Rice");
+                    staticString.str.remove("116");
+                    staticString.str.add("116");
                 }
                 else
-                    staticString.str.remove("Rice");
+                    staticString.str.remove("116");
                 if (millet.isChecked())
                 {
-                    staticString.str.remove("Millet");
-                    staticString.str.add("Millet");
+                    staticString.str.remove("117");
+                    staticString.str.add("117");
                 }
                 else
-                    staticString.str.remove("Millet");
+                    staticString.str.remove("117");
                 if (oatmeal.isChecked())
                 {
-                    staticString.str.remove("Oatmeal");
-                    staticString.str.add("Oatmeal");
+                    staticString.str.remove("115");
+                    staticString.str.add("115");
                 }
                 else
-                    staticString.str.remove("Oatmeal");
+                    staticString.str.remove("115");
                 if (buckwheat.isChecked())
                 {
-                    staticString.str.remove("Buckwheat");
-                    staticString.str.add("Buckwheat");
+                    staticString.str.remove("114");
+                    staticString.str.add("114");
                 }
                 else
-                    staticString.str.remove("Buckwheat");
+                    staticString.str.remove("114");
 
                 FragmentManager fm = getFragmentManager();
                 fm.popBackStack();

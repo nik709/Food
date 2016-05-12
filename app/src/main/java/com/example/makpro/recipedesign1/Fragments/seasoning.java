@@ -105,39 +105,39 @@ public class seasoning extends Fragment {
             public void onClick(View v) {
                 if (cinnamon.isChecked())
                 {
-                    staticString.str.remove("Корица");
-                    staticString.str.add("Корица");
+                    staticString.str.remove("158");
+                    staticString.str.add("158");
                 }
                 else
-                    staticString.str.remove("Корица");
+                    staticString.str.remove("158");
                 if (vanilla.isChecked())
                 {
-                    staticString.str.remove("Ваниль");
-                    staticString.str.add("Ваниль");
+                    staticString.str.remove("159");
+                    staticString.str.add("159");
                 }
                 else
-                    staticString.str.remove("Ваниль");
+                    staticString.str.remove("159");
                 if (pepper.isChecked())
                 {
-                    staticString.str.remove("Перец");
-                    staticString.str.add("Перец");
+                    staticString.str.remove("157");
+                    staticString.str.add("157");
                 }
                 else
-                    staticString.str.remove("Перец");
+                    staticString.str.remove("157");
                 if (salt.isChecked())
                 {
-                    staticString.str.remove("Соль");
-                    staticString.str.add("Соль");
+                    staticString.str.remove("156");
+                    staticString.str.add("156");
                 }
                 else
-                    staticString.str.remove("Соль");
+                    staticString.str.remove("156");
                 if (sugar.isChecked())
                 {
-                    staticString.str.remove("Сахар");
-                    staticString.str.add("Сахар");
+                    staticString.str.remove("160");
+                    staticString.str.add("160");
                 }
                 else
-                    staticString.str.remove("Сахар");
+                    staticString.str.remove("160");
                 FragmentManager fm = getFragmentManager();
                 fm.popBackStack();
                 FragmentTransaction ft = fm.beginTransaction();
