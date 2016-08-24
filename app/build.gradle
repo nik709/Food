@@ -20,9 +20,17 @@ android {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile fileTree(include: ['*.jar'], dir: 'libs')
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:23.3.0'
     compile 'com.android.support:design:23.3.0'
     compile 'com.android.support:support-v4:23.3.0'
+    compile 'org.springframework:spring-core:4.3.2.RELEASE'
+    compile 'org.springframework:spring-beans:4.3.2.RELEASE'
+    compile 'org.springframework:spring-context:4.3.2.RELEASE'
+    compile 'org.springframework:spring-jdbc:4.3.2.RELEASE'
+    compile 'org.springframework:spring-orm:4.3.2.RELEASE'
+    compile files('src/libs/springProject-1.0-SNAPSHOT.jar')
+    compile files('src/libs/org/springframework/spring-context/4.3.2.RELEASE/spring-context-4.3.2.RELEASE.jar')
+    compile files('src/libs/org/springframework/spring-context-support/4.0.1.RELEASE/spring-context-support-4.0.1.RELEASE.jar')
 }

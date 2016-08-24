@@ -1,13 +1,12 @@
 package com.example.makpro.recipedesign1.Fragments;
 
+import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.content.Context;
 import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Bundle;
-import android.app.Fragment;
-import android.renderscript.Type;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -17,6 +16,10 @@ import android.widget.CheckBox;
 
 import com.example.makpro.recipedesign1.R;
 import com.example.makpro.recipedesign1.staticString;
+import com.netcracker.service.TestService;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -36,7 +39,7 @@ public class TimeFragment extends Fragment {
     private String mParam1;
     private String mParam2;
     View view;
-    CheckBox time1, time2, time3, time4, time5, time6, time7;
+    CheckBox time1, time2, time3, time4, time5, time6, time7, test;
     Button apply;
 
     private OnFragmentInteractionListener mListener;
@@ -75,6 +78,10 @@ public class TimeFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
+        ApplicationContext ctx = (ApplicationContext) new ClassPathXmlApplicationContext("app-context.xml");
+        final TestService testService = (TestService) ctx.getBean("TestService");
+
         view = inflater.inflate(R.layout.fragment_time, container, false);
         view.setFocusableInTouchMode(true);
         view.requestFocus();
@@ -112,6 +119,7 @@ public class TimeFragment extends Fragment {
         time6.setTypeface(tim);
         time7 = (CheckBox) view.findViewById(R.id.CBtime7);
         time7.setTypeface(tim);
+        test = (CheckBox) view.findViewById(R.id.testBox);
         apply.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v)
@@ -164,6 +172,9 @@ public class TimeFragment extends Fragment {
                 }
                 else
                     staticString.SearchTime.remove("1007");
+
+                if (test.isChecked()){
+                }
 
                 if (staticString.IsAdd){
                     for (int i=0; i<staticString.addTime.size(); i++)

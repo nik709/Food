@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-<<<<<<< HEAD
-      <module fileurl="file://$PROJECT_DIR$/Food-master.iml" filepath="$PROJECT_DIR$/Food-master.iml" />
-=======
-      <module fileurl="file://$PROJECT_DIR$/Food-1.iml" filepath="$PROJECT_DIR$/Food-1.iml" />
->>>>>>> 7043f66701546b00ed96b5c45fba4c283b204718
+      <module fileurl="file://$PROJECT_DIR$/Food.iml" filepath="$PROJECT_DIR$/Food.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
